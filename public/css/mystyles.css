@@ -1,0 +1,409 @@
+.mycontainer {
+    width: 90%;
+    margin: auto;
+}
+
+#guestBody {
+    background-image: url(../images/scraper.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+#landing {
+    background-image: url(../images/chart.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#flexRow {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+}
+
+#stats {
+    background-image: url(../images/investment.jpg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+#mypage-header {
+    background-image: url(../images/page-header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#testimony {
+    background-image: url(../images/auth3.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#contact-header {
+    background-image: url(../images/customer_service.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#testimony::after,
+#stats::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#mypage-header::after,
+#contact-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#guestBody::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.stats-link,
+.testimony-content,
+#auth_body,
+#auth_logo {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* USER PAGES */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.card-single div:last-child span {
+    color: #6875f5;
+    font-size: 3rem;
+}
+
+.card-single div:first-child span {
+    color: #6875f5;
+}
+
+.card-single:last-child {
+    background-color: #6875f5;
+}
+
+.card-single:last-child h1,
+.card-single:last-child div:last-child span,
+.card-single:last-child div:first-child span {
+    color: #fff;
+}
+
+.recent-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 55% auto;
+    grid-gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card-header {
+    padding: 1rem;
+
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header a {
+    background-color: #6875f5;
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid #6875f5;
+}
+
+.card-body ul,
+.card-body p {
+    padding: .7rem;
+}
+
+.card-body p {
+    padding: .7rem;
+    line-height: 1.2rem;
+
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+thead td {
+    font-weight: 700;
+}
+
+th {
+    padding: .5rem;
+    font-size: .9rem;
+    color: #222;
+    text-align: left;
+}
+
+td {
+    padding: .5rem;
+    font-size: .9rem;
+    color: #222;
+    text-align: left;
+}
+
+tr td:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: scroll !important;
+}
+
+.investor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info h4 {
+    font-size: .8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.info small {
+    font-weight: 600;
+    color: var(--text-grey);
+}
+
+.contact span {
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-left: .1rem;
+    color: #6875f5;
+}
+
+#personalinfo table tr:nth-child(even) {
+    background: var(--text-grey);
+}
+
+#personalinfo table tr td {
+    padding: .8rem;
+}
+
+#tabledetails {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#tabledetails table tr:nth-child(even) {
+    background: var(--text-grey);
+}
+
+#tabledetails table tr td {
+    padding: .8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tabledetails table tr td a {
+    margin-left: .3rem;
+}
+
+#investors {
+    margin-bottom: 25px;
+}
+
+#deposits {
+    margin-bottom: 25px;
+}
+
+.mybtn {
+    background-color: #6875f5;
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid #6875f5;
+}
+
+.mybtn2 {
+    background-color: #161942;
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid #161942;
+}
+
+
+
+.myform {
+    width: 100%;
+    padding: .5rem 1.5rem;
+}
+
+.myform input[type="text"],
+.myform input[type="number"],
+.myform input[type="password"],
+.myform input[type="email"] {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: .8rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: .5rem;
+    display: block;
+}
+
+.myform input[type="radio"] {
+    display: inline;
+}
+
+.myform button {
+    display: block;
+}
+
+.myform label {
+    margin-right: .3rem;
+}
+
+.mybtnform {
+    width: 70%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: .7rem .8rem;
+    background-color: #161942;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-top: .7rem;
+}
+
+.mybtn:hover,
+.mybtn2:hover,
+.mybtnform:hover {
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+.viewpage table tr:nth-child(even) {
+    background: var(--text-grey);
+}
+
+@media only screen and (max-width: 960px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .recent-grid {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+@media(max-width: 640px) {
+    .mycontainer {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #flexRow {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .cards {
+        grid-template-columns: 100%;
+    }
+
+    .emailpage h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mailform input,
+    .mailform textarea {
+        width: 100%;
+    }
+}
