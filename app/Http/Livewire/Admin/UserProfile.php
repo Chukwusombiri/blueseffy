@@ -6,9 +6,9 @@ use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Validation\Rule;
 use Livewire\WithFileUploads;
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 
-class UserProfile extends ModalComponent
+class UserProfile extends Component
 {
     use WithFileUploads;
 
@@ -48,11 +48,6 @@ class UserProfile extends ModalComponent
         }
     }
 
-    public static function modalMaxWidth(): string
-    {       
-        return 'xl';
-    }
-
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
@@ -79,7 +74,7 @@ class UserProfile extends ModalComponent
        $user->save();
 
        if($this->occupation || $this->address || $this->country || $this->marital_status){
-        $contact =  new Contact();
+        $contact = Contact::where('user_id',$this->user->id)->first() ?? new Contact();   
         $contact->user_id = $this->user->id;
         if($this->occupation){
             $contact->occupation = $this->occupation;
@@ -95,7 +90,7 @@ class UserProfile extends ModalComponent
         }
         $contact->save();
        }       
-       $this->closeModalWithEvents(['userUpdated']);
+       $this->emit('userUpdated');
     }
 
     public function render()

@@ -28,9 +28,9 @@
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">         
         @livewireStyles            
         <!-- Alpine v3 -->
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/cdn.min.js"></script>        
+        {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.4.2/dist/cdn.min.js"></script>         --}}
             {{-- OR use vite to add alpine --}}
-        {{-- @vite(['resources/js/app.js']) --}}
+        @vite(['resources/js/app.js'])
     </head>
     <body  class="hold-transition sidebar-mini layout-fixed">
         <main class="wrapper">

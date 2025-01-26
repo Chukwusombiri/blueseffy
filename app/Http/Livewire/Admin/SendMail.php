@@ -12,7 +12,7 @@ use LivewireUI\Modal\ModalComponent;
 class SendMail extends ModalComponent
 {
     use WithFileUploads;
-    public User $user;
+    public $user;
     public $sjt;
     public $msg;
     public $attachee;
@@ -26,8 +26,8 @@ class SendMail extends ModalComponent
         'attachee_name'=>[Rule::excludeIf(!$this->attachee),'string']
         ];
     } 
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public static function modalMaxWith():string{

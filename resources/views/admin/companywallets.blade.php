@@ -45,8 +45,7 @@
               <tr>                                        
                 <th>wallet</th>
                 <th>icon</th>
-                <th>address</th>
-                <td>no: of transaction</td>
+                <th>address</th>                
                 <th>added</th>    
                 <th>action</th>           
               </tr>
@@ -61,8 +60,7 @@
                             <img src="{{url('storage/'.$wallet->icon_path)}}" alt="" width="50" height="50">
                           </div>
                         </td>                       
-                        <td>{{$wallet->address}}</td>
-                        <td>{{$wallet->deposits->count()}}</td>
+                        <td>{{$wallet->address}}</td>                        
                         <td>{{$wallet->created_at->diffForHumans()}}</td>  
                         <td class="d-flex"><a href="{{route('admin.company_wallet.edit',[$wallet->id])}}" class="btn  btn-sm btn-primary mr-3">EDIT</a>                            
                             <form method="POST" action="{{route('admin.company_wallet.destroy',[$wallet->id])}}">
@@ -73,15 +71,7 @@
                               </button>                                  
                           </form>
                         </td>
-                   @endforeach
-                @else
-                    <tr>
-                        <td>No records</td>
-                        <td>No records</td>
-                        <td>No records</td>
-                        <td>No records</td>
-                        <td>No records</td>                     
-                    </tr>  
+                   @endforeach               
                 @endif
                                  
             </tbody>

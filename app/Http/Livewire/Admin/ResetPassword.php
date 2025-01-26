@@ -9,7 +9,7 @@ use Illuminate\Validation\Rules;
 
 class ResetPassword extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $password;
     public $password_confirmation;
     
@@ -27,8 +27,8 @@ class ResetPassword extends ModalComponent
             'resetedPassword'
         ]);
     }
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function render()

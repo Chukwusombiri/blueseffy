@@ -14,7 +14,7 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
+            <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Welcome back</h2>
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
@@ -45,7 +45,7 @@
             </div>
             <div class="block mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 flex items-center justify-center" href="{{ route('register') }}">
-                    {{ __('Dont have an account? Sign up') }}
+                    {{ __('Don\'t have an account? Sign up') }}
                 </a>
             </div>
         </form>

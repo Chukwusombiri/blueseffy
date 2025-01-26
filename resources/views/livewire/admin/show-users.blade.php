@@ -42,7 +42,7 @@
           <tr>
             <td>{{$u+1}}</td>
             <td>{{$user->name}} <br>
-              <button class="underline" wire:click='$emit("openModal", "admin.send-mail", @json([$user]))'>
+              <button class="underline" wire:click="$emit('openModal', 'admin.send-mail', {{ json_encode(['id' => $user->id])}} )'>
               <i class="fa fa-envelope" aria-hidden="true"></i> {{$user->email}}</button></td>                          
             <td>{{date('M d, Y',strtotime($user->created_at))}}</td>  
             <td>{{date('M d, Y',strtotime($user->last_sign_out_at))}}</td>               
@@ -72,31 +72,34 @@
             </span></td>                         
             <td class="d-flex">                
                 <div>
-                  <button wire:click='$emit("openModal", "admin.user-profile", @json([$user]))' class="border-0 rounded-pill px-2 pb-1 btn-info">view</button>
+                  <a href='{{route('admin.user.edit',[$user->id])}}' class="border-0 rounded-pill px-2 pb-1 btn-info">view</a>
                   <button class="border-0 rounded-pill px-3" type="button" data-toggle="dropdown" aria-expanded="false" >
                     <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                   </button>
                   <ul class="dropdown-menu left-4"> 
                     <li><a class="dropdown-item" href="/admin/users/{{$user->id}}"><i class="fa fa-list" aria-hidden="true"></i> Activity</a></li>
+                    @if (! $user->hasVerifiedEmail())
+                    <li><button class="dropdown-item" wire:click="verify('{{$user->id}}')"><i class="fa fa-check" aria-hidden="true"></i> Verify user</button></li>
+                    @endif                    
                     @if ($user->status=='earning')
                       @if ($user->is_paused)
-                      <li><button class="dropdown-item" onclick='Livewire.emit("openModal","admin.resume-trade",@json([$user]))'><i class="fa fa-unlock" aria-hidden="true"></i> resume trade</a></li>                         
+                      <li><button class="dropdown-item" wire:click="$emit('openModal','admin.resume-trade',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-unlock" aria-hidden="true"></i> resume trade</a></li>                         
                       @else
-                      <li><button class="dropdown-item" onclick='Livewire.emit("openModal","admin.pause-trade",@json([$user]))'><i class="fa fa-lock" aria-hidden="true"></i> pause trade</a></li>                           
+                      <li><button class="dropdown-item" wire:click="$emit('openModal','admin.pause-trade',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-lock" aria-hidden="true"></i> pause trade</a></li>                           
                       @endif                    
                     @endif
-                    <li><button class="dropdown-item" onclick='Livewire.emit("openModal","admin.reset-password",@json([$user]))'><i class="fa fa-key"></i> Password</button></li>                                           
+                    <li><button class="dropdown-item" wire:click="$emit('openModal','admin.reset-password',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-key"></i> Password</button></li>                                           
                     @if ($user->is_banned)
-                        <li><button class="dropdown-item" wire:click='$emit("openModal","admin.unban",@json([$user]))'><i class="fa fa-undo" aria-hidden="true"></i> Un-Ban</button></li>
+                        <li><button class="dropdown-item" wire:click="$emit('openModal','admin.unban',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-undo" aria-hidden="true"></i> Un-Ban</button></li>
                     @else
-                        <li><button class="dropdown-item"  wire:click='$emit("openModal","admin.ban",@json([$user]))'><i class="fa fa-ban" aria-hidden="true"></i> Ban</button></li>
+                        <li><button class="dropdown-item"  wire:click="$emit('openModal','admin.ban',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-ban" aria-hidden="true"></i> Ban</button></li>
                     @endif
-                    <li><button class="dropdown-item" wire:click='$emit("openModal","admin.delete-member",@json([$user]))'><i class="fa fa-user-times" aria-hidden="true"></i> Delete</button></li>
+                    <li><button class="dropdown-item" wire:click="$emit('openModal','admin.delete-member',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-user-times" aria-hidden="true"></i> Delete</button></li>
                     <div class="dropdown-divider"></div> 
                     @if ($user->is_admin)
-                      <li><button class="dropdown-item" wire:click='$emit("openModal","admin.remove-admin",@json([$user]))'><i class="fa fa-unlock"></i> remove admin</button></li>
+                      <li><button class="dropdown-item" wire:click="$emit('openModal','admin.remove-admin',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-unlock"></i> remove admin</button></li>
                     @else
-                      <li><button class="dropdown-item" wire:click='$emit("openModal","admin.make-admin",@json([$user]))'><i class="fa fa-lock"></i> Make admin</button></li>  
+                      <li><button class="dropdown-item" wire:click="$emit('openModal','admin.make-admin',{{ json_encode(['id' => $user->id])}})"><i class="fa fa-lock"></i> Make admin</button></li>  
                     @endif
                   </ul>
                 </div>                  

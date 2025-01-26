@@ -124,7 +124,8 @@ Route::middleware([
          /* user management */
         Route::resource( 'users' ,UsersController::class)->names([
             'index' => 'users',            
-            'show' => 'user.show',                        
+            'show' => 'user.show', 
+            'edit' => 'user.edit'                       
         ]);
         
         /* bots */

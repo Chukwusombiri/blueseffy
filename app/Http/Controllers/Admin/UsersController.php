@@ -3,18 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Account;
 use App\Models\Downline;
-use App\Models\Loans;
 use App\Models\User;
-use App\Models\Withdrawals;
 use App\Notifications\NewDownlineNotification;
-use App\Notifications\WelcomeEmailNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-Use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules;
 
@@ -128,12 +122,16 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {        
-        $user = User::find($id);
+    {               
+        $user = User::findOrFail($id);
+        if(! $user){
+            return redirect()->back();
+        }
         $prev_url = url()->previous();
+
         return view('admin.edituser')->with([
             'user' => $user,
-            'prev_url'=>$prev_url
+            'prev_url' => $prev_url
         ]);
     }
 

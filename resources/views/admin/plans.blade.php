@@ -48,8 +48,7 @@
                 <th>Min Amount</th>
                 <th>Max Amount</th>
                 <th>Duration</th>
-                <th>Ref commission</th>
-                <td>No: of Transaction</td>
+                <th>Ref commission</th>                
                 <th>Added</th>    
                 <th>action</th>           
               </tr>
@@ -63,8 +62,7 @@
                         <td>${{$plan->min}}</td>   
                         <td>${{$plan->max}}</td>
                         <td>{{$plan->duration}} hrs</td> 
-                        <td>{{$plan->ref_commission}}%</td>  
-                        <td>{{$plan->deposits->count()}}</td>
+                        <td>{{$plan->ref_commission}}%</td>                          
                         <td>{{$plan->created_at->diffForHumans()}}</td>  
                         <td class="d-flex"><a href="{{route('admin.plan.edit',[$plan->id])}}" class="btn  btn-sm btn-primary mr-3">EDIT</a>                            
                             <form method="POST" action="{{route('admin.plan.destroy',[$plan->id])}}">

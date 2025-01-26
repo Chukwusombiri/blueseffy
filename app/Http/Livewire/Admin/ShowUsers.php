@@ -21,12 +21,21 @@ class ShowUsers extends Component
         'madeAdmin'=>'$refresh',
         'removedAdmin'=>'$refresh',
         'resumedTrade'=>'$refresh',
-        'pausedTrade'=>'$refresh'
+        'pausedTrade'=>'$refresh',
+        'verifiedUser'=>'$refresh',
     ];
     
     public function updatingSearch()
     {
         $this->resetPage();                   
+    }
+
+    public function verify($id){
+        $user = User::find($id);
+        if($user){
+            $user->markEmailAsVerified();
+            $this->emit('verifiedUser');
+        }
     }
 
     public function clear(){
