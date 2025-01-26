@@ -33,6 +33,7 @@ class UserFactory extends Factory
             'is_admin' => 1,
             'last_sign_in_at' => now(),
             'last_sign_out_at'=>now(),
+            'phone' => '+1 234 563 76'
         ];
     }
 
