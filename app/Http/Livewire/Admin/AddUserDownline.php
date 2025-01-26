@@ -9,7 +9,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddUserDownline extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $downline_id;
     
     protected $rules=[
@@ -20,8 +20,8 @@ class AddUserDownline extends ModalComponent
         'downline_id'=>'Downline',
     ];
 
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function save(){

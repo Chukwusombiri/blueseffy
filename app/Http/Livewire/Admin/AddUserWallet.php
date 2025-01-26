@@ -8,12 +8,12 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddUserWallet extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $name;
     public $address;
 
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function save(){

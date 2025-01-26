@@ -9,7 +9,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddReferralIncome extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $amount;
     public $downline_id;
 
@@ -22,8 +22,8 @@ class AddReferralIncome extends ModalComponent
         'downline_id'=>'Downline'
     ];
 
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function submit(){

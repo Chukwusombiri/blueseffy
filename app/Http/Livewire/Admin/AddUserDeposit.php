@@ -23,9 +23,8 @@ class AddUserDeposit extends ModalComponent
         'wallet_id'=>'Wallet',
     ];
 
-    public function mount(User $user)
-    {
-        $this->user=  $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function submit(){

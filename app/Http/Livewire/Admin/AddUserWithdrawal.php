@@ -10,7 +10,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddUserWithdrawal extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $amount;
     public $wallet_id;
     
@@ -25,8 +25,8 @@ class AddUserWithdrawal extends ModalComponent
         'wallet_id'=>'wallet address',       
     ];
    
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function submit(){

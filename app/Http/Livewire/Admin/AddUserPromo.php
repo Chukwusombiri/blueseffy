@@ -9,7 +9,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddUserPromo extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $amount;
     public $name;
     public $message;
@@ -19,8 +19,9 @@ class AddUserPromo extends ModalComponent
         'amount'=>'required|string',
         'message'=>'required|string',
     ];
-    public function mount(User $user){
-        $this->user=$user;
+    
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function submit(){

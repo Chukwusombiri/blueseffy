@@ -33,9 +33,10 @@ class AddUserSub extends ModalComponent
     protected $validationAttributes = [
         'days_left' =>'Days Left',        
     ];
+   
 
-    public function mount(User $user){
-        $this->user = $user;
+    public function mount($id){
+        $this->user = User::find($id);
         $this->allBots = Bot::all();
         $this->allWallets = Wallet::all();
     }

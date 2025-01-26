@@ -10,7 +10,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class AddUserFiatWithdrawal extends ModalComponent
 {
-    public User $user;
+    public $user;
     public $amount;
     public $account_name;
     public $account_no;
@@ -33,8 +33,8 @@ class AddUserFiatWithdrawal extends ModalComponent
         'routing_no'=>'routing number',
     ];
 
-    public function mount(User $user){
-        $this->user = $user; 
+    public function mount($id){
+        $this->user = User::find($id);
     }
 
     public function submit(){

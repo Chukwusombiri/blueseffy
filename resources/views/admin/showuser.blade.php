@@ -36,7 +36,7 @@
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
                                         <a class="btn btn-block btn-primary btn-sm"
-                                            onclick='Livewire.emit("openModal","admin.add-user-investment",@json([$user]))'>New
+                                            onclick="Livewire.emit('openModal','admin.add-user-investment',{{ json_encode(['id' => $user->id])}} )">New
                                             Investment</a>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
                                         <a class="btn btn-block btn-primary btn-sm"
-                                            onclick='Livewire.emit("openModal","admin.add-user-deposit",@json([$user]))'>New
+                                            onclick="Livewire.emit('openModal','admin.add-user-deposit',{{ json_encode(['id' => $user->id])}} )">New
                                             Deposit</a>
                                     </div>
                                 </div>
@@ -81,7 +81,7 @@
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
                                         <a class="btn btn-block btn-primary btn-sm"
-                                            onclick='Livewire.emit("openModal","admin.add-user-withdrawal",@json([$user]))'>New
+                                            onclick="Livewire.emit('openModal','admin.add-user-withdrawal',{{ json_encode(['id' => $user->id])}} )">New
                                             Withdrawal</a>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-user-fiat-withdrawal",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-user-fiat-withdrawal',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">New Withdrawal</a>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-user-sub",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-user-sub',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">add new</a>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-user-downline",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-user-downline',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">add referral</a>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                                 <h3 class="card-title">Referral Income</h3>
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-referral-income",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-referral-income',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">fund</a>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
 
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-user-promo",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-user-promo',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">New Promo</a>
                                     </div>
                                 </div>
@@ -209,7 +209,7 @@
                                 <h3 class="card-title">User Wallets</h3>
                                 <div class="card-tools">
                                     <div class="input-group input-group-sm" style="width: 150px;">
-                                        <a onclick='Livewire.emit("openModal","admin.add-user-wallet",@json([$user]))'
+                                        <a onclick="Livewire.emit('openModal','admin.add-user-wallet',{{ json_encode(['id' => $user->id])}} )"
                                             class="btn btn-block btn-primary btn-sm">New Wallet</a>
                                     </div>
                                 </div>
