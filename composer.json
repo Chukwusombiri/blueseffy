@@ -13,10 +13,10 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
         "propaganistas/laravel-phone": "^4.4",
-        "wire-elements/modal": "^1.0"
+        "wire-elements/modal": "^1.0",
+        "fakerphp/faker": "^1.9.1"
     },
-    "require-dev": {
-        "fakerphp/faker": "^1.9.1",
+    "require-dev": {        
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
