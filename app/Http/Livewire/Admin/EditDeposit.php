@@ -13,11 +13,13 @@ class EditDeposit extends ModalComponent
     public $amount;
     public $wallet_id;
     public $user_id;  
+    public $date;
    
     protected function rules(){
         return [
             'amount'=>'required|numeric|integer',
-            'wallet_id'=>'required|exists:wallets,id',            
+            'wallet_id'=>'required|exists:wallets,id',   
+            'date' => 'required|date',         
         ];
     }
     protected $validationAttributes = [
@@ -30,21 +32,18 @@ class EditDeposit extends ModalComponent
         $this->wallet_id = $deposit->wallet_id;       
         $this->user_id=$deposit->user_id;
         $this->amount =$deposit->amount;
+        $this->date = $this->deposit->created_at;
     }
 
     public function save(){
-        $this->validate();
-        $plan=Plan::find($this->plan_id);
-        if($this->amount>$plan->max || $plan->min>$this->amount){
-            session()->flash('result','inappropriate amount for selected plan');
-        }else{
-            $deposit = FundingDeposit::find($this->deposit->id);
-            $deposit->wallet_id = $this->wallet_id;        
-            $deposit->amount = $this->amount;
-            $deposit->save();
+        $this->validate();                       
+        $deposit = FundingDeposit::find($this->deposit->id);
+        $deposit->wallet_id = $this->wallet_id;        
+        $deposit->amount = $this->amount;
+        $deposit->created_at = $this->date;
+        $deposit->save();
 
-            $this->closeModalWithEvents(['editedDeposit']);
-        }
+        $this->closeModalWithEvents(['editedDeposit']);       
     }
     public function render()
     {

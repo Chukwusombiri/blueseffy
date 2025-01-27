@@ -9,7 +9,7 @@ use LivewireUI\Modal\ModalComponent;
 
 class EditFiatWithdrawal extends ModalComponent
 {
-    public FiatWithdrawal $withdrawal;
+    public $withdrawal;
     public $amount;
     public $account_no;
     public $account_name;
@@ -17,15 +17,17 @@ class EditFiatWithdrawal extends ModalComponent
     public $routing_no;
     public $description;
     public $user_id;
+    public $date;
 
     protected function rules(){
         return [
             'amount'=>['required','numeric','integer'],
-            'account_no'=>['required','numeric','integer','min:8'],
+            'account_no'=>['required','numeric','min:8'],
             'account_name'=>['required','string'],
             'bank_name'=>['required','string',],
             'routing_no'=>['required','integer','numeric'],
             'description'=>[Rule::excludeIf(!$this->description),'string'],
+            'date' => 'required|date',
         ];
     }
 
@@ -36,15 +38,16 @@ class EditFiatWithdrawal extends ModalComponent
         'routing_no'=>'routing number',
     ];
 
-    public function mount(FiatWithdrawal $withdrawal){
-        $this->withdrawal = $withdrawal;
-        $this->amount = $withdrawal->amount;
-        $this->account_name = $withdrawal->account_name;
-        $this->account_no = $withdrawal->account_no;
-        $this->bank_name = $withdrawal->bank_name;
-        $this->routing_no = $withdrawal->routing_no;
-        $this->description = $withdrawal->description;
-        $this->user_id  = $withdrawal->user_id;
+    public function mount($id){
+        $this->withdrawal = FiatWithdrawal::find($id);
+        $this->amount = $this->withdrawal->amount;
+        $this->account_name = $this->withdrawal->account_name;
+        $this->account_no = $this->withdrawal->account_no;
+        $this->bank_name = $this->withdrawal->bank_name;
+        $this->routing_no = $this->withdrawal->routing_no;
+        $this->description = $this->withdrawal->description;
+        $this->user_id  = $this->withdrawal->user_id;
+        $this->date = $this->withdrawal->created_at;
     }
 
     public function submit(){
@@ -58,6 +61,7 @@ class EditFiatWithdrawal extends ModalComponent
             $withdrawal->bank_name = $this->bank_name;
             $withdrawal->routing_no = $this->routing_no;
             $withdrawal->description = $this->description;
+            $withdrawal->created_at = $this->date;
             if($this->withdrawal->amount!==$this->amount){
                 $withdrawal->amount = $this->amount;
                 $old_amount = $this->withdrawal->amount;

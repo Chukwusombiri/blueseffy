@@ -161,8 +161,8 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div x-show="open" x-bind:class="open ? 'block sm:hidden' : 'hidden'"
-        class="fixed inset-0 bg-white flex flex-col">
+    <div x-show="open" x-bind:class="{'block': open, 'hidden': ! open}" 
+        class="fixed inset-0 bg-white flex flex-col hidden lg:hidden">
         <div class="w-full h-full flex flex-col gap-6 px-6 overflow-y-auto">
             <div class="w-full flex justify-end py-4 border-b border-gray-300">
                 <button x-on:click="open=false"

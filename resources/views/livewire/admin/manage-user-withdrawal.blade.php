@@ -27,7 +27,7 @@
                   </td>
                   <td class="d-flex">           
                       @if ($withdrawal->is_approved)
-                        <a wire:click='$emit("openModal","admin.edit-withdrawal",@json([$withdrawal]))' class="btn  btn-sm btn-primary mr-3">EDIT</a>                                                                    
+                        <a wire:click="$emit('openModal','admin.edit-withdrawal',{{ json_encode(['id' => $withdrawal->id]) }} )" class="btn  btn-sm btn-primary mr-3">EDIT</a>                                                                    
                       @else                                                      
                         <button wire:click="approve('{{$withdrawal->id}}')" type="button" class="btn btn-sm btn-secondary mr-3">
                             {{ __('APPROVE') }}

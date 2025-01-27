@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/admin/dashboard" class="brand-link">      
-      <span class="brand-text font-weight-bold">{{$store ?? 'BluesTech Ltd'}}</span>
+      <span class="brand-text font-weight-bold">{{ config('app.name') }}</span>
     </a>
 
     <!-- Sidebar -->

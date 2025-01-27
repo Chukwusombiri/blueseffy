@@ -22,7 +22,7 @@ class PlanController extends Controller
     public function store(Request $request){
         $this->validate($request,[
             'name'=>['required','string','unique:plans,name'],
-            'interest'=>['required','numeric','between:0.01,99.99'],
+            'interest'=>['required','numeric'],
             'min'=>['required','numeric'],
             'max'=>['required','numeric','gt:min'],  
             'duration'=>['required','numeric'], 

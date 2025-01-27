@@ -18,6 +18,7 @@ class AdminDashBoardController extends Controller
         ->count();
     
         $newusers = User::where('created_at','>',Auth::user()->last_sign_out_at)
+        ->where('id','!=',Auth::user()->id)
         ->orderBy('created_at','desc')
         ->get();
                 

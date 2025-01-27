@@ -168,7 +168,7 @@
                     <ul class="users-list clearfix">
                       @foreach ($newusers as $newuser)
                         <li>
-                          <img src="storage/{{$newuser->profile_photo_path}}" alt="User Image">
+                          <img src="{{ asset('storage/'.$newuser->profile_photo_path) }}" alt="User Image">
                           <a class="users-list-name" href="{{route('admin.user.show',[$newuser->id])}}">{{$newuser->name}}</a>
                           <span class="users-list-date">{{$newuser->created_at->diffForHumans()}}</span>
                         </li>   
@@ -284,7 +284,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer clearfix">
-                  <a href="{{route('admin.investment_deposit.create')}}" class="btn btn-sm btn-info float-left">Create New Investment</a>
+                  <a href="{{route('admin.investment.create')}}" class="btn btn-sm btn-info float-left">Create New Investment</a>
                   <a href="/admin/investment_deposits" class="btn btn-sm btn-secondary float-right">View All Investments</a>
                 </div>
                 <!-- /.card-footer -->

@@ -20,7 +20,7 @@ class AddUserFiatWithdrawal extends ModalComponent
 
     protected function rules(){ return [
         'amount'=>['required','numeric','integer'],
-        'account_no'=>['required','numeric','integer','min_digits:8'],
+        'account_no'=>['required','numeric','min_digits:8'],
         'account_name'=>['required','string'],
         'bank_name'=>['required','string'],
         'routing_no'=>['required','numeric','integer'],
