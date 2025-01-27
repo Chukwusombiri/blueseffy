@@ -3,7 +3,7 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
-
+        <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Welcome back</h2>
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
@@ -13,8 +13,7 @@
         @endif
 
         <form method="POST" action="{{ route('login') }}">
-            @csrf
-            <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Welcome back</h2>
+            @csrf           
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />

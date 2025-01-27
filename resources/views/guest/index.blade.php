@@ -5,10 +5,10 @@
                 class="relative text-center md:text-start md:pr-4 flex flex-col items-center md:items-start gap-3 md:gap-6">
                 <h2 class="text-4xl md:text-6xl archivo-700 leading-tight text-gray-700">
                     Unlock Your Financial Future <br /><span class="text-indigo-600">{{ config('app.name') }}</span>
-                </h2>
+                </h2>                
                 <div class="w-full flex justify-center md:justify-start">
                     <a href="{{ route('user.investments') }}"
-                        class="px-4 md:px-8 py-2 md:py-4 rounded-xl bg-slate-700 text-white tracking-wide archivo-700 text-xs md:text-sm capitalize transition hover:-translate-y">get
+                        class="px-6 md:px-8 py-3 md:py-4 rounded-xl bg-slate-700 text-white tracking-wide archivo-700 text-xs md:text-sm capitalize transition hover:-translate-y">get
                         started</a>
                 </div>
 

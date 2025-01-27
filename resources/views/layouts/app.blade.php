@@ -31,6 +31,7 @@
     <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
+        _smartsupp.offsetY = 100;
         _smartsupp.key = 'e2a94a98be5f33c1c9e2413f57aa96fab5ef5c36';
         window.smartsupp || (function(d) {
             var s, c, o = smartsupp = function() {
@@ -46,7 +47,7 @@
             s.parentNode.insertBefore(c, s);
         })(document);
     </script>
-    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>    
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

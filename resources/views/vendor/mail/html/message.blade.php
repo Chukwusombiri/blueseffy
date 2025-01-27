@@ -2,10 +2,12 @@
     {{-- Header --}}
     <x-slot:header>
         <x-mail::header :url="config('app.url')">
-            <h2>
+            <h2 style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
                 <span
-                    style="background-color: #2B2C2D; border-radius: 0.5rem; color: #6610f2; padding: 0.5rem 0.75rem;">B</span>
-                <span style="font-family: serif;">Bluesefficiency</span>
+                    style="background-color: #6610f2; border-radius: 9999px; color: #fff; padding: 0.6rem;">  
+                    <img src="{{asset('images/handshake.png')}}" alt="" style="width: 1.75rem; height: 1.75rem;">                                          
+                </span>
+                <span style="text-transform: uppercase; color: #4f46e5; letter-spacing: 0.02em; font-size: 1.5rem; margin-left: 3px;">Bluesefficiency</span>
             </h2>
         </x-mail::header>
     </x-slot:header>

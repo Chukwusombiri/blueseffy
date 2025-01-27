@@ -4,11 +4,11 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
+        <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Sign Up Today</h2>
         <x-jet-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
-            @csrf
-            <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Sign Up Today</h2>
+            @csrf            
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
