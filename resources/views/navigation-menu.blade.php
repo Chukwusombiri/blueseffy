@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white relative border-b border-gray-100 z-50">
+<nav x-data="{ open: false }" class="bg-white relative border-b border-gray-100 dark:border-gray-600 z-50 dark:bg-gray-800 dark:text-gray-50">
     <!-- Primary Navigation Menu -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -67,10 +67,10 @@
                 </div>
             </div>
 
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="hidden sm:flex sm:items-center gap-2 sm:ml-4">
                 <!-- Settings Dropdown -->
                 @auth
-                    <div class="ml-3 relative">
+                    <div class="relative">
                         <x-jet-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 <button
@@ -83,7 +83,7 @@
 
                             <x-slot name="content">
                                 <!-- Account Management -->
-                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                <div class="block px-4 py-2 text-xs text-gray-500 dark:text-gray-400">
                                     {{ __('Manage Account') }}
                                 </div>
                                 <x-jet-dropdown-link href="{{ route('user.dashboard') }}">
@@ -114,7 +114,7 @@
                                     {{ __('Affiliate Program') }}
                                 </x-jet-dropdown-link>
 
-                                <div class="border-t border-gray-100"></div>
+                                <div class="border-t border-gray-300 dark:border-gray-500"></div>
 
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}" x-data>
@@ -142,6 +142,51 @@
                         </x-secondary-link-button>
                     </div>
                 @endguest
+                <div x-data="{
+                    isDark: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    toggleDark() {
+                        this.isDark = !this.isDark;
+                        if (this.isDark) {
+                            document.documentElement.classList.add('dark');
+                            localStorage.theme = 'dark';
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.theme = 'light';
+                        }
+                    },
+                    init() {
+                        if (this.isDark) {
+                            document.documentElement.classList.add('dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                        }
+                    }
+                }" x-init="init()">
+                    <button @click="toggleDark" x-bind:class="isDark ? 'justify-end' : 'justify-start'"
+                        class="w-12 rounded-full inline-flex border border-gray-500 dark:border-gray-400 p-1 bg-gray-200 dark:bg-gray-600">
+                        <svg :class="isDark ? 'block' : 'hidden'"
+                            class="w-5 h-5 bg-gray-400 text-gray-800 rounded-full" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                            <path d="M12 5l0 .01"></path>
+                            <path d="M17 7l0 .01"></path>
+                            <path d="M19 12l0 .01"></path>
+                            <path d="M17 17l0 .01"></path>
+                            <path d="M12 19l0 .01"></path>
+                            <path d="M7 17l0 .01"></path>
+                            <path d="M5 12l0 .01"></path>
+                            <path d="M7 7l0 .01"></path>
+                        </svg>
+                        <svg :class="isDark ? 'hidden' : 'block'" class="w-5 h-5 bg-white text-gray-800 rounded-full"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                            stroke-width="2">
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <!-- Hamburger -->
@@ -161,15 +206,61 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div x-show="open" x-bind:class="{'block': open, 'hidden': ! open}" 
-        class="fixed inset-0 bg-white flex flex-col hidden lg:hidden">
+    <div x-show="open" x-bind:class="{ 'block': open, 'hidden': !open }"
+        class="fixed inset-0 bg-white dark:bg-gray-800 flex flex-col hidden lg:hidden">
         <div class="w-full h-full flex flex-col gap-6 px-6 overflow-y-auto">
-            <div class="w-full flex justify-end py-4 border-b border-gray-300">
+            <div class="w-full flex justify-between items-center py-4 border-b border-gray-300">
+                <div x-data="{
+                    isDark: localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    toggleDark() {
+                        this.isDark = !this.isDark;
+                        if (this.isDark) {
+                            document.documentElement.classList.add('dark');
+                            localStorage.theme = 'dark';
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.theme = 'light';
+                        }
+                    },
+                    init() {
+                        if (this.isDark) {
+                            document.documentElement.classList.add('dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                        }
+                    }
+                }" x-init="init()">
+                    <button @click="toggleDark" x-bind:class="isDark ? 'justify-end' : 'justify-start'"
+                        class="w-12 rounded-full inline-flex border border-gray-500 dark:border-gray-400 p-1 bg-gray-200 dark:bg-gray-600">
+                        <svg :class="isDark ? 'block' : 'hidden'"
+                            class="w-5 h-5 bg-gray-400 text-gray-800 rounded-full" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                            <path d="M12 5l0 .01"></path>
+                            <path d="M17 7l0 .01"></path>
+                            <path d="M19 12l0 .01"></path>
+                            <path d="M17 17l0 .01"></path>
+                            <path d="M12 19l0 .01"></path>
+                            <path d="M7 17l0 .01"></path>
+                            <path d="M5 12l0 .01"></path>
+                            <path d="M7 7l0 .01"></path>
+                        </svg>
+                        <svg :class="isDark ? 'hidden' : 'block'" class="w-5 h-5 bg-white text-gray-800 rounded-full"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                            stroke-width="2">
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
                 <button x-on:click="open=false"
-                    class="inline-flex gap2 items-center px-4 py-2 rounded-full border border-indigo-600 hover:bg-indigo-100 text-gray-800 archivo-300 text-xs">
+                    class="inline-flex gap2 items-center px-4 py-2 rounded-full border border-indigo-600 hover:bg-indigo-100 text-gray-800 dark:text-gray-100 archivo-300 text-xs">
                     <span class="uppercase">close</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                        stroke-linecap="round" stroke-linejoin="round" width="24" height="24"
+                        stroke-width="2">
                         <path d="M18 6l-12 12"></path>
                         <path d="M6 6l12 12"></path>
                     </svg>
@@ -254,8 +345,8 @@
                                     @endif
                                 </div>
                                 <div>
-                                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                                    <div class="font-medium text-base text-gray-800 dark:text-gray-100">{{ Auth::user()->name }}</div>
+                                    <div class="font-medium text-sm text-gray-500 dark:text-gray-300">{{ Auth::user()->email }}</div>
                                 </div>
                             </div>
 

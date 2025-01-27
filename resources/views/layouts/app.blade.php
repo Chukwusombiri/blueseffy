@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="">
 
 <head>
     <meta charset="utf-8">
@@ -56,7 +56,7 @@
 </head>
 
 <body class="antialiased relative">
-    <div class="min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-800">
         @livewire('navigation-menu')
 
         <!-- Page Heading -->
@@ -77,7 +77,7 @@
             <div class="fixed bottom-0 left-0 right-0">
                 <x-fixedBottom></x-fixedBottom>
             </div>
-        </div>
+        </div>        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
