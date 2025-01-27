@@ -480,9 +480,9 @@
                 {{ config('app.name') }}? All of our trusted partners makes that purchase and resale of crypto a cinch!
             </p>
             <div class="partners-slider owl-carousel owl-theme">
-                <div class="bg-white p-4 shadow-md">
+                <div class="">
                     <a href="https://www.binance.com/" target="_blank"
-                        class="bg-white p-4 shadow-md flex flex-col items-center">
+                        class="p-2 flex flex-col items-center">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -515,9 +515,9 @@
                         <span class="text-gray-600 tracking-wide mt-2 inline-block">BINANCE</span>
                     </a>
                 </div>
-                <div class="bg-white p-4 shadow-md">
+                <div class="">
                     <a href="https://www.luno.com/" target="_blank"
-                        class="bg-white p-4 shadow-md flex flex-col items-center">
+                        class="p-2 flex flex-col items-center">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -532,9 +532,9 @@
                         <span class="text-gray-600 tracking-wide mt-2 inline-block">LUNO</span>
                     </a>
                 </div>
-                <div class="bg-white p-4 shadow-md">
+                <div class="">
                     <a href="https://www.coinbase.com/" target="_blank"
-                        class="bg-white p-4 shadow-md flex flex-col items-center">
+                        class="p-2 flex flex-col items-center">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -549,9 +549,9 @@
                         <span class="text-gray-600 tracking-wide mt-2 inline-block">COINBASE</span>
                     </a>
                 </div>
-                <div class="bg-white p-4 shadow-md">
-                    <a href=" https://www.kraken.com/" target="_blank"
-                        class="bg-white p-4 shadow-md flex flex-col items-center">
+                <div class="">
+                    <a href="https://www.kraken.com/" target="_blank"
+                        class="p-2 flex flex-col items-center">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
