@@ -161,20 +161,18 @@
     <div class="bg-gray-100 dark:bg-gray-600">
         <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
             <div class="flex flex-col items-center md:items-start gap-3">
-                <h3 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-200 sm:text-4xl">Ready to dive in?</h3>
-                <h3 class="text-3xl font-bold tracking-tight sm:text-4xl text-indigo-600 dark:text-blue-500">Sign up for free today.</h3>
+                <h3 class="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-200 sm:text-4xl">Ready to dive
+                    in?</h3>
+                <h3 class="text-3xl font-bold tracking-tight sm:text-4xl text-indigo-600 dark:text-blue-500">Sign up for
+                    free today.</h3>
             </div>
-            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="{{ route('register') }}"
-                        class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 dark:bg-blue-500 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get
-                        started</a>
-                </div>
-                <div class="ml-3 inline-flex rounded-md shadow">
-                    <a href="{{ route('about') }}"
-                        class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50 dark:text-blue-500">Learn
-                        more</a>
-                </div>
+            <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 flex justify-center lg:justify-end gap-3">
+                <a href="{{ route('register') }}"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 dark:bg-blue-500 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get
+                    started</a>
+                <a href="{{ route('about') }}"
+                    class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50 dark:text-blue-500">Learn
+                    more</a>
             </div>
         </div>
     </div>
