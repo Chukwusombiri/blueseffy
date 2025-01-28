@@ -59,16 +59,13 @@ $(function () {
         margin: 30,
         autoplay: true,
         autoplayTimeOut: 5000,
-        autoplayHoverPause: false,
+        autoplayHoverPause: true,
         smartSpeed: 700,
         responsive: {
             0: {
                 items: 2
             },
             600: {
-                items: 3
-            },
-            1500: {
                 items: 4
             }
         }
