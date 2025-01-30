@@ -27,25 +27,8 @@
     align-content: center;
 }
 
-#stats {
-    background-image: url(../images/investment.jpg);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-
 #mypage-header {
     background-image: url(../images/page-header.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-#testimony {
-    background-image: url(../images/auth3.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,17 +41,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
-
-#testimony::after,
-#stats::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 98vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #mypage-header::after,
@@ -92,7 +64,6 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.stats-link,
 .testimony-content,
 #auth_body,
 #auth_logo {

@@ -30,7 +30,6 @@ Route::get('/pricing', 'pricing')->name('pricing');
 Route::get('/about', 'about')->name('about');
 Route::get('/faq', 'faqs')->name('faqs');
 Route::get('/testimonials', 'testimonials')->name('testimonials');
-Route::get('/team', 'team')->name('team');     
 Route::get('/articles/{id?}', 'articles')->name('articles'); 
 Route::get('readarticle/{id}','readarticle')->name('readarticle');
 Route::get('/company_details/pdf','getPdf')->name('pdf');

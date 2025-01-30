@@ -1,6 +1,6 @@
-<nav x-data="{ open: false }" class="bg-white relative border-b border-gray-100 dark:border-gray-600 z-50 dark:bg-gray-800 dark:text-gray-50">
+<nav x-data="{ open: false }" class="bg-white relative z-50 dark:bg-gray-800 dark:text-gray-50">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-100 dark:border-gray-700">
         <div class="flex justify-between h-16 items-center">
             <div class="flex">
                 <!-- Logo -->
@@ -27,10 +27,10 @@
                         </x-slot:trigger>
 
                         <x-slot:content>
-                            <x-jet-dropdown-link href="{{ route('pricing') }}">
+                            <x-jet-dropdown-link href="{{ route('about') }}">
                                 {{ 'About ' . config('app.name') }}
                             </x-jet-dropdown-link>
-                            <x-jet-dropdown-link href="{{ route('team') }}">
+                            <x-jet-dropdown-link href="{{ route('about').'#team' }}">
                                 {{ __('Team members') }}
                             </x-jet-dropdown-link>
                             <x-jet-dropdown-link href="{{ route('testimonials') }}">
@@ -288,7 +288,7 @@
                             <x-jet-responsive-nav-link href="{{ route('about') }}">
                                 {{ __('About ') . config('app.name') }}
                             </x-jet-responsive-nav-link>
-                            <x-jet-responsive-nav-link href="{{ route('team') }}">
+                            <x-jet-responsive-nav-link href="{{ route('about').'#team' }}">
                                 {{ __('team members') }}
                             </x-jet-responsive-nav-link>
                             <x-jet-responsive-nav-link href="{{ route('testimonials') }}">

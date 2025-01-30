@@ -16,7 +16,7 @@
                   </div>
                   <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div class="flex flex-col gap-2">
-                          <h4 class="text-indigo-500 text-md archivo-700 uppercase tracking-wide">Company</h4>
+                          <h4 class="text-indigo-500 dark:text-gray-100 text-md archivo-700 uppercase tracking-wide">Company</h4>
                           <ul class="list-none space-y-0.5" role="list">
                               <li role="listitem">
                                   <a href="{{ route('about') }}" class="text-gray-200 hover:text-gray-50 text-sm">
@@ -29,7 +29,7 @@
                                   </a>
                               </li>
                               <li role="listitem">
-                                  <a href="{{ route('team') }}" class="text-gray-200 hover:text-gray-50 text-sm">
+                                  <a href="{{ route('about').'#team' }}" class="text-gray-200 hover:text-gray-50 text-sm">
                                       Team members
                                   </a>
                               </li>
@@ -41,7 +41,7 @@
                           </ul>
                       </div>
                       <div class="flex flex-col gap-2">
-                          <h4 class="text-indigo-500 text-md archivo-700 uppercase tracking-wide">Quick Links</h4>
+                          <h4 class="text-indigo-500 dark:text-gray-100 text-md archivo-700 uppercase tracking-wide">Quick Links</h4>
                           <ul class="list-none space-y-0.5" role="list">
                               <li role="listitem">
                                   <a href="{{ route('guestHome') }}" class="text-gray-200 hover:text-gray-50 text-sm">
@@ -67,7 +67,7 @@
                           </ul>
                       </div>
                       <div class="flex flex-col gap-2">
-                          <h4 class="text-indigo-500 text-md archivo-700 uppercase tracking-wide">Contact Us</h4>
+                          <h4 class="text-indigo-500 dark:text-gray-100 text-md archivo-700 uppercase tracking-wide">Contact Us</h4>
                           <ul class="list-none space-y-0.5" role="list">
                               <li role="listitem" class="flex">
                                   <a href="tel:{{ $company->tel }}" class="flex items-center gap-2 hover:text-gray-50">

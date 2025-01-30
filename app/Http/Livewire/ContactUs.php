@@ -12,6 +12,7 @@ class ContactUs extends Component
     public $subject;
     public $msg;
     public $email;
+    public $phone;
     public $response;
 
     protected $rules=[
@@ -37,6 +38,7 @@ class ContactUs extends Component
         $this->email= '';
         $this->msg='';
         $this->subject='';
+        $this->phone = '';
 
         $this->emit('contactedUs');
     }

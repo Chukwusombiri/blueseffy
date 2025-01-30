@@ -9,4 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 class Testimonial extends Model
 {
     use HasFactory,HasUuids;
+
+    protected $fillable = [
+        'testimony',
+        'testifier_img',
+        'testifier_job',
+        'testifier'
+    ];
 }

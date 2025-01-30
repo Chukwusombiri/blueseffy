@@ -123,7 +123,6 @@
             </div>
         </div>
     </div>
-
     {{-- Trading view snaps --}}
     <div class="py-20">
         <div class="mx-auto max-w-6xl px-6 lg:px-8">
@@ -176,7 +175,6 @@
             </div>
         </div>
     </div>
-
     {{-- FOOTER --}}
     <x-footer></x-footer>
 </x-app-layout>

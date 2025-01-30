@@ -30,24 +30,15 @@ class GuestPagesController extends Controller
         }
 
         public function about(){
-            $company= Company::first();           
-            $about = About::first();           
+            $company= Company::first();
+            $members = Team::all();            
             $articles = Article::orderByDesc('created_at')->limit(3)->get();
-            return view('guest.about')->with(['company'=>$company,'about'=>$about,'articles'=>$articles]);
-        }
-
-
-        public function team(){
-            $members = Team::all();
-            $articles = Article::limit(4)->get();
-            return view('guest.team')->with(['members'=>$members,'articles'=>$articles]);
-        }
+            return view('guest.about')->with(['company'=>$company,'articles'=>$articles, 'members' => $members]);
+        }        
 
         public function testimonials($id = null){
-            $testimonials = Testimonial::all();                  
-            $faqs = Faq::limit(4)->get(); 
-                      
-            return view('guest.testimonials')->with(['testimonials'=>$testimonials,'faqs'=>$faqs]);
+            $testimonials = Testimonial::all();                              
+            return view('guest.testimonials')->with(['testimonials'=>$testimonials]);
         }
 
         public function faqs(){            
