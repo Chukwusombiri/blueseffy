@@ -11,7 +11,7 @@
             <li><i class="las la-check-square"></i> Enter Wallet Address</li>
             <li><i class="las la-check-square"></i> And Submit Form</li>                    
         </ul>
-        <a onclick='Livewire.emit("openModal","admin.add-user-wallet",@json([$user]))' class="flex flex-nowrap justify-start items-center bg-indigo-400 text-white px-4 py-2 rounded-md mt-4 w-max"
+        <a onclick="Livewire.emit('openModal','admin.add-user-wallet', {{ json_encode(['id' => $user->id]) }} )" class="flex flex-nowrap justify-start items-center bg-indigo-400 text-white px-4 py-2 rounded-md mt-4 w-max cursor-pointer"
           ><i class="las la-plus"></i> Add Wallet</a>                
     </div>
    
