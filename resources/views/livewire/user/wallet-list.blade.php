@@ -42,7 +42,7 @@
                                 <td>{{$wallet->name}}</td>
                                 <td>{{$wallet->address}}</td>                                                                   
                                 <td>{{ date('M d, Y', strtotime($wallet->created_at))}}</td>                                            
-                                <td><a href="javascript:void(0)"  onclick='Livewire.emit("openModal","admin.edit-user-wallet",@json([$wallet]))' class="btn btn-secondary mybtn">EDIT</a></td>
+                                <td><a href="javascript:void(0)"  wire:click="$emit('openModal','admin.edit-user-wallet', {{ json_encode(['id' => $wallet->id]) }} )" class="btn btn-secondary mybtn">EDIT</a></td>
                                 <td><a href="javascript:void(0)" wire:click="deleteWallet('{{$wallet->id}}')" class="btn btn-primary mybtn">DELETE</a></td>
                             </tr>                                                                                            
                         @endforeach                                                                                                   

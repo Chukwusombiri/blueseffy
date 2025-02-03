@@ -16,7 +16,7 @@
                       <td>{{$wallet->address}}</td>  
                       <td>{{date('M d, Y',strtotime($wallet->created_at))}}</td>                                                                                                          
                       <td class="d-flex">                                                 
-                        <a wire:click='$emit("openModal","admin.edit-user-wallet",@json([$wallet]))'
+                        <a wire:click="$emit('openModal','admin.edit-user-wallet', {{ json_encode(['id' => $wallet->id]) }} )"
                          class="btn  btn-sm btn-primary mr-3">EDIT</a>                                                                                                                                                                                                     
                         <button wire:click="deleteWallet('{{$wallet->id}}')" class="btn btn-sm btn-danger">
                             {{ __('DELETE') }}

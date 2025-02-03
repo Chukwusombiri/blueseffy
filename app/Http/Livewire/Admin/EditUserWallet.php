@@ -7,14 +7,14 @@ use LivewireUI\Modal\ModalComponent;
 
 class EditUserWallet extends ModalComponent
 {
-    public UserWallet $wallet;
+    public $wallet;
     public $name;
     public $address;
 
-    public function mount(UserWallet $wallet){
-        $this->wallet = $wallet;
-        $this->name = $wallet->name;
-        $this->address=$wallet->address;
+    public function mount($id){
+        $this->wallet = UserWallet::find($id);
+        $this->name = $this->wallet->name;
+        $this->address=$this->wallet->address;
     }
 
     public function save(){
@@ -22,7 +22,7 @@ class EditUserWallet extends ModalComponent
         $wallet = UserWallet::find($this->wallet->id);
         $wallet->name = $this->name;
         $wallet->address = $this->address;        
-        $wallet->update();
+        $wallet->save();
 
         $this->closeModalWithEvents(['editedUserWallet']);
     }
