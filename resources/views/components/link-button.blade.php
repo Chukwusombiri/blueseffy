@@ -1,3 +1,3 @@
-<a {{ $attributes->merge(['class' => 'inline-flex items-center px-4 py-2 bg-indigo-50 border border-transparent rounded-full font-semibold text-xs text-indigo-800 uppercase tracking-widest hover:bg-indigo-100 focus:bg-indigo-100 active:bg-indigo-300 shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150']) }}>
+<a {{ $attributes->merge(['class' => 'inline-flex items-center cursor-pointer px-6 py-2 md:px-8 md:py-3 bg-white dark:bg-gray-800 shadow border border-indigo-600 dark:border-blue-500 rounded-full font-semibold text-xs text-indigo-600 dark:text-blue-500 uppercase tracking-widest hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-300 dark:hover:bg-gray-900 focus:bg-gray-900 active:bg-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150']) }}>
     {{ $slot }}
 </a>

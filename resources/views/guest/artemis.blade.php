@@ -1,7 +1,7 @@
 <x-app-layout>
     {{-- hero --}}
-    <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-transparent to-transparent pt-24 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="relative z-10">
+    <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-transparent to-transparent pt-24 pb-16">
+        <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
             <div
                 class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
                 <svg class="h-[60rem] w-[100rem] flex-none stroke-blue-600 opacity-20" aria-hidden="true">
@@ -20,14 +20,14 @@
                 </svg>
             </div>
         </div>
-        <div class="relative z-30 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-2 items-center justify-center gap-8">
+        <div class="relative z-30 mx-auto max-w-6xl px-6 lg:px-8 grid grid-cols-2 items-center justify-center gap-8">
             <div class="col-span-2 md:col-span-1 text-left">
                 <h1 class="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
                     <span class="block xl:inline">AI Powered Trading software</span><br>
-                    <span class="block text-indigo-600 xl:inline">Artemis-Algo</span>
+                    <span class="block text-indigo-600 dark:text-gray-100 xl:inline">Artemis-Algo</span>
                 </h1>
                 <p
-                    class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                    class="mt-3 text-base text-gray-500 dark:text-gray-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                     Artemis-Algorithm is a trading software that works on autopilot once installed on your trading
                     account, thereby enhancing
                     moving away from the traditional expert managed portfolio. It is preferred by investors because it
@@ -35,12 +35,12 @@
                     hourly earning rate up to 5X more than an expert managed portfolio. No prior experience required.
                 </p>
                 <!-- Button Section -->
-                <div class="mt-4 sm:mt-8">
+                <div class="mt-4 sm:mt-8 flex flex-nowrap gap-4 items-center">
                     <a href="#plans"
-                        class="flex justify-center md:inline-block mr-0 mb-4 md:mb-0 md:mr-2 px-6 py-4 border border-transparent text-sm font-semibold rounded-xl text-white bg-gray-800 hover:bg-gray-900">
+                        class="px-6 py-3 md:px-8 md:py-4 border border-indigo-600 dark:border-blue-500 text-sm font-semibold rounded-xl text-white bg-gray-800 hover:bg-gray-900">
                         Get Artemis
                     </a>
-                    <a href="#reviews" class="flex justify-center md:inline-block text-gray-800 font-semibold hover:underline">
+                    <a href="#reviews" class="text-indigo-600 dark:text-blue-500 text-md font-semibold hover:underline">
                         Read reviews &#10511;
                     </a>
                 </div>
@@ -54,29 +54,31 @@
             <!--   End of Image Section     -->
         </div>
         {{-- brands --}}
-        <div class="max-w-screen-xl px-4 pb-8 mx-auto mt-16">
-            <h2 class="text-gray-800 text-opacity-70 font-semibold text-start mb-4 text-2xl">Trusted by and seen on</h2>
-            <div
-                class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+        <div class="max-w-6xl px-6 md:px-8 pb-8 mx-auto mt-16">
+            <h2 class="text-gray-800 dark:text-gray-200 text-opacity-70 font-semibold text-start mb-4 text-2xl">Trusted
+                by and seen on</h2>
+            <div class="grid grid-cols-2 gap-8 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6">
                 <div class="flex items-center lg:justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 hover:text-gray-900 dark:hover:text-white"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-16 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         viewBox="-86.122635 -22.566475 746.39617 135.39885" fill="currentColor">
-                        <g fill="none" transform="translate(-.0011 -.001)">
-                            <path fill="#323956"
+                        <g fill="currentColor" transform="translate(-.0011 -.001)">
+                            <path fill="currentColor"
                                 d="M33.752 25.427l6.33 4-2.42 22.87 34.06-20.77a36 36 0 10-70.5 13.77z" />
-                            <path fill="#323956"
+                            <path fill="currentColor"
                                 d="M34.792 63.837l-6.33-4 2.42-22.86-26.64 16.26a36 36 0 0067.53-12z" />
                             <circle r="5.09" cy="17.047" cx="37.962" fill="#F64E00" />
                             <path
                                 d="M90.052 69.627l8.94-.13V6.317l-8.94.13zm42.76-43.9c-4 0-10.81 1.78-13.83 6.61v-5.71h-8.44v43h8.44v-23.27c0-8.48 6.4-12.28 12.74-12.28 6 0 10 4.5 10 11.19v24.36h8.43v-24.81c0-6.11-1.68-11.11-5-14.45-3-3.04-7.27-4.64-12.34-4.64zm42.72 32.84l-12.91-31.93h-9.03l17.86 42.99h8.08l17.95-42.99h-9.12zm157.51-32.84c-13 0-22.45 9.36-22.45 22.27s9.66 22.54 22.45 22.54a22 22 0 0022.55-22.54c0-12.91-9.44-22.27-22.55-22.27zm0 36.83c-7.89 0-13.89-6.26-13.89-14.56 0-8.15 6-14.29 13.92-14.29a13.89 13.89 0 0114.08 14.29c0 8.3-6.07 14.56-14.11 14.56zm51.69-36.83c-6.23 0-11.93 2.71-14.83 7v-6.1h-8.44v63.64h8.44v-26.64c2.88 4.33 8.37 6.88 14.92 6.88 12.43 0 21.45-9.4 21.45-22.36 0-12.96-9.06-22.42-21.54-22.42zm-.73 36.83a14.06 14.06 0 01-14.1-14.29c0-8.3 6.06-14.56 14.1-14.56 7.71 0 13.74 6.4 13.74 14.56s-5.91 14.29-13.74 14.29zm110.3-29.93c-2.88-4.33-8.37-6.88-14.92-6.88-12.43 0-21.45 9.4-21.45 22.36 0 12.96 9.06 22.45 21.54 22.45 6.23 0 11.93-2.71 14.83-7v6.07h8.44V3.447h-8.44zm-14.15 29.93c-7.66 0-13.65-6.4-13.65-14.56s5.83-14.29 13.65-14.29a14.1 14.1 0 0114.19 14.29c-.04 7.06-5.01 14.56-14.19 14.56zm33.27-35.92h8.44v42.99h-8.44zm60.06-.01h-8.44v5c-3-3.74-8.17-5.92-14.21-5.92h-.68c-12.43 0-21.45 9.4-21.45 22.36 0 12.96 9.06 22.45 21.54 22.45h.71c5.75 0 11.06-2.32 14.12-6v5.11h9.08v-43zm-22.27 35.9c-7.49-.2-13.3-6.5-13.3-14.54s5.7-14.09 13.3-14.27c7.753.137 13.936 6.516 13.83 14.27 0 6.97-4.89 14.35-13.83 14.55zm-288.74-19.18c-4.41-1.13-7.53-2.14-7.53-4.89 0-3.09 3.12-5.25 7.6-5.25a14.82 14.82 0 018.93 3.22l.21.16 4.53-6.28-.2-.16a21.88 21.88 0 00-14-4.61c-7.61 0-15.8 4.19-15.8 13.37 0 6.4 5.34 9.52 9.81 11 1.5.5 3 .89 4.52 1.27 4.67 1.2 8.71 2.24 8.71 5.88 0 2.55-2.57 5.25-7.33 5.25a20.55 20.55 0 01-12.36-4.57l-.22-.16-4.52 6.46.19.15a26.74 26.74 0 0017.1 5.79c7.7 0 15.89-4.59 15.89-13.1s-7.85-11.56-15.53-13.53zm189.97 4.05c0-12.83-8.29-21.77-20.29-21.77-12.13 0-20.93 9.17-20.93 21.79a22.64 22.64 0 006.41 16.4 20 20 0 0014.13 5.67h.4c7.43-.13 12.28-1.36 18.17-7.72l.18-.19-5.85-5.57-.18.2a15.42 15.42 0 01-12.03 5.42c-6.52 0-11.66-4.78-12.87-11.93l32.57-.07h.24v-.24a7.17 7.17 0 000-1.17c.06-.16.05-.38.05-.82zm-31.57-4.34c1.11-6.21 5.18-9.63 11.49-9.63 6.11 0 10.27 3.59 11.19 9.63zm-180.72 4.34c0-12.83-8.35-21.77-20.27-21.77-12.13 0-20.93 9.17-20.93 21.79a22.64 22.64 0 006.41 16.4 20 20 0 0014.13 5.67h.39c7.44-.13 12.29-1.36 18.18-7.72l.18-.19-5.85-5.57-.18.2a15.42 15.42 0 01-12.06 5.42c-6.53 0-11.66-4.78-12.87-11.93l32.56-.07h.25v-.24a8.65 8.65 0 000-1.17c.06-.16.06-.38.06-.82zm-31.6-4.34c1.12-6.21 5.19-9.63 11.5-9.63 6.11 0 10.27 3.59 11.19 9.63zm97.1 17.64a12.75 12.75 0 01-3.56.43 7 7 0 01-5.23-2c-.92-1.08-1.11-2.74-1.11-4.89v-20.26h12v-7.35h-12v-13.92h-8.45v13.92h-4.64v7.35h4.64v19.82c0 4.77 1.06 8.28 3.24 10.72a14.46 14.46 0 0011.31 4.74c2.12.02 4.233-.27 6.27-.86l.25-.08-2.47-7.69zm211.99-54.66a5.39 5.39 0 00-5.4 5.49 5.32 5.32 0 005.4 5.4 5.39 5.39 0 005.51-5.4 5.47 5.47 0 00-5.51-5.49z"
-                                fill="#000" />
+                                fill="currentColor" />
                         </g>
                     </svg>
                 </div>
                 <div class="flex items-center lg:justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 hover:text-gray-900 dark:hover:text-white"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-16 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         viewBox="-27.615 -6.05 239.33 36.3">
-                        <path
+                        <path fill="currentColor"
                             d="M13.8 2.5c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8C6.2 1 5 .6 4 .6 2 .6.6 2.1.6 3.8c0 1.5 1.1 2 1.5 2.2l.1-.2c-.2-.2-.5-.4-.5-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1L9 9.8v.1l1.5 1.3v4.3c-.8.5-1.7.6-2.5.6-1.5 0-2.8-.4-3.9-1.6l4.1-2V5.6l-5 2.2C3.6 6.5 4.7 5.6 5.8 5l-.1-.3c-3 .8-5.7 3.6-5.7 7 0 4 3.3 7 7 7 4 0 6.6-3.2 6.6-6.5h-.2c-.6 1.3-1.5 2.5-2.6 3.1v-4.1l1.6-1.3v-.1l-1.6-1.3V5.4c1.5 0 3-1 3-2.9zm-8.7 11l-1.2.6c-.7-.9-1.1-2.1-1.1-3.8 0-.7 0-1.5.2-2.1l2.1-.9zm10.6 2.3l-1.3 1 .2.2.6-.5 2.2 2 3-2-.1-.2-.8.5-1-1V9l.8-.6L21 9.8v6.1c0 3.8-.8 4.4-2.5 5v.3c2.8.1 5.4-.8 5.4-5.7V8.9l.9-.7-.2-.2-.8.6-2.5-2.1-2.8 2.1V.4h-.2l-3.5 2.4V3c.4.2 1 .4 1 1.5zM34 14.7l-2.5 1.9-2.5-2v-1.2l4.7-3.2v-.1l-2.4-3.6-5.2 2.8v6.6l-1 .8.2.2.9-.7 3.4 2.5 4.5-3.6zM29 13V8.1l.2-.1 2.2 3.5zM53.1 1.6c0-.3-.1-.6-.2-.9h-.2c-.3.8-.7 1.2-1.7 1.2-.9 0-1.5-.5-1.9-.9l-2.9 3.3.2.2 1-.9c.6.5 1.1.9 2.5 1v8.3L44 2.8C43.5 2 42.8.9 41.4.9c-1.6 0-3 1.4-2.8 3.6h.3c.1-.6.4-1.3 1.1-1.3.5 0 1 .5 1.3 1v3.3c-1.8 0-3 .8-3 2.3 0 .8.4 2 1.6 2.3v-.2c-.2-.2-.3-.4-.3-.7 0-.5.4-.9 1.1-.9h.5v4.2c-2.1 0-3.8 1.2-3.8 3.2 0 1.9 1.6 2.8 3.4 2.7v-.2c-1.1-.1-1.6-.6-1.6-1.3 0-.9.6-1.3 1.4-1.3.8 0 1.5.5 2 1.1l2.9-3.2-.2-.2-.7.8c-1.1-1-1.7-1.3-3-1.5v-10l8 14h.6v-14c1.5-.1 2.9-1.3 2.9-3zm7.3 13.1l-2.5 1.9-2.5-2v-1.2l4.7-3.2v-.1l-2.4-3.6-5.2 2.8v6.6l-1 .8.2.2.9-.7 3.4 2.5 4.5-3.6zm-5-1.7V8.1l.2-.1 2.2 3.5zm21.3-5.4l-.7.5-1.9-1.6-2.2 2 .9.9v7.5l-2.4-1.5V9.2l.8-.5-2.3-2.2-2.2 2 .9.9v7.2l-.3.2-2.1-1.5v-6c0-1.4-.7-1.8-1.5-2.3-.7-.5-1.1-.8-1.1-1.5 0-.6.6-.9.9-1.1v-.2c-.8 0-2.9.8-2.9 2.7 0 1 .5 1.4 1 1.9s1 .9 1 1.8v5.8l-1.1.8.2.2 1-.8 2.3 2 2.5-1.7 2.8 1.7 5.3-3.1V8.8l1.3-1zm18.6-5.5l-1 .9-2.2-2-3.3 2.4V1.2h-.3l.1 16.2c-.3 0-1.2-.2-1.9-.4l-.2-13.5c0-1-.7-2.4-2.5-2.4s-3 1.4-3 2.8h.3c.1-.6.4-1.1 1-1.1s1.1.4 1.1 1.7v3.9c-1.8.1-2.9 1.1-2.9 2.4 0 .8.4 2 1.6 2v-.2c-.4-.2-.5-.5-.5-.7 0-.6.5-.8 1.3-.8h.4v6.2c-1.5.5-2.1 1.6-2.1 2.8 0 1.7 1.3 2.9 3.3 2.9 1.4 0 2.6-.2 3.8-.5 1-.2 2.3-.5 2.9-.5.8 0 1.1.4 1.1.9 0 .7-.3 1-.7 1.1v.2c1.6-.3 2.6-1.3 2.6-2.8 0-1.5-1.5-2.4-3.1-2.4-.8 0-2.5.3-3.7.5-1.4.3-2.8.5-3.2.5-.7 0-1.5-.3-1.5-1.3 0-.8.7-1.5 2.4-1.5.9 0 2 .1 3.1.4 1.2.3 2.3.6 3.3.6 1.5 0 2.8-.5 2.8-2.6V3.3l1.2-1zm-4.1 6.1c-.3.3-.7.6-1.2.6s-1-.3-1.2-.6V3.8l1-.7 1.4 1.3zm0 3c-.2-.2-.7-.5-1.2-.5s-1 .3-1.2.5V8.6c.2.2.7.5 1.2.5s1-.3 1.2-.5zm0 4.7c0 .8-.5 1.6-1.6 1.6h-.8v-5.9c.2-.2.7-.5 1.2-.5s.9.3 1.2.5zm13.7-7.1l-3.2-2.3-4.9 2.8v6.5l-1 .8.1.2.8-.6 3.2 2.4 5-3zm-5.4 6.3V7.9l2.5 1.8v7.1zm14.9-8.4h-.2c-.3.2-.6.4-.9.4-.4 0-.9-.2-1.1-.5h-.2l-1.7 1.9-1.7-1.9-3 2 .1.2.8-.5 1 1.1v6.3l-1.3 1 .2.2.6-.5 2.4 2 3.1-2.1-.1-.2-.9.5-1.2-1v-7c.5.5 1.1 1 1.8 1 1.4.1 2.2-1.3 2.3-2.9zm12 9.6l-3.4 2.3-4.6-7 3.3-5.1h.2c.4.4 1 .8 1.7.8s1.2-.4 1.5-.8h.2c-.1 2-1.5 3.2-2.5 3.2s-1.5-.5-2.1-.8l-.3.5 5 7.4 1-.6zm-11-.5l-1.3 1 .2.2.6-.5 2.2 2 3-2-.2-.2-.8.5-1-1V.4h-.1l-3.6 2.4V3c.4.2 1 .3 1 1.5zM143 2.5c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8-1.3-.4-2.5-.8-3.5-.8-2 0-3.4 1.5-3.4 3.2 0 1.5 1.1 2 1.5 2.2l.1-.2c-.3-.2-.6-.4-.6-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1l-1.5 1.3v.1l1.5 1.3v4.3c-.8.5-1.7.6-2.5.6-1.5 0-2.8-.4-3.9-1.6l4.1-2v-7l-5 2.2c.5-1.3 1.6-2.2 2.6-2.9l-.1-.2c-3 .8-5.7 3.5-5.7 6.9 0 4 3.3 7 7 7 4 0 6.6-3.2 6.6-6.5h-.2c-.6 1.3-1.5 2.5-2.6 3.1v-4.1l1.6-1.3v-.1L140 8.4v-3c1.5 0 3-1 3-2.9zm-8.7 11l-1.2.6c-.7-.9-1.1-2.1-1.1-3.8 0-.7.1-1.5.3-2.1l2.1-.9zm12.2-12h-.1l-2 1.7v.1l1.7 1.9h.2l2-1.7v-.1zm3 14.8l-.8.5-1-1V8.9l1-.7-.2-.2-.7.6-1.8-2.1-2.9 2 .2.3.7-.5.9 1.1v6.5l-1.3 1 .1.2.7-.5 2.2 2 3-2zm16.7-.1l-.7.5-1.1-1V8.9l1-.8-.2-.2-.8.7-2.3-2.1-3 2.1-2.3-2.1-2.8 2.1-1.8-2.1-2.9 2 .1.3.7-.5 1 1.1v6.5l-.8.8 2.3 1.9 2.2-2-.9-.9V8.9l.9-.6 1.5 1.4v6l-.8.8 2.3 1.9 2.2-2-.9-.9V8.9l.8-.5 1.6 1.4v6l-.7.7 2.3 2.1 3.1-2.1zm8.7-1.5l-2.5 1.9-2.5-2v-1.2l4.7-3.2v-.1l-2.4-3.6-5.2 2.8v6.8l3.5 2.5L175 15zm-5-1.7V8.1l.2-.1 2.2 3.5zm14.1-.9l-1.9-1.5c1.3-1.1 1.8-2.6 1.8-3.6v-.6h-.2c-.2.5-.6 1-1.4 1-.8 0-1.3-.4-1.8-1L176 8.9v3.6l1.7 1.3c-1.7 1.5-2 2.5-2 3.3 0 1 .5 1.7 1.3 2l.1-.2c-.2-.2-.4-.3-.4-.8 0-.3.4-.8 1.2-.8 1 0 1.6.7 1.9 1l4.3-2.6v-3.6zm-1.1-3c-.7 1.2-2.2 2.4-3.1 3l-1.1-.9V7.7c.4 1 1.5 1.8 2.6 1.8.7 0 1.1-.1 1.6-.4zm-1.7 8c-.5-1.1-1.7-1.9-2.9-1.9-.3 0-1.1 0-1.9.5.5-.8 1.8-2.2 3.5-3.2l1.2 1z" />
                     </svg>
                 </div>
@@ -104,7 +106,8 @@
                     </svg>
                 </div>
                 <div class="flex items-center lg:justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 hover:text-gray-900 dark:hover:text-white"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-16 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         viewBox="-105.1209 -140.02325 911.0478 840.1395">
                         <path
                             d="M350.378 53.461C339.453 26.183 312.838-3.277 262.99.77c-63.499 6.903-83.287 67.756-73.689 104.059-25.29-17.125-68.294-24.655-105.829 7.497-48.464 48.581-22.54 114.281 4.101 130.04-29.362-2.718-75.768 17.122-86.034 69.022-10.92 64.438 38.201 102.003 86.034 102.003h530.413c55.312 0 86-47.851 82.558-92.979-5.426-58.896-59.32-81.493-88.72-76.651 24.562-13.704 57.365-78.076 7.485-128.682-39.595-37.662-90.07-23.958-107.818-7.532 9.567-31.462-6.122-96.498-70.34-106.784C436.71.266 432.435 0 428.362 0c-49.023.007-71.067 35.843-77.985 53.461"
@@ -129,29 +132,37 @@
                             fill="#FCB711" />
                         <path
                             d="M.74 496.66c0 22.492 18.386 63.433 88.594 63.433 64.73 0 85.174-29.702 85.174-43.321h-50.113s-2.38 17.993-30.649 17.993c-28.287 0-35.937-23.611-35.937-37.264 0-13.601 7.65-35.937 35.937-35.937 28.27 0 30.65 15.665 30.65 15.665h50.112c0-13.635-15-42.918-85.174-42.918C19.126 434.311.74 477.913.74 496.66m525.555 0c0 22.492 18.406 63.433 88.595 63.433 64.724 0 85.176-29.702 85.176-43.321h-50.078s-2.39 17.993-30.667 17.993c-28.29 0-35.948-23.611-35.948-37.264 0-13.601 7.658-35.937 35.948-35.937 28.276 0 30.667 15.665 30.667 15.665h50.078c0-13.635-14.984-42.918-85.176-42.918-70.188 0-88.595 43.602-88.595 62.349m-214.828-60.249v76.141l-58.32-76.141H187.54v120.601h44.977v-77.016l57.3 77.016h66.63V436.411h-44.98M455.594 528.2v.159h-37.476v-22.144h37.476v.072c8.002 0 14.47 4.918 14.47 10.974 0 6.041-6.468 10.939-14.47 10.939m-37.132-68.333h36.11v.051c6.118 0 11.08 4.025 11.08 8.979 0 4.973-4.962 8.963-11.08 8.963v.054h-36.11zm73.94 33.029c8.187 0 25.307-9.505 25.307-27.919 0-26.221-48.827-28.566-56.317-28.566H371.43v120.601h89.962c43.268 0 60.65-13.669 60.65-36.495 0-22.826-29.64-27.621-29.64-27.621z"
-                            fill="#292526" />
+                            fill="currentColor" />
                     </svg>
                 </div>
                 <div class="flex items-center lg:justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 hover:text-gray-900 dark:hover:text-white" viewBox="-150 -71.25325 1300 427.5195"><path d="M541.817 184.201c0 30.971-38.541 29.133-38.541 29.133h-38.54v-55.963h38.54c39.663-.266 38.541 26.83 38.541 26.83M464.736 72.023h29.368c30.496 1.611 29.345 24.316 29.345 24.316 0 28.216-33.721 28.676-33.721 28.676h-24.992zm69.952 63.997s26.38-11.241 26.145-41.057c0 0 4.012-48.864-60.729-54.824h-71.838v204.849h82.344s68.802.205 68.802-57.799c-.001 0 1.626-39.473-44.724-51.169M348.773 0h302.453v285.013H348.773zM193.041 184.201c0 30.971-38.541 29.133-38.541 29.133h-38.543v-55.963H154.5c39.666-.266 38.541 26.83 38.541 26.83M115.957 72.023h29.374c30.497 1.611 29.343 24.316 29.343 24.316 0 28.216-33.719 28.676-33.719 28.676h-24.998zm69.958 63.997s26.384-11.241 26.147-41.057c0 0 4.009-48.864-60.732-54.824H79.489v204.849h82.349s68.801.205 68.801-57.799c0 0 1.621-39.473-44.724-51.169M0 0h302.453v285.013H0zm938.301 54.825v37.846s-36.942-22.702-77.764-23.159c0 0-76.161-1.495-79.594 73.005 0 0-2.751 68.513 78.676 72.417 0 0 34.165 4.115 80.514-25.441v39.195s-62.173 36.939-134.197 8.488c0 0-60.545-22.109-62.851-94.659 0 0-2.518-74.619 78.23-99.389 0 0 21.563-8.255 60.313-4.586.001-.001 23.161 2.29 56.673 16.283M697.547 285.013H1000V0H697.547z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-16 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                        viewBox="-150 -71.25325 1300 427.5195">
+                        <path fill="currentColor"
+                            d="M541.817 184.201c0 30.971-38.541 29.133-38.541 29.133h-38.54v-55.963h38.54c39.663-.266 38.541 26.83 38.541 26.83M464.736 72.023h29.368c30.496 1.611 29.345 24.316 29.345 24.316 0 28.216-33.721 28.676-33.721 28.676h-24.992zm69.952 63.997s26.38-11.241 26.145-41.057c0 0 4.012-48.864-60.729-54.824h-71.838v204.849h82.344s68.802.205 68.802-57.799c-.001 0 1.626-39.473-44.724-51.169M348.773 0h302.453v285.013H348.773zM193.041 184.201c0 30.971-38.541 29.133-38.541 29.133h-38.543v-55.963H154.5c39.666-.266 38.541 26.83 38.541 26.83M115.957 72.023h29.374c30.497 1.611 29.343 24.316 29.343 24.316 0 28.216-33.719 28.676-33.719 28.676h-24.998zm69.958 63.997s26.384-11.241 26.147-41.057c0 0 4.009-48.864-60.732-54.824H79.489v204.849h82.349s68.801.205 68.801-57.799c0 0 1.621-39.473-44.724-51.169M0 0h302.453v285.013H0zm938.301 54.825v37.846s-36.942-22.702-77.764-23.159c0 0-76.161-1.495-79.594 73.005 0 0-2.751 68.513 78.676 72.417 0 0 34.165 4.115 80.514-25.441v39.195s-62.173 36.939-134.197 8.488c0 0-60.545-22.109-62.851-94.659 0 0-2.518-74.619 78.23-99.389 0 0 21.563-8.255 60.313-4.586.001-.001 23.161 2.29 56.673 16.283M697.547 285.013H1000V0H697.547z" />
+                    </svg>
                 </div>
                 <div class="flex items-center lg:justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 hover:text-gray-900 dark:hover:text-white"
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-16 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                         viewBox="-119.58657 -16.889075 1036.41694 101.33445">
                         <path
                             d="M792.9912 58.2775c-2.3187 0-4.2525 1.9338-4.2525 4.5438 0 2.6087 1.9338 4.5425 4.2525 4.5425 2.3188 0 4.2525-1.9338 4.2525-4.5425 0-2.61-1.9337-4.5438-4.2525-4.5438m-153.8625 8.795H658.65v-1.7387l-2.1238-.4838c-1.9337-.4837-2.805-1.5462-2.805-4.2537V34.31h4.5438c2.8025 0 4.2525.6763 4.445 6.5725l.4837 12.37c.3863 11.1138 3.5763 14.2075 8.99 14.2075 5.5075 0 6.9575-3.77 6.9575-9.085v-2.2237H677.11v1.6425c0 3.5775-.4813 6.09-1.8363 6.09-1.255 0-1.3525-.9663-1.6425-5.4125l-.5787-8.5038c-.7738-11.405-2.2238-15.3675-10.6325-16.915 8.0225-2.125 12.9512-8.0212 12.9512-16.43 0-10.9212-8.6012-16.14-16.8162-16.14h-32.9563v1.74l1.8363.3863c3.4787.7737 3.5762 2.61 3.5762 10.4387v38.465c0 8.6025-2.4175 12.7575-7.9275 12.7575-4.9262 0-7.6337-2.4162-7.6337-11.7912V6.765c0-2.7063.8687-3.4788 2.995-3.9625l2.61-.58v-1.74h-20.1975v1.74l2.1237.58c1.9338.58 2.61 1.3537 2.61 4.0587v44.9413c0 10.1475 5.8963 15.7537 14.885 15.7537 8.9875 0 13.4325-5.6062 13.4325-16.0437V9.5675c0-5.2188 1.065-7.055 5.315-7.055 3.3838 0 4.835 1.16 4.835 4.3487v53.735c0 2.7075-.87 3.6738-2.8037 4.1575l-2.1263.58zm129.7-60.2112c0-2.705.8713-3.575 2.8025-3.9625l2.61-.58V.4825h-20.1025v1.74l2.1263.58c1.9337.58 2.8025 1.3538 2.8025 4.0588V60.985c0 2.6088-1.0613 4.0588-4.06 4.0588-3.4788 0-3.9625-1.16-5.2175-6.8613L737.42.29h-3.8675l-11.7888 56.055c-1.355 6.2813-2.0312 7.7325-4.6412 8.505l-1.6438.4838v1.7387H729.3v-1.7387l-2.0288-.3875c-2.9-.58-3.6725-2.125-2.2225-9.4713l6.9588-35.8562 7.6337 37.9825c1.16 5.5087 1.065 6.5725-3.0925 7.345l-2.0287.3875v1.7387h51.2225v-22.035h-1.8363c-.9662 10.1475-2.995 19.7163-11.21 19.7163h-3.8675zm-30.1537 42.235v-2.6088h-13.0475l-.385 2.6088zm-53.9288-41.075v46.1975c0 6.9587 0 10.245-3.4787 10.825l-1.74.29v1.7387h14.2062v-1.7387c-6.185-.87-6.185-2.9963-6.185-10.535V10.9213L685.23 8.795l23.6787 58.2775h4.0575v-53.735c0-7.925 0-9.665 3.8675-10.7287l1.3525-.3863v-1.74h-14.595v1.74l1.6438.3863c4.9287.87 4.9287 2.8037 4.9287 10.1487V46.39l.9675-.29L693.155.4825h-13.8213v1.74l1.3525.3863c1.5488.4837 2.4175 2.2237 4.06 5.4125m-31.025-5.2188h3.8675c3.865 0 7.4413 2.5125 7.4413 15.0775 0 12.8538-2.705 14.11-8.1175 14.11h-3.1913zM589.3562 33.15c0 27.93-2.32 31.8938-7.3462 31.8938-5.025 0-7.2488-3.9638-7.2488-31.7013 0-26.8675 2.4175-30.7337 7.2488-30.7337 5.0262 0 7.3462 3.8662 7.3462 30.5412m10.535.58C599.8912 15.27 593.995 0 582.01 0c-12.08 0-17.7838 15.27-17.7838 33.73 0 18.5563 5.8963 33.8263 17.7838 33.8263 12.275 0 17.8812-15.27 17.8812-33.8263m-41.365-26.8687c0-2.705.6763-3.575 2.6075-4.0588l2.1263-.58v-1.74h-20.005v1.74l2.415.58c1.9325.4838 2.9975 1.16 2.9975 3.9625v46.4875c0 6.475-.5813 11.6938-5.4125 11.6938-3.0938 0-5.4125-2.4163-5.315-4.155.2875-2.9975 5.315-2.8025 5.7012-7.6363.29-3.4787-1.9337-4.9287-3.9625-5.2175-2.9962-.3875-6.6675 2.125-6.7662 7.1513-.0975 6.475 4.1562 12.3712 11.405 12.3712 8.0225 0 14.2087-5.4125 14.2087-15.755zm-322.8037 0c0-2.705.87-3.575 2.8025-3.9625l2.61-.58V.4825h-20.1025v1.74l2.1262.58c1.9325.58 2.8025 1.3538 2.8025 4.0588V60.985c0 2.6088-1.0637 4.0588-4.06 4.0588-3.4787 0-4.0587-1.16-5.315-6.8613L204.215.29h-3.865l-11.7913 56.055c-1.3525 6.2813-2.03 7.7325-4.6387 8.505l-1.6438.4838v1.7387h13.8213v-1.7387l-2.03-.3875c-2.8988-.58-3.6725-2.125-2.2225-9.4713l6.9587-36.05 7.635 38.1763c1.0625 5.5087 1.0625 6.5725-3.0925 7.345l-2.03.3875v1.7387h51.32v-22.035H250.8c-.9663 10.1475-2.9963 19.7163-11.2113 19.7163h-3.8662zm269.065-4.0588h2.1275c5.9937 0 8.0225 9.5675 8.6987 19.7163h1.835V.4825h-35.0825v22.0362h1.8363C484.88 12.37 486.91 2.8025 492.9012 2.8025h2.1263v57.7937c0 2.7075-.8688 3.6738-2.8025 4.1575l-2.5125.58v1.7388h20.8762v-1.7388l-2.9975-.6762c-1.8362-.4838-2.8037-1.0638-2.8037-4.0613zm-44.1663 30.83l2.995.0975c4.35.0963 5.605 1.74 6.4775 12.275h1.835V19.1363h-1.835c-1.065 8.4087-2.225 11.9837-6.38 12.0812l-3.0925.0963V2.8026h6.6688c7.4425 0 9.085 9.375 10.1475 19.7162h1.8362V.4826h-33.3425v1.74l2.1263.58c2.2212.58 2.8025 1.9337 2.8025 4.1562v53.6375c0 2.7075-.8688 3.6738-2.8025 4.1575l-2.1263.58v1.7388H480.24v-22.035h-1.8363c-1.16 10.0512-2.4162 19.7162-11.1137 19.7162h-6.6688V33.6326zm-36.4362 0l2.9962.0975c4.3488.0963 5.605 1.74 6.475 12.275h1.8363V19.1363h-1.8363c-1.0625 8.4087-2.2225 11.9837-6.3775 12.0812l-3.0937.0963V2.8026h6.6687c7.4425 0 9.085 9.5675 10.1475 19.7162h1.8363V.4826h-34.3088v1.74l3.0925.58c2.2225.58 2.8025 1.9337 2.8025 4.1562v53.6375c0 2.7075-.87 3.6738-2.8025 4.1575l-2.1262.58v1.7388h34.3087v-22.035h-1.835c-1.16 10.0512-2.4175 19.7162-11.115 19.7162h-6.6687V33.6326zm-39.7225-30.83h2.9c3.865 0 7.4412 2.5125 7.4412 15.0775 0 12.66-2.705 14.11-8.1175 14.11h-2.2237zm-14.5938 64.27h19.5238v-1.7387l-2.1275-.4838c-1.9325-.4837-2.8025-1.5462-2.8025-4.2537V34.31h3.5762c2.8025 0 4.2525 1.16 4.4463 6.5725l.4825 12.37c.3875 11.1137 3.5762 14.2075 8.9887 14.2075 5.5088 0 6.9575-3.77 6.9575-9.085v-2.2238h-2.0287v1.6425c0 3.5775-.4825 6.09-1.8363 6.09-1.2562 0-1.3537-.9662-1.6425-5.4125l-.5812-8.5037c-.7725-11.695-2.3188-15.3675-10.63-16.915 8.0212-2.125 12.95-8.0213 12.95-16.43 0-10.9213-8.6013-16.14-16.8163-16.14h-18.46v1.74l2.1263.58c1.9337.58 2.8025 1.3537 2.8025 4.0587v53.735c0 2.7075-.8688 3.6738-2.8025 4.1575l-2.1263.58zm-14.7862-64.27h2.1262c5.9913 0 8.0213 9.5675 8.6988 19.7163h1.835V.4825H332.66v22.0362h1.8362c.6763-10.1487 2.7063-19.7162 8.6988-19.7162h2.1262v57.7937c0 2.7075-.8712 3.6738-2.8025 4.1575l-2.5137.58v1.7388h20.3925v-1.7388l-2.5125-.58c-2.5125-.58-2.8025-2.5125-2.8025-4.1575zm-22.3263 46.97c0-19.8125-21.745-25.0312-21.745-39.4312 0-3.0925 1.16-7.7325 5.9913-7.7325 6.9587 0 9.5687 8.9887 10.7287 19.91h1.8363V.4825h-1.16c-.4838 2.1262-1.3538 3.0937-2.6088 3.0937-2.2237 0-3.3837-3.48-8.6987-3.48-8.215 0-13.8213 6.8625-13.8213 15.85 0 16.3338 21.7463 23.195 21.7463 38.2725 0 6.8613-3.19 10.7275-7.5388 10.7275-6.475 0-10.7275-7.6337-11.8875-19.9087h-1.8362v22.035h1.16c.9662-3.1888 2.2225-3.4788 3.285-3.4788 1.8375 0 3.77 3.8663 9.375 3.8663 8.6025 0 15.1737-7.4413 15.1737-17.6875M269.4525 6.8612c0-2.705.87-3.575 2.8025-3.9625l2.61-.58V.4825h-20.1025v1.74l2.1262.58c1.9325.58 2.8025 1.3537 2.8025 4.0587v53.735c0 2.7075-.87 3.6738-2.8025 4.1575l-2.1262.58v1.7388h31.6037v-22.035h-1.8375c-.965 10.1475-2.995 19.7162-11.21 19.7162h-3.8662zm-63.9813 42.235v-2.6087H192.425l-.3875 2.6087zm-55.8612 18.17h3.9625l8.9875-47.55h-1.3525l9.8575 47.55h3.48l11.7912-56.055c1.2563-5.8962 1.9325-7.925 4.2525-8.5062l1.8363-.4825v-1.74h-13.6275v1.74l2.03.3862c2.8987.58 3.575 2.32 2.2225 9.4713l-7.635 37.5962h1.16l-7.7325-39.625c-.7738-3.77-1.2563-6.8625 1.9337-7.4425l2.125-.3862v-1.74h-18.6525v1.74l1.2563.29c1.9337.4825 2.2237 1.6437 2.9962 5.3162l2.9963 14.4-.58-8.6987-6.6688 35.18h.87L147.29 10.0512c-.87-3.9625-1.16-6.9587 1.9325-7.5387l1.4512-.29v-1.74h-19.04v1.74l1.8363.4825c1.7387.4837 2.7062 1.3537 3.8662 6.6687zM98 33.6325l2.9962.0975c4.3488.0963 5.605 1.74 6.475 12.275h1.8363V19.1362h-1.8363c-1.0625 8.4088-2.2225 11.9838-6.3787 12.0813L98 31.3138V2.8025h6.6687c7.4413 0 9.085 9.5675 10.1475 19.7163h1.8363V.4825H83.31v1.74l2.1262.58c2.2225.58 2.8025 1.9338 2.8025 4.1563v53.6375c0 2.7075-.87 3.6737-2.8025 4.1575l-2.1262.58v1.7387h34.31v-22.035h-1.8375c-1.1588 10.0513-2.415 19.7163-11.1138 19.7163H98V33.6325zm-60.7913 33.44h19.8125v-1.7388l-2.2225-.4837c-1.74-.3863-2.9-1.5463-2.9-4.2538V34.2137h14.5938v26.3825c0 2.7075-1.1588 3.8675-2.8988 4.2538l-2.2225.4837v1.7388h19.8125v-1.7388l-2.1262-.58c-1.9325-.4837-2.8038-1.5475-2.8038-4.2525v-53.64c0-2.705.8713-3.575 2.8038-4.0587l2.1262-.58v-1.74H61.3712v1.74l2.2225.58c1.6425.4837 2.8988 1.16 2.8988 3.9625v24.8387H51.8987V6.765c0-2.7063 1.0638-3.4788 2.9-3.9625l2.2225-.58v-1.74H37.2087v1.74l2.1263.58c1.9337.58 2.8025 1.3537 2.8025 4.0587v53.735c0 2.7075-.8688 3.6738-2.8025 4.1575l-2.1263.58zm-14.7875-64.27h2.1275c5.9913 0 8.0213 9.5675 8.6975 19.7162h1.8363V.4825H0v22.0362h1.8362C2.5125 12.37 4.5425 2.8025 10.5337 2.8025H12.66v57.7937c0 2.7075-.8688 3.6738-2.8025 4.1575l-2.5125.58v1.7388h20.8762v-1.7388l-2.9962-.6762c-1.8363-.4838-2.8038-1.0638-2.8038-4.0613z"
-                            fill="#1c1c21" />
+                            fill="currentColor" />
                     </svg>
                 </div>
             </div>
         </div>
     </section>
     {{-- milestone --}}
-    <section class="bg-white text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+    <section class="bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+        <div class="max-w-6xl px-6 md:px-8 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-20">
-                <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Milestone</h2>
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Journey to Success:
+                <h2 class="text-xs text-indigo-500 dark:text-blue-500 tracking-widest font-medium title-font mb-1">
+                    Milestone</h2>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-gray-200">Journey to
+                    Success:
                     Artemis-Algo's Key Milestones</h1>
                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">From inception to innovation, witness the
                     evolution of cutting-edge
@@ -162,8 +173,9 @@
                     artificial intelligence to analyze market trends, execute trades, and optimize your portfolio.</p>
             </div>
             <div class="flex flex-wrap">
-                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Development Phase</h2>
+                <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6">
+                    <h2 class="text-lg sm:text-xl text-gray-900 dark:text-gray-200 font-medium title-font mb-2">
+                        Development Phase</h2>
                     <p class="leading-relaxed text-base mb-4">Our team of experts in artificial intelligence and finance
                         collaborated to
                         develop a robust AI-powered Trader Bot, incorporating the latest advancements in machine
@@ -171,24 +183,28 @@
                         analysis.</p>
                 </div>
                 <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Testing and Optimization
+                    <h2 class="text-lg sm:text-xl text-gray-900 dark:text-gray-200 font-medium title-font mb-2">Testing
+                        and Optimization
                     </h2>
                     <p class="leading-relaxed text-base mb-4">Extensive testing and optimization were conducted to
                         fine-tune the bot's
                         algorithms and ensure its reliability and effectiveness in various market conditions.</p>
                 </div>
                 <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">Launch and Integration</h2>
+                    <h2 class="text-lg sm:text-xl text-gray-900 dark:text-gray-200 font-medium title-font mb-2">Launch
+                        and Integration</h2>
                     <p class="leading-relaxed text-base mb-4">The AI-powered Trader Bot - Artemis-Algo was successfully
                         launched and integrated into our
                         investment platform, providing users with seamless access to its powerful capabilities.</p>
                 </div>
                 <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-                    <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">User Feedback and Iteration
+                    <h2 class="text-lg sm:text-xl text-gray-900 dark:text-gray-200 font-medium title-font mb-2">User
+                        Feedback and Iteration
                     </h2>
                     <p class="leading-relaxed text-base mb-4">We value user feedback and continuously iterate on the
                         Artemis-Algo's features and performance to enhance its effectiveness and user experience.</p>
-                    <a class="text-indigo-500 inline-flex items-center" href="#reviews">View reviews
+                    <a class="text-indigo-500 dark:text-blue-500 inline-flex items-center" href="#reviews">View
+                        reviews
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -199,278 +215,281 @@
         </div>
     </section>
     {{-- how-to --}}
-    <section class="text-gray-600 body-font"
+    <section class="text-gray-600"
         style="background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bot1.jpg') no-repeat center;background-size:cover">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <h2 class="w-full font-bold text-center text-3xl md:text-4xl text-gray-200 mb-4 md:mb-8">Purchase Once, and
-                Keep using</h2>
-            <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
-                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        <div class="gray-900 bg-opacity-50 backdrop-blur-lg">
+            <div class="max-w-6xl px-6 md:px-8 py-24 mx-auto flex flex-wrap">
+                <h2 class="w-full font-bold text-center text-3xl md:text-4xl text-gray-200 mb-4 md:mb-8">Purchase Once,
+                    and
+                    Keep using</h2>
+                <div class="w-full max-w-2xl mx-auto flex relative py-8 sm:items-center">
+                    <div class="w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
+                    </div>
+                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                        1
+                    </div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
+                            <svg class="w-8 h-8 text-indigo-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                                <path d="M16 19h6"></path>
+                                <path d="M19 16v6"></path>
+                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+                              </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Sign-up on our
+                                platform</h2>
+                            <p class="leading-relaxed text-gray-300 text-sm">Register an account on our platform through our
+                                website
+                                or through an investor's referral link.</p>
+                        </div>
+                    </div>
                 </div>
-                <div
-                    class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-                    1</div>
-                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="w-full max-w-2xl mx-auto flex relative pb-8 sm:items-center">
+                    <div class="w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
+                    </div>
+                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                        2
+                    </div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z" />
+                                <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
+                                <path
+                                    d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598z" />
+                                <path d="M3 6v10c0 .888 .772 1.45 2 2" />
+                                <path d="M3 11c0 .888 .772 1.45 2 2" />
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Fund your
+                                account
+                            </h2>
+                            <p class="leading-relaxed text-gray-300 text-sm">Fund your portfolio by choosing any of the
+                                investment
+                                plans of your choice and deposit funds suited for plan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-2xl mx-auto flex relative pb-8 sm:items-center">
+                    <div class="w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
+                    </div>
+                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                        3
+                    </div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                                <path d="M12 2v2" />
+                                <path d="M9 12v9" />
+                                <path d="M15 12v9" />
+                                <path d="M5 16l4 -2" />
+                                <path d="M15 14l4 2" />
+                                <path d="M9 18h6" />
+                                <path d="M10 8v.01" />
+                                <path d="M14 8v.01" />
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Purchase
+                                Artemis-Algo</h2>
+                            <p class="leading-relaxed text-gray-300 text-sm">Visit our AI Powered trader webpage, click on "get
+                                Artemis-Algo". Choose the desired version and make your payment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full max-w-2xl mx-auto flex relative pb-8 sm:items-center">
+                    <div class="w-6 absolute inset-0 flex items-center justify-center">
+                        <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
+                    </div>
                     <div
-                        class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus h-12 w-12"
-                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                            <path d="M16 19h6" />
-                            <path d="M19 16v6" />
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl text-gray-200">Sign-up on our
-                            platform</h2>
-                        <p class="leading-relaxed text-gray-300">Register an account on our platform through our website
-                            or through an investor's referral link.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                </div>
-                <div
-                    class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-                    2</div>
-                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-                    <div
-                        class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coins w-12 h-12"
-                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z" />
-                            <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
-                            <path
-                                d="M3 6c0 1.072 1.144 2.062 3 2.598s4.144 .536 6 0c1.856 -.536 3 -1.526 3 -2.598c0 -1.072 -1.144 -2.062 -3 -2.598s-4.144 -.536 -6 0c-1.856 .536 -3 1.526 -3 2.598z" />
-                            <path d="M3 6v10c0 .888 .772 1.45 2 2" />
-                            <path d="M3 11c0 .888 .772 1.45 2 2" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl text-gray-200">Fund your account
-                        </h2>
-                        <p class="leading-relaxed text-gray-300">Fund your portfolio by choosing any of the investment
-                            plans of your choice and deposit funds suited for plan.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                </div>
-                <div
-                    class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-                    3</div>
-                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-                    <div
-                        class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-robot w-12 h-12"
-                            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
-                            <path d="M12 2v2" />
-                            <path d="M9 12v9" />
-                            <path d="M15 12v9" />
-                            <path d="M5 16l4 -2" />
-                            <path d="M15 14l4 2" />
-                            <path d="M9 18h6" />
-                            <path d="M10 8v.01" />
-                            <path d="M14 8v.01" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl text-gray-200">Purchase
-                            Artemis-Algo</h2>
-                        <p class="leading-relaxed text-gray-300">Visit our AI Powered trader webpage, click on "get
-                            Artemis-Algo". Choose the desired version and make your payment.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-                <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
-                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                </div>
-                <div
-                    class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">
-                    4</div>
-                <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-                    <div
-                        class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="icon icon-tabler icon-tabler-moneybag w-12 h-12" width="44" height="44"
-                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path
-                                d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z" />
-                            <path d="M4 17v-1a8 8 0 1 1 16 0v1a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-                        </svg>
-                    </div>
-                    <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-                        <h2 class="font-medium title-font text-gray-900 mb-1 text-xl text-gray-200">Seat Back and Earn
-                        </h2>
-                        <p class="leading-relaxed text-gray-300">Artemis-Algo will be automatically installed on your
-                            trading portfolio. Depending the version you bought, it uses its multiplier
-                            on your base hourly earning rate to determine the minimum earnings to be returned and other
-                            necessary factors.
-                        </p>
+                        class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                        4</div>
+                    <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z" />
+                                <path d="M4 17v-1a8 8 0 1 1 16 0v1a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                            </svg>
+                        </div>
+                        <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                            <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Seat Back and
+                                Earn
+                            </h2>
+                            <p class="leading-relaxed text-gray-300 text-sm">Artemis-Algo will be automatically installed on
+                                your
+                                trading portfolio. Depending the version you bought, it uses its multiplier
+                                on your base hourly earning rate to determine the minimum earnings to be returned and
+                                other
+                                necessary factors.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     {{-- features --}}
-    <section id="features" class="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20">
-
-        <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-8">
-
-            <h2 class="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-indigo-600 mb-8">Features of the
-                AI-Powered Trader</h2>
-
-            <p class="max-w-[85%] mx-auto text-center">
-                <a href="#plan"
-                    class="px-6 py-4 rounded-full shadow-md bg-gray-900 hover:bg-gray-100 hover:border border-2 border-gray-900 hover:text-gray-900 text-gray-100 font-semibold text-sm text-center">Get
-                    Artemis-Algo</a>
-            </p>
-
-        </div>
-
-        <div class="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-chart-candle-filled h-12 w-12 fill-current" width="44"
-                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M6 3a1 1 0 0 1 .993 .883l.007 .117v1a2 2 0 0 1 1.995 1.85l.005 .15v3a2 2 0 0 1 -1.85 1.995l-.15 .005v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 1.85 -1.995l.15 -.005v-1a1 1 0 0 1 1 -1z"
-                            stroke-width="0" fill="currentColor" />
-                        <path
-                            d="M12 3a1 1 0 0 1 .993 .883l.007 .117v9a2 2 0 0 1 1.995 1.85l.005 .15v3a2 2 0 0 1 -1.85 1.995l-.15 .005a1 1 0 0 1 -1.993 .117l-.007 -.117l-.15 -.005a2 2 0 0 1 -1.844 -1.838l-.006 -.157v-3a2 2 0 0 1 1.85 -1.995l.15 -.005v-9a1 1 0 0 1 1 -1z"
-                            stroke-width="0" fill="currentColor" />
-                        <path
-                            d="M18 3a1 1 0 0 1 .993 .883l.007 .117a2 2 0 0 1 1.995 1.85l.005 .15v4a2 2 0 0 1 -1.85 1.995l-.15 .005v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-4a2 2 0 0 1 1.85 -1.995l.15 -.005a1 1 0 0 1 1 -1z"
-                            stroke-width="0" fill="currentColor" />
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Advanced Market Analysis</h3>
-                        <p class="text-sm text-muted-foreground">Artemis-Algo employs sophisticated algorithms to
-                            analyze vast amounts of market data in real-time, identifying patterns and trends that human
-                            traders might overlook.
-                        </p>
+    <section id="features" class="bg-slate-100 dark:bg-gray-800 py-12 lg:py-20">
+        <div class="w-full max-w-6xl mx-auto px-6 md:px-8">
+            <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-10">
+                <h2 class="font-semibold text-3xl leading-[1.1] text-4xl text-indigo-600 dark:text-blue-500 mb-4">Features of the
+                    AI-Powered Trader</h2>    
+                <p class="max-w-[85%] mx-auto text-center">
+                    <a href="#plan"
+                        class="px-6 py-3 md:px-8 md:py-4 rounded-full shadow-md bg-gray-900 dark:bg-transparent hover:bg-gray-100 hover:bg-gray-900 border border-2 border-transparent dark:border-blue-500 hover:border-gray-900 text-gray-100 hover:text-gray-900 dark:hover:text-blue-600 font-semibold text-sm text-center">Get
+                        Artemis-Algo</a>
+                </p>    
+            </div>
+            <div class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M6 3a1 1 0 0 1 .993 .883l.007 .117v1a2 2 0 0 1 1.995 1.85l.005 .15v3a2 2 0 0 1 -1.85 1.995l-.15 .005v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 1.85 -1.995l.15 -.005v-1a1 1 0 0 1 1 -1z"
+                                stroke-width="0" fill="currentColor" />
+                            <path
+                                d="M12 3a1 1 0 0 1 .993 .883l.007 .117v9a2 2 0 0 1 1.995 1.85l.005 .15v3a2 2 0 0 1 -1.85 1.995l-.15 .005a1 1 0 0 1 -1.993 .117l-.007 -.117l-.15 -.005a2 2 0 0 1 -1.844 -1.838l-.006 -.157v-3a2 2 0 0 1 1.85 -1.995l.15 -.005v-9a1 1 0 0 1 1 -1z"
+                                stroke-width="0" fill="currentColor" />
+                            <path
+                                d="M18 3a1 1 0 0 1 .993 .883l.007 .117a2 2 0 0 1 1.995 1.85l.005 .15v4a2 2 0 0 1 -1.85 1.995l-.15 .005v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-4a2 2 0 0 1 1.85 -1.995l.15 -.005a1 1 0 0 1 1 -1z"
+                                stroke-width="0" fill="currentColor" />
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Advanced Market Analysis</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo employs sophisticated algorithms to
+                                analyze vast amounts of market data in real-time, identifying patterns and trends that human
+                                traders might overlook.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-chart-arrows-vertical h-12 w-12 fill-current"
-                        width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
-                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M18 21v-14" />
-                        <path d="M9 15l3 -3l3 3" />
-                        <path d="M15 10l3 -3l3 3" />
-                        <path d="M3 21l18 0" />
-                        <path d="M12 21l0 -9" />
-                        <path d="M3 6l3 -3l3 3" />
-                        <path d="M6 21v-18" />
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Predictive Insights</h3>
-                        <p class="text-sm">With machine learning capabilities, the Artemis-Algo gains insights into
-                            potential market movements, helping it make informed investment decisions.</p>
+    
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M18 21v-14" />
+                            <path d="M9 15l3 -3l3 3" />
+                            <path d="M15 10l3 -3l3 3" />
+                            <path d="M3 21l18 0" />
+                            <path d="M12 21l0 -9" />
+                            <path d="M3 6l3 -3l3 3" />
+                            <path d="M6 21v-18" />
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Predictive Insights</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">With machine learning capabilities, the Artemis-Algo gains insights into
+                                potential market movements, helping it make informed investment decisions.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-settings-automation h-12 w-12 fill-current" width="44"
-                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
-                        <path d="M10 9v6l5 -3z" />
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Automated Trading</h3>
-                        <p class="text-sm text-muted-foreground">Artemis-Algo executes trades on your behalf, following
-                            predefined parameters and strategies, without your raising a finger.</p>
+    
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                            <path d="M10 9v6l5 -3z" />
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Automated Trading</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo executes trades on your behalf, following
+                                predefined parameters and strategies, without your raising a finger.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-shield-half h-12 w-12 fill-current" width="44"
-                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
-                        <path d="M12 3v18" />
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Risk Management</h3>
-                        <p class="text-sm text-muted-foreground">Built-in risk management features ensure that your
-                            investments are protected. Artemis-Algo dynamically adjusts its trading strategy based on
-                            market conditions to minimize potential losses.</p>
+    
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+                            <path d="M12 3v18" />
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Risk Management</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Built-in risk management features ensure that your
+                                investments are protected. Artemis-Algo dynamically adjusts its trading strategy based on
+                                market conditions to minimize potential losses.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-briefcase-filled h-12 w-12 fill-current" width="44"
-                        height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
-                            stroke-width="0" fill="currentColor" />
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Portfolio Optimization</h3>
-                        <p class="text-sm text-muted-foreground">By continuously analyzing your portfolio and market
-                            conditions, the bot optimizes your investment portfolio to maximize returns and minimize
-                            risks.</p>
+    
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
+                                stroke-width="0" fill="currentColor" />
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Portfolio Optimization</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">By continuously analyzing your portfolio and market
+                                conditions, the bot optimizes your investment portfolio to maximize returns and minimize
+                                risks.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="relative rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                <div class="flex min-h-[180px] flex-col justify-between rounded-md p-6">
-                    <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current">
-                        <path
-                            d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z">
-                        </path>
-                    </svg>
-                    <div class="space-y-2">
-                        <h3 class="font-bold">Flexible Subscriptions</h3>
-                        <p class="text-sm text-muted-foreground">Purchase your subcription once, and keep using it
-                            throughout the subscription span depending on the version you purchase.</p>
+    
+                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                    <div class="flex flex-col gap-3 rounded-md p-6">
+                        <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200">
+                            <path fill="currentColor"
+                                d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z">
+                            </path>
+                        </svg>
+                        <div class="space-y-1">
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Flexible Subscriptions</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Purchase your subcription once, and keep using it
+                                throughout the subscription span depending on the version you purchase.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-        </div>
-
+                </div>    
+            </div>    
+        </div>                
     </section>
     {{-- plans --}}
     <section id="plans" class="max-w-6xl mx-auto pt-10 pb-36 px-8">
@@ -501,8 +520,8 @@
                         <ul class="mb-8 space-y-2">
                             <li class="flex items-center">
                                 <div class="mr-3">
-                                    <svg class="w-4 h-4 text-teal-400" viewBox="0 0 24 24"
-                                        stroke-linecap="round" stroke-width="2">
+                                    <svg class="w-4 h-4 text-teal-400" viewBox="0 0 24 24" stroke-linecap="round"
+                                        stroke-width="2">
                                         <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8">
                                         </polyline>
                                         <circle cx="12" cy="12" fill="none" r="11"
@@ -511,7 +530,7 @@
                                 </div>
                                 <p class="font-medium text-gray-300">Hourly earning rate boost &#10511; <span
                                         class="font-semibold">{{ $bot->multiplier }}X</span></p>
-                            </li>                            
+                            </li>
                         </ul>
                         <a href="{{ route('user.purchase_bot', [$bot->id]) }}"
                             class="inline-flex items-center justify-center w-full h-10 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none">

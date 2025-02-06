@@ -1,4 +1,4 @@
-<div class="bg-indigo-600" style="overflow-x: hidden">
+<div class="bg-indigo-600 dark:bg-blue-500" style="overflow-x: hidden">
   <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
     <div class="flex items-center justify-around">        
           <a

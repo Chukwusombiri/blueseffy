@@ -185,8 +185,6 @@
             </div>
         </div>
     </section>
-    <!-- ====== Testimonials Section End -->
-
     <!-- ====== FAQ Section Start -->
     <section class="relative overflow-hidden bg-white dark:bg-gray-800 pt-20 pb-16 lg:pt-[120px] lg:pb-[90px]">
         <div class="max-w-6xl mx-auto px-6 md:px-8">

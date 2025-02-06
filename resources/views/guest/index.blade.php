@@ -1,19 +1,26 @@
 <x-app-layout>
+    {{-- hero section --}}
     <section class="relative bg-white dark:bg-gray-800">
         <div class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center px-6 md:px-10 py-16 gap-y-6">
             <div
                 class="relative text-center md:text-start md:pr-4 flex flex-col items-center md:items-start gap-3 md:gap-6">
                 <h2 class="text-4xl md:text-6xl archivo-700 leading-tight text-gray-700 dark:text-gray-100">
-                    Unlock Your Financial Future <br /><span class="text-indigo-600">{{ config('app.name') }}</span>
+                    Unlock Your Financial Future <br /><span class="text-indigo-600 dark:text-blue-500">{{ config('app.name') }}</span>
                 </h2>
                 <div class="w-full flex justify-center md:justify-start">
                     <a href="{{ route('user.investments') }}"
-                        class="px-6 md:px-8 py-3 md:py-4 rounded-xl bg-slate-700 dark:bg-slate-200 text-white dark:text-slate-700 tracking-wide archivo-700 text-xs md:text-sm capitalize transform transition hover:-translate-y-1">get
-                        started</a>
+                        class="px-6 md:px-8 py-3 md:py-4 flex gap-2 flex-wrap items-center rounded-3xl bg-slate-700 dark:bg-slate-200 text-white dark:text-slate-700 tracking-wide archivo-700 text-xs md:text-sm capitalize transform transition hover:-translate-y-1">get
+                        started
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <path d="M5 12l14 0"></path>
+                            <path d="M15 16l4 -4"></path>
+                            <path d="M15 8l4 4"></path>
+                        </svg>
+                    </a>
                 </div>
 
                 <p
-                    class="hidden md:block overflow-hidden rounded-full py-1.5 px-2 sm:px-4 text-sm text-slate-600 bg-slate-200 leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                    class="hidden md:block overflow-hidden rounded-full py-1.5 px-2 sm:px-4 text-sm text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     Stay informed with the latest updates in the financial
                     markets.
                     <a href="{{ route('articles', ['cat_id' => 'all']) }}" class="font-semibold text-blue-600">
@@ -30,7 +37,7 @@
     <section class="bg-white dark:bg-gray-800 py-20">
         <div class="max-w-6xl mx-auto">
             <div class="px-6 mt-12 services-slider owl-carousel owl-theme" data-aos="fade-right">
-                <div class="p-8 rounded-lg border border-indigo-600 shadow-lg">
+                <div class="p-8 rounded-lg border border-indigo-600 dark:border-blue-500 shadow-lg">
                     <svg class="text-gray-700 dark:text-gray-200 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,7 +50,7 @@
                     <x-link-button href="{{ route('user.pricing_table') }}"
                         class="shadow uppercase">invest</x-link-button>
                 </div>
-                <div class="p-8 rounded-lg border border-indigo-600  shadow-lg">
+                <div class="p-8 rounded-lg border border-indigo-600 dark:border-blue-500 shadow-lg">
                     <svg class="text-gray-700 dark:text-gray-200 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" width="24" height="24" stroke-width="2">
@@ -61,7 +68,7 @@
                         cryptocurrency wallet with just a few button clicks.</p>
                     <x-link-button href="{{ route('user.withdrawal.create') }}" class="shadow">withdraw</x-link-button>
                 </div>
-                <div class="p-8 rounded-lg border border-indigo-600  shadow-lg">
+                <div class="p-8 rounded-lg border border-indigo-600 dark:border-blue-500 shadow-lg">
                     <svg class="text-gray-700 dark:text-gray-200 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -108,7 +115,7 @@
         <div class="max-w-6xl mx-auto px-6 md:px-8">
             <div class="mx-auto mb-10 max-w-[510px] text-center">
                 <h2 class="mb-4 text-3xl archivo-700 md:text-4xl text-gray-700 dark:text-gray-200">
-                    Now is the time to build your portfolio. <span class="text-indigo-600">Not later.</span>
+                    Now is the time to build your portfolio. <span class="text-indigo-600 dark:text-blue-500">Not later.</span>
                 </h2>
                 <p class="text-md text-gray-600 dark:text-gray-400 archivo-500">
                     With typical markets returns, you have to start early to secure your future. With
@@ -119,7 +126,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-piggy-bank" viewBox="0 0 16 16">
                         <path
                             d="M5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm1.138-1.496A6.613 6.613 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 0 0 .286-.958A7.602 7.602 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962z" />
@@ -135,7 +142,7 @@
                 </div>
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
                         <path
                             d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z" />
@@ -150,7 +157,7 @@
                 </div>
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
                         <path
                             d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z" />
@@ -165,7 +172,7 @@
                 </div>
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
                         <path
                             d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
@@ -182,7 +189,7 @@
                 </div>
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-bezier" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
@@ -199,14 +206,14 @@
                 </div>
                 <div
                     class="rounded-xl p-6 md:p-10 shadow-md border border-gray-300 dark:border-gray-500">
-                    <svg class="text-indigo-600 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
+                    <svg class="text-indigo-600 dark:text-blue-500 w-8 h-8 mb-1" xmlns="http://www.w3.org/2000/svg" width="150"
                         height="150" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
                         <path
                             d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"
-                            fill="#6875f5"></path>
+                            fill="currentColor"></path>
                         <path
                             d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z"
-                            fill="#6875f5"></path>
+                            fill="currentColor"></path>
                     </svg>
                     <h4 class="mb-2 text-xl archivo-700 text-gray-700 dark:text-gray-100">
                         Encrypted and secured
@@ -226,7 +233,7 @@
                 class="mx-auto max-w-2xl grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div class="lg:pr-8 lg:pt-4">
                     <div class="lg:max-w-lg">
-                        <h2 class="text-base font-semibold leading-6 text-indigo-500">Grow exponentially</h2>
+                        <h2 class="text-base font-semibold leading-6 text-indigo-600 dark:text-blue-500">Grow exponentially</h2>
                         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-200 sm:text-4xl">A.I Powered Trader
                         </p>
                         <p class="mt-6 text-md text-gray-600 dark:text-gray-400">Want to earn more on your current trading plan?
@@ -236,7 +243,7 @@
                         <div class="mt-10 max-w-xl space-y-8 text-sm tracking-wide text-gray-600 dark:text-gray-400 lg:max-w-none">
                             <div class="relative pl-9">
                                 <div class="inline font-semibold text-gray-700 dark:text-gray-100"><svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-focus-auto absolute left-1 top-1 h-6 w-6 text-indigo-600"
+                                        class="icon icon-tabler icon-tabler-focus-auto absolute left-1 top-1 h-6 w-6 text-indigo-600 dark:text-blue-500"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
                                         stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -255,7 +262,7 @@
                             <div class="relative pl-9">
                                 <div class="inline font-semibold text-gray-700 dark:text-gray-100">
                                     <svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-adjustments-alt absolute left-1 top-1 h-6 w-6 text-indigo-600"
+                                        class="icon icon-tabler icon-tabler-adjustments-alt absolute left-1 top-1 h-6 w-6 text-indigo-600 dark:text-blue-500"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
                                         stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -276,7 +283,7 @@
                             </div>
                             <div class="relative pl-9">
                                 <div class="inline font-semibold text-gray-700 dark:text-gray-100"><svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-arrows-minimize absolute left-1 top-1 h-6 w-6 text-indigo-600"
+                                        class="icon icon-tabler icon-tabler-arrows-minimize absolute left-1 top-1 h-6 w-6 text-indigo-600 dark:text-blue-500"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
                                         stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -297,10 +304,10 @@
                     </div>
                     <div class="mt-10 flex items-center gap-x-6">
                         <a href="{{ route('artemis') . '#plans' }}"
-                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                            class="rounded-md bg-indigo-600 dark:bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
                             Artemis-Algorithm</a>
                         <a href="{{ route('artemis') }}"
-                            class="text-md font-semibold leading-6 text-gray-700 dark:text-indigo-500 hover:underline tracking-wide">
+                            class="text-md font-semibold leading-6 text-indigo-600 dark:text-blue-500 hover:underline tracking-wide">
                             Learn more &#10511;
                         </a>
                     </div>
@@ -313,7 +320,7 @@
     </section>
     {{-- MOBILE APP --}}
     <section class="bg-cover bg-center" style="background-image: url('/images/investment.jpg')">
-        <div class="bg-gray-900 bg-opacity-60 text-white py-16 text-center px-6">
+        <div class="bg-gray-900 bg-opacity-60 backdrop-blur-sm text-white py-16 text-center px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold">Ready to dive in?</h2>
                 <p class="mt-4 mb-8 text-lg">Join {{ config('app.name') }} and empower yourself to shape a secure
@@ -325,68 +332,23 @@
                         <h2 class="text-4xl font-bold mb-6">Get the Mobile App Now</h2>
                         <div class="flex space-x-4">
                             <button onclick='Livewire.emit("openModal","app-store")'
-                                class="flex items-center cursor-pointer px-4 py-2 bg-indigo-50 border border-transparent rounded-full font-semibold text-xs text-indigo-800 uppercase tracking-widest hover:bg-indigo-100 focus:bg-indigo-100 active:bg-indigo-300 shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                <svg fill="#000000" viewBox="0 0 24 24" id="app-store" data-name="Flat Line"
-                                    xmlns="http://www.w3.org/2000/svg" class="icon flat-line w-6 h-6 mr-1">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <line id="primary" x1="21" y1="17" x2="18"
-                                            y2="17"
-                                            style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                                        </line>
-                                        <line id="primary-2" data-name="primary" x1="20" y1="21"
-                                            x2="14.29" y2="10.72"
-                                            style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                                        </line>
-                                        <line id="primary-3" data-name="primary" x1="12" y1="6.6"
-                                            x2="10" y2="3"
-                                            style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                                        </line>
-                                        <line id="primary-4" data-name="primary" x1="14" y1="3"
-                                            x2="4" y2="21"
-                                            style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                                        </line>
-                                        <line id="primary-5" data-name="primary" x1="13" y1="17"
-                                            x2="3" y2="17"
-                                            style="fill: none; stroke: #000000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
-                                        </line>
-                                    </g>
-                                </svg>
-                                <span class="font-semibold">Download on the App Store</span>
+                                class="flex items-center cursor-pointer px-4 py-2 bg-white dark:bg-gray-800 shadow border border-indigo-600 dark:border-blue-500 rounded-full font-semibold text-xs text-indigo-600 dark:text-blue-500 uppercase tracking-widest hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-300 dark:hover:bg-gray-900 focus:bg-gray-900 active:bg-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                <svg class="stroke-indigo-600 dark:stroke-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                    <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488"></path>
+                                    <path d="M7 14h5m2.9 0h2.1"></path>
+                                    <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1 -1.805"></path>
+                                  </svg>
+                                <span class="font-semibold">Apple Store</span>
                             </button>
                             <button onclick='Livewire.emit("openModal","app-store")'
-                                class="flex items-center cursor-pointer px-4 py-2 bg-indigo-50 border border-transparent rounded-full font-semibold text-xs text-indigo-800 uppercase tracking-widest hover:bg-indigo-100 focus:bg-indigo-100 active:bg-indigo-300 shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
-                                <svg viewBox="0 0 48 48" id="a" xmlns="http://www.w3.org/2000/svg"
-                                    fill="#000000" class="w-6 h-6 mr-1">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <defs>
-                                            <style>
-                                                .b {
-                                                    fill: none;
-                                                    stroke: #000000;
-                                                    stroke-linecap: round;
-                                                    stroke-linejoin: round;
-                                                }
-                                            </style>
-                                        </defs>
-                                        <path class="b"
-                                            d="m25.0274,24.0519l-16.2624,15.8333h0c.5191,1.765,2.1803,3.1148,4.153,3.1148.8306,0,1.5574-.2077,2.1803-.6229h0l18.1694-10.2787-8.2403-8.0464Z">
-                                        </path>
-                                        <path class="b"
-                                            d="m40.9508,20.2623h0l-7.7869-4.4645-8.1365,8.2541,8.2403,8.0464,7.7869-4.3607c1.3497-.7268,2.2842-2.1803,2.2842-3.7377-.1038-1.5574-1.0383-3.0109-2.388-3.7377Z">
-                                        </path>
-                                        <path class="b"
-                                            d="m8.765,8.1148c-.1038.3115-.1038.7268-.1038,1.1421v29.5902c0,.4153,0,.7268.1038,1.1421l16.2624-15.9372L8.765,8.1148Z">
-                                        </path>
-                                        <path class="b"
-                                            d="m25.0274,24.0519l8.1365-8.2541L15.2022,5.623c-.623-.4153-1.4536-.623-2.2842-.623-1.9727,0-3.7377,1.3497-4.153,3.1148h0l16.2624,15.9372Z">
-                                        </path>
-                                    </g>
-                                </svg>
-                                <span class="font-semibold">Get it on Google Play</span>
+                                class="flex items-center cursor-pointer px-4 py-2 bg-white dark:bg-gray-800 shadow border border-indigo-600 dark:border-blue-500 rounded-full font-semibold text-xs text-indigo-600 dark:text-blue-500 uppercase tracking-widest hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-300 dark:hover:bg-gray-900 focus:bg-gray-900 active:bg-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                <svg class="stroke-indigo-600 dark:stroke-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                                    <path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z"></path>
+                                    <path d="M15 9l-10.5 11.5"></path>
+                                    <path d="M4.5 3.5l10.5 11.5"></path>
+                                  </svg>
+                                <span class="font-semibold">Google Play</span>
                             </button>
                         </div>
                     </div>
@@ -400,7 +362,7 @@
             <h2 class="text-3xl text-center font-bold mb-8 md:text-4xl text-gray-700 dark:text-gray-200">Client Reviews</h2>
             <p class="text-center mb-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Explore the testimonials and success stories of our clients
                 who have experienced the exceptional Account Management service provided by {{ config('app.name') }}. <a href="{{ route('testimonials') }}"
-                class="text-blue-600 dark:text-indigo-500 hover:underline">Go to Testimonials</a>
+                class="text-blue-600 dark:text-blue-500 hover:underline">Go to Testimonials</a>
             </p>
             <div class="testimonial-slider mt-10 owl-carousel owl-theme">
                 <div class="bg-gray-200 dark:bg-gray-700 rounded-lg shadow p-6">
