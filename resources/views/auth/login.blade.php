@@ -3,11 +3,11 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
-        <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700">Welcome back</h2>
+        <h2 class="text-2xl archivo-700 text-center mt-2 mb-4 text-gray-700 dark:text-gray-200">Welcome back</h2>
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
+            <div class="mb-4 font-medium text-sm text-green-600 dark:text-green-500">
                 {{ session('status') }}
             </div>
         @endif
@@ -27,13 +27,13 @@
             <div class="block mt-4">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
@@ -43,7 +43,7 @@
                 </x-jet-button>                
             </div>
             <div class="block mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 flex items-center justify-center" href="{{ route('register') }}">
+                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center justify-center" href="{{ route('register') }}">
                     {{ __('Don\'t have an account? Sign up') }}
                 </a>
             </div>

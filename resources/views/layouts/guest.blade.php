@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Sora:wght@800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ url('css/mystyles.css') }}">
     <!-- Scripts -->
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="archivo-400 text-gray-900">
+    <div class="archivo-400 text-gray-900 dark:text-gray-100">
         {{ $slot }}
     </div>
 </body>

@@ -226,23 +226,27 @@
                     <div class="w-6 absolute inset-0 flex items-center justify-center">
                         <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
                     </div>
-                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                    <div
+                        class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
                         1
                     </div>
                     <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                         <div
                             class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
-                            <svg class="w-8 h-8 text-indigo-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+                            <svg class="w-8 h-8 text-indigo-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" width="24" height="24" stroke-width="2">
                                 <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
                                 <path d="M16 19h6"></path>
                                 <path d="M19 16v6"></path>
                                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
-                              </svg>
+                            </svg>
                         </div>
                         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
                             <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Sign-up on our
                                 platform</h2>
-                            <p class="leading-relaxed text-gray-300 text-sm">Register an account on our platform through our
+                            <p class="leading-relaxed text-gray-300 text-sm">Register an account on our platform
+                                through our
                                 website
                                 or through an investor's referral link.</p>
                         </div>
@@ -252,16 +256,16 @@
                     <div class="w-6 absolute inset-0 flex items-center justify-center">
                         <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
                     </div>
-                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                    <div
+                        class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
                         2
                     </div>
                     <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                         <div
                             class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600 dark:text-blue-500"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M9 14c0 1.657 2.686 3 6 3s6 -1.343 6 -3s-2.686 -3 -6 -3s-6 1.343 -6 3z" />
                                 <path d="M9 14v4c0 1.656 2.686 3 6 3s6 -1.344 6 -3v-4" />
@@ -285,16 +289,16 @@
                     <div class="w-6 absolute inset-0 flex items-center justify-center">
                         <div class="h-full w-1 bg-gray-200 dark:bg-gray-900 pointer-events-none"></div>
                     </div>
-                    <div class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
+                    <div
+                        class="shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 dark:bg-blue-500 text-white relative z-10 font-medium text-sm">
                         3
                     </div>
                     <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                         <div
                             class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600 dark:text-blue-500"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
@@ -311,7 +315,8 @@
                         <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
                             <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Purchase
                                 Artemis-Algo</h2>
-                            <p class="leading-relaxed text-gray-300 text-sm">Visit our AI Powered trader webpage, click on "get
+                            <p class="leading-relaxed text-gray-300 text-sm">Visit our AI Powered trader webpage, click
+                                on "get
                                 Artemis-Algo". Choose the desired version and make your payment.</p>
                         </div>
                     </div>
@@ -326,10 +331,9 @@
                     <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                         <div
                             class="flex-shrink-0 w-16 h-16 bg-white dark:bg-gray-900 rounded-full inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-8 h-8 text-indigo-600 dark:text-blue-500" width="24" height="24"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                                stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-600 dark:text-blue-500"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M9.5 3h5a1.5 1.5 0 0 1 1.5 1.5a3.5 3.5 0 0 1 -3.5 3.5h-1a3.5 3.5 0 0 1 -3.5 -3.5a1.5 1.5 0 0 1 1.5 -1.5z" />
@@ -340,7 +344,8 @@
                             <h2 class="font-medium text-gray-900 mb-1 text-lg text-gray-200">Seat Back and
                                 Earn
                             </h2>
-                            <p class="leading-relaxed text-gray-300 text-sm">Artemis-Algo will be automatically installed on
+                            <p class="leading-relaxed text-gray-300 text-sm">Artemis-Algo will be automatically
+                                installed on
                                 your
                                 trading portfolio. Depending the version you bought, it uses its multiplier
                                 on your base hourly earning rate to determine the minimum earnings to be returned and
@@ -357,21 +362,23 @@
     <section id="features" class="bg-slate-100 dark:bg-gray-800 py-12 lg:py-20">
         <div class="w-full max-w-6xl mx-auto px-6 md:px-8">
             <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mb-10">
-                <h2 class="font-semibold text-3xl leading-[1.1] text-4xl text-indigo-600 dark:text-blue-500 mb-4">Features of the
-                    AI-Powered Trader</h2>    
+                <h2 class="font-semibold text-3xl leading-[1.1] text-4xl text-indigo-600 dark:text-blue-500 mb-4">
+                    Features of the
+                    AI-Powered Trader</h2>
                 <p class="max-w-[85%] mx-auto text-center">
                     <a href="#plan"
                         class="px-6 py-3 md:px-8 md:py-4 rounded-full shadow-md bg-gray-900 dark:bg-transparent hover:bg-gray-100 hover:bg-gray-900 border border-2 border-transparent dark:border-blue-500 hover:border-gray-900 text-gray-100 hover:text-gray-900 dark:hover:text-blue-600 font-semibold text-sm text-center">Get
                         Artemis-Algo</a>
-                </p>    
+                </p>
             </div>
             <div class="grid justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
-                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M6 3a1 1 0 0 1 .993 .883l.007 .117v1a2 2 0 0 1 1.995 1.85l.005 .15v3a2 2 0 0 1 -1.85 1.995l-.15 .005v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 1.85 -1.995l.15 -.005v-1a1 1 0 0 1 1 -1z"
@@ -384,20 +391,24 @@
                                 stroke-width="0" fill="currentColor" />
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Advanced Market Analysis</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo employs sophisticated algorithms to
-                                analyze vast amounts of market data in real-time, identifying patterns and trends that human
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Advanced Market
+                                Analysis</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo employs sophisticated
+                                algorithms to
+                                analyze vast amounts of market data in real-time, identifying patterns and trends that
+                                human
                                 traders might overlook.
                             </p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200"
-                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M18 21v-14" />
@@ -409,72 +420,86 @@
                             <path d="M6 21v-18" />
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Predictive Insights</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">With machine learning capabilities, the Artemis-Algo gains insights into
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Predictive
+                                Insights</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">With machine learning capabilities, the
+                                Artemis-Algo gains insights into
                                 potential market movements, helping it make informed investment decisions.</p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
-                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
                             <path d="M10 9v6l5 -3z" />
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Automated Trading</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo executes trades on your behalf, following
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Automated Trading
+                            </h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Artemis-Algo executes trades on your
+                                behalf, following
                                 predefined parameters and strategies, without your raising a finger.</p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
-                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
+                            <path
+                                d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" />
                             <path d="M12 3v18" />
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Risk Management</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Built-in risk management features ensure that your
-                                investments are protected. Artemis-Algo dynamically adjusts its trading strategy based on
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Risk Management
+                            </h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Built-in risk management features
+                                ensure that your
+                                investments are protected. Artemis-Algo dynamically adjusts its trading strategy based
+                                on
                                 market conditions to minimize potential losses.</p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200" width="24"
-                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
+                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path
                                 d="M22 13.478v4.522a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-4.522l.553 .277a20.999 20.999 0 0 0 18.897 -.002l.55 -.275zm-8 -11.478a3 3 0 0 1 3 3v1h2a3 3 0 0 1 3 3v2.242l-1.447 .724a19.002 19.002 0 0 1 -16.726 .186l-.647 -.32l-1.18 -.59v-2.242a3 3 0 0 1 3 -3h2v-1a3 3 0 0 1 3 -3h4zm-2 8a1 1 0 0 0 -1 1a1 1 0 1 0 2 .01c0 -.562 -.448 -1.01 -1 -1.01zm2 -6h-4a1 1 0 0 0 -1 1v1h6v-1a1 1 0 0 0 -1 -1z"
                                 stroke-width="0" fill="currentColor" />
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Portfolio Optimization</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">By continuously analyzing your portfolio and market
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Portfolio
+                                Optimization</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">By continuously analyzing your
+                                portfolio and market
                                 conditions, the bot optimizes your investment portfolio to maximize returns and minimize
                                 risks.</p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
+
+                <div
+                    class="relative rounded-lg border bg-white dark:bg-transparent dark:border-gray-600 hover:shadow hover:shadow-teal-200 p-2">
                     <div class="flex flex-col gap-3 rounded-md p-6">
                         <svg viewBox="0 0 24 24" class="h-12 w-12 fill-current text-gray-900 dark:text-gray-200">
                             <path fill="currentColor"
@@ -482,23 +507,27 @@
                             </path>
                         </svg>
                         <div class="space-y-1">
-                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Flexible Subscriptions</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Purchase your subcription once, and keep using it
+                            <h3 class="font-bold text-gray-800 dark:text-gray-100 text-md capitalize">Flexible
+                                Subscriptions</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Purchase your subcription once, and
+                                keep using it
                                 throughout the subscription span depending on the version you purchase.</p>
                         </div>
                     </div>
-                </div>    
-            </div>    
-        </div>                
+                </div>
+            </div>
+        </div>
     </section>
     {{-- plans --}}
     <section id="plans" class="max-w-6xl mx-auto pt-10 pb-36 px-8">
 
         <div class="max-w-2xl mx-auto mb-14 text-center">
-            <h1 class="text-4xl font-semibold mb-6 lg:text-5xl"><span class="text-indigo-600">Flexible</span>
+            <h1 class="text-3xl md:text-4xl font-semibold mb-6 text-gray-700 dark:text-gray-200"><span
+                    class="text-indigo-600 dark:text-blue-500">Flexible</span>
                 subscriptions
             </h1>
-            <p class="text-xl text-gray-500 font-medium">Choose a version of Artemis-Algo that works best for you
+            <p class="text-lg text-gray-500 font-medium text-gray-700 dark:text-gray-100">Choose a version of
+                Artemis-Algo that works best for you
                 depending your projected earning rate.</p>
         </div>
 
@@ -507,33 +536,31 @@
                 <div>
                     <div class="p-8 bg-gray-900 rounded">
                         <div class="mb-4 text-center">
-                            <p class="text-xl font-medium tracking-wide text-white">
+                            <p class="text-lg font-medium tracking-wide text-white mb-2">
                                 {{ $bot->name }}
                             </p>
                             <div class="flex items-center justify-center">
-                                <p class="mr-2 text-5xl font-semibold text-white lg:text-6xl">
+                                <p class="mr-2 text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-200">
                                     ${{ $bot->price }}
                                 </p>
-                                <p class="text-lg text-gray-500">/ {{ $bot->duration }} days</p>
+                                <p class="text-lg text-gray-600 dark:text-gray-400">/ {{ $bot->duration }} days</p>
                             </div>
                         </div>
                         <ul class="mb-8 space-y-2">
                             <li class="flex items-center">
-                                <div class="mr-3">
-                                    <svg class="w-4 h-4 text-teal-400" viewBox="0 0 24 24" stroke-linecap="round"
-                                        stroke-width="2">
-                                        <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8">
-                                        </polyline>
-                                        <circle cx="12" cy="12" fill="none" r="11"
-                                            stroke="currentColor"></circle>
-                                    </svg>
-                                </div>
-                                <p class="font-medium text-gray-300">Hourly earning rate boost &#10511; <span
+                                <svg class="mr-3 w-4 h-4 text-teal-400" viewBox="0 0 24 24" stroke-linecap="round"
+                                    stroke-width="2">
+                                    <polyline fill="none" stroke="currentColor" points="6,12 10,16 18,8">
+                                    </polyline>
+                                    <circle cx="12" cy="12" fill="none" r="11"
+                                        stroke="currentColor"></circle>
+                                </svg>
+                                <p class="font-medium text-gray-300 text-sm">Hourly earning rate boost &#10511; <span
                                         class="font-semibold">{{ $bot->multiplier }}X</span></p>
                             </li>
                         </ul>
                         <a href="{{ route('user.purchase_bot', [$bot->id]) }}"
-                            class="inline-flex items-center justify-center w-full h-10 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none">
+                            class="inline-flex items-center justify-center w-full h-10 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-indigo-600 dark:bg-blue-500 hover:bg-indigo-700 dark:hover:bg-blue-700 focus:shadow-outline focus:outline-none">
                             Get Now
                         </a>
                     </div>
@@ -544,144 +571,172 @@
         </div>
     </section>
     {{-- reviews --}}
-    <section id="reviews" class="min-w-screen min-h-screen bg-gray-50 flex items-center justify-center">
-        <div class="w-full bg-white border-t border-b border-gray-200 px-5 py-16 md:py-24 text-gray-800">
+    <section id="reviews"
+        class="min-w-screen min-h-screen bg-white dark:bg-gray-800 flex items-center justify-center">
+        <div class="w-full px-6 md:px-8 py-16 md:py-24 text-gray-800 dark:text-gray-100">
             <div class="w-full max-w-6xl mx-auto">
                 <div class="text-center max-w-xl mx-auto">
-                    <h1 class="text-6xl md:text-7xl font-bold mb-5 text-indigo-600">What people <br>are saying.</h1>
-                    <h3 class="text-xl mb-5 font-light">Discover how Artemis-Algo has transformed trading for
+                    <h1 class="text-3xl md:text-4xl font-semibold mb-2 text-indigo-600 dark:text-blue-500">What people
+                        <br>are saying.
+                    </h1>
+                    <h3 class="text-xl mb-4 font-light">Discover how Artemis-Algo has transformed trading for
                         individuals worldwide.</h3>
                     <div class="text-center mb-10">
-                        <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                        <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                        <span class="inline-block w-40 h-1 rounded-full bg-indigo-500"></span>
-                        <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                        <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
+                        <span class="inline-block w-1 h-1 rounded-full bg-indigo-600 dark:bg-blue-500 ml-1"></span>
+                        <span class="inline-block w-3 h-1 rounded-full bg-indigo-600 dark:bg-blue-500 ml-1"></span>
+                        <span class="inline-block w-40 h-1 rounded-full bg-indigo-600 dark:bg-blue-500"></span>
+                        <span class="inline-block w-3 h-1 rounded-full bg-indigo-600 dark:bg-blue-500 ml-1"></span>
+                        <span class="inline-block w-1 h-1 rounded-full bg-indigo-600 dark:bg-blue-500 ml-1"></span>
                     </div>
                 </div>
-                <div class="-mx-3 md:flex items-start">
+                <div class="md:flex items-start">
                     <div class="px-3 md:w-1/3">
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-1.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Christopher Wilson.</h6>
+                                    <h6
+                                        class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300 dark:text-gray-300">
+                                        Christopher Wilson.</h6>
                                 </div>
                             </div>
                             <div class="w-full">
-                                <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>Since
-                                    integrating the AI-powered Trader Bot into my investment strategy, I've seen a
+                                <p class="text-sm leading-tight">
+                                    <span
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>
+                                    Since integrating the AI-powered Trader Bot into my investment strategy, I've seen a
                                     significant improvement in my portfolio performance. Its predictive insights and
-                                    automated trading have truly revolutionized my approach to investing<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                    automated trading have truly revolutionized my approach to investing
+                                    <span
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-2.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Olivia Anne.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300">Olivia
+                                        Anne.</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>I was
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>I
+                                    was
                                     initially skeptical about using an AI-powered trading bot, but after seeing the
                                     impressive results it delivered, I'm now a firm believer. It's like having a skilled
                                     trader working for you 24/7.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="px-3 md:w-1/3">
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-3.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Alexander James.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300">Alexander
+                                        James.</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>The
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>The
                                     AI-powered Trader Bot has surpassed all my expectations. Not only has it optimized
                                     my investment portfolio, but it has also freed up my time by handling the trading
                                     process autonomously. I couldn't be happier with the results.<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-4.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Grace Martinez</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300">Grace
+                                        Martinez</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span>As a
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>As
+                                    a
                                     busy professional, I don't always have the time to monitor the markets closely.
                                     Artemis-Algo has been a game-changer for me. Its automated trading features allow me
                                     to stay on top of my investments effortlessly. <span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="px-3 md:w-1/3">
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-5.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Elizabeth Johnson.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300">Elizabeth
+                                        Johnson.</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span> I've
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>
+                                    I've
                                     been able to achieve consistent returns without the stress of constant monitoring.
                                     Highly recommended for anyone looking to streamline their trading process!<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                         <div
-                            class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                            <div class="w-full flex mb-4 items-center">
-                                <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
+                            class="w-full rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-5 font-light mb-6">
+                            <div class="flex mb-4 items-center">
+                                <div
+                                    class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700overflow-hidden rounded-full w-10 h-10 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                                     <img src="{{ url('images/t-6.jpg') }}" alt="Testifier image"
                                         class="object-cover w-full h-full">
                                 </div>
                                 <div class="flex-grow pl-3">
-                                    <h6 class="font-bold text-sm uppercase text-gray-600">Thomas Brown.</h6>
+                                    <h6 class="font-bold text-sm uppercase text-gray-600 dark:text-gray-300">Thomas
+                                        Brown.</h6>
                                 </div>
                             </div>
                             <div class="w-full">
                                 <p class="text-sm leading-tight"><span
-                                        class="text-lg leading-none italic font-bold text-gray-400 mr-1">"</span> I've
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 mr-1">"</span>
+                                    I've
                                     been using the software for months now, and I continue to be amazed by its accuracy
                                     and performance. Thank you, Artemis-Algo, for helping me achieve my financial
                                     goals!<span
-                                        class="text-lg leading-none italic font-bold text-gray-400 ml-1">"</span></p>
+                                        class="text-lg leading-none italic font-bold text-gray-400 dark:text-gray-500 ml-1">"</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -690,29 +745,29 @@
         </div>
     </section>
     {{-- FAQS --}}
-    <section
-        class="my-10 relative w-full bg-white px-6 py-16 lg:py-24 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
-        <div class="mx-auto px-5">
+    <section class="relative bg-white dark:bg-gray-800 py-16">
+        <div
+            class="w-full mx-auto max-w-2xl px-6 md:px-10 py-10 sm:shadow-xl ring-1 ring-gray-900/5 sm:rounded-lg bg-gray-50 dark:bg-gray-900">
             <div class="flex flex-col items-center">
-                <h2 class="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
-                <p class="mt-3 text-lg text-neutral-500 md:text-xl">Frequenty asked questions
-
-                </p>
+                <h2
+                    class="text-center text-3xl font-bold tracking-tight md:text-4xl text-indigo-600 dark:text-blue-500">
+                    FAQ</h2>
+                <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">Frequenty asked questions</p>
             </div>
-            <div class="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+            <div class="mt-10 max-w-xl mx-auto divide-y divide-gray-200 dark:divide-gray-800">
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300 text-gray-700 dark:text-gray-300">
                             <span> Can I customize the trading strategies used by the AI-powered Trader Bot?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">No. However, you can change your
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">No. However, you can
+                            change your
                             investment plan so as to affect the multiplier factor of the AI trader and other related
                             factors
                             which Artemis's relies on to determine the minimum earning rate for a user account.
@@ -721,7 +776,8 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> How does the bot handle market volatility?</span>
                             <span class="transition group-open:rotate-180">
                                 <svg fill="none" height="24" shape-rendering="geometricPrecision"
@@ -731,7 +787,8 @@
                                 </svg>
                             </span>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Artemis-Algo is equipped with
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Artemis-Algo is
+                            equipped with
                             advanced risk management features to adapt its trading strategy in response to market
                             volatility, minimizing potential losses.
                         </p>
@@ -739,17 +796,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> Is the Artemis-Algo suitable for novice traders?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Absolutely! Artemis-Algo's automated
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Absolutely!
+                            Artemis-Algo's automated
                             trading functionality makes it accessible to traders of all levels of experience, from
                             beginners to seasoned investors.
                         </p>
@@ -757,17 +814,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> What markets does Artemis-Algo support?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Artemis-Algo supports a wide range
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Artemis-Algo
+                            supports a wide range
                             of financial markets, including stocks, forex, cryptocurrencies, and commodities, allowing
                             users to diversify their investment portfolio.
                         </p>
@@ -775,17 +832,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> How often does Artemis-Algo execute trades?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Artemis-Algo continuously monitors
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Artemis-Algo
+                            continuously monitors
                             the markets in real-time and executes trades based on predefined criteria. The frequency of
                             trades depends on market conditions and the user's specified investment plan.
                         </p>
@@ -793,17 +850,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> What kind of support and assistance does Artemis-Algo provide to its users?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Artemis-Algo offers comprehensive
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Artemis-Algo offers
+                            comprehensive
                             support to its users, including technical assistance, and regular updates on market trends
                             and performance. Our dedicated team is available to address any queries or concerns that
                             users may have.
@@ -812,17 +869,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> What kind of risk management features does Artemis-Algo offer?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Artemis-Algo includes robust risk
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Artemis-Algo
+                            includes robust risk
                             management features to help protect your investments. These features may include stop-loss
                             orders, position sizing controls, and dynamic portfolio rebalancing based on market
                             conditions.
@@ -831,17 +888,17 @@
                 </div>
                 <div class="py-5">
                     <details class="group">
-                        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between font-medium text-gray-700 dark:text-gray-300">
                             <span> Can I track the performance of Artemis-Algo over time?</span>
-                            <span class="transition group-open:rotate-180">
-                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
-                                    <path d="M6 9l6 6 6-6"></path>
-                                </svg>
-                            </span>
+                            <svg class="transition group-open:rotate-180" fill="none" height="24"
+                                shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                <path d="M6 9l6 6 6-6"></path>
+                            </svg>
                         </summary>
-                        <p class="group-open:animate-fadeIn mt-3 text-neutral-600">Yes, Artemis-Algo provides detailed
+                        <p class="group-open:animate-fadeIn mt-3 text-gray-600 dark:text-gray-500">Yes, Artemis-Algo
+                            provides detailed
                             performance reports, including metrics such as returns on investment, earnings, and
                             progressive expected return analysis. These reports allow users to track the bot's
                             performance and make informed decisions about their investment strategies.

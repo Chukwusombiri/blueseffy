@@ -1,49 +1,57 @@
 <x-app-layout>
-    <section class="shadow-md py-[70px]" id="mypage-header">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="border-stroke border-b stats-link">
-                <h2 class="mb-2 text-2xl font-semibold text-white">
-                    INVESTMENT
+    <section class="bg-cover bg-center" style="background-image: url('/images/page-header.jpg')">
+        <div class="bg-gray-900 bg-opacity-50 backdrop-blur-sm py-12">
+            <div class="max-w-6xl mx-auto px-6 md:px-10 border-b flex flex-col gap-4">                                  
+                <h2 class="text-2xl font-semibold text-white capitalize">                           
+                    investment                         
                 </h2>
-                <p class="text-white mb-6 text-sm font-medium">
-                    Portfolio funding through crytocrrency deposit
-                    Last Login: {{ $user->last_sign_in_at }} <br>
-                    Status: <span class="inline-block py-1 px-2 rounded-full bg-indigo-400">
-                        @switch($user->status)
-                            @case('earning')
-                                {{ 'ACTIVE TRADING' }}
-                            @break
+                <div class="text-white text-sm font-medium">
+                    <p class="mb-1">Portfolio funding using crytocurrency</p>
+                    <p class="mb-1">Last Login: {{ date('M d, y', strtotime($user->last_sign_in_at)) }}</p>  
+                    <p class="uppercase font-semibold mb-4 flex items-center text-sm"> 
+                        <span>Status:</span>
+                        <span
+                            class="ml-3 py-1 px-4 md:px-6 md:py-2 rounded-full bg-indigo-600 dark:bg-blue-500 text-xs">
+                            @if ($user->is_paused)
+                                {{ 'ACCOUNT SUSPENDED' }}
+                            @else
+                                @switch($user->status)
+                                    @case('earning')
+                                        {{ 'ACTIVE TRADING' }}
+                                    @break
 
-                            @case('not_earning')
-                                {{ 'TRADING SESSION COMPLETED' }}
-                            @break
+                                    @case('not_earning')
+                                        {{ 'TRADING SESSION COMPLETED' }}
+                                    @break
 
-                            @case('dormant')
-                                {{ 'DORMANT' }}
-                            @break
+                                    @case('dormant')
+                                        {{ 'DORMANT' }}
+                                    @break
 
-                            @case('active')
-                                {{ 'YET TO TRADE' }}
-                            @break
-                        @endswitch
-                    </span>
-                </p>
+                                    @case('active')
+                                        {{ 'YET TO TRADE' }}
+                                    @break
+                                @endswitch
+                            @endif
+                        </span>
+                    </p>                                              
+                </div>                                              
             </div>
         </div>
-    </section>
-    <section class="relative overflow-hidden pt-20 pb-20 lg:pt-[120px] lg:pb-[90px]">
+    </section>   
+    <section class="relative py-20">
         @livewire('user.make-investment', ['plan' => $plan, 'wallets' => $wallets, 'user' => $user], key($user->id))
     </section>
     {{-- supported coin vendors --}}
-    <section class="bg-white pt-16 pb-20 lg:pb-[90px]">
-        <div class="max-w-6xl mx-auto px-6 md:px-8">
-            <h2 class="text-3xl font-semibold mb-6 text-center">Our Trusted Partners</h2>
-            <p class="max-w-xl text-md mx-auto mb-4">Do you want to purchase crypto to kick start your investment on
-                {{ config('app.name') }}? Our trusted partners makes it a breeze!</p>
+    <section class="bg-white dark:bg-gray-800 pt-16 pb-20 lg:pb-28 px-6 md:px-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-semibold mb-6 text-center md:text-4xl text-gray-700 dark:text-gray-200">Our Trusted Partners</h2>
+            <p class="max-w-xl mx-auto text-center text-md mb-4 text-gray-600 dark:text-gray-400">
+                Ready to start investing with {{ config('app.name') }}? Easily purchase crypto from any of our trusted partners today! Just click on your choice.
+            </p>
             <div class="partners-slider owl-carousel owl-theme">
                 <div class="">
-                    <a href="https://www.binance.com/" target="_blank"
-                        class="p-4 flex flex-col items-center">
+                    <a href="https://www.binance.com/" target="_blank" class="p-2 flex flex-col items-center hover:animate-pulse focus:animate-pulse">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -73,12 +81,11 @@
                                     </g>
                                 </g>
                             </svg></span>
-                        <span class="text-gray-600 tracking-wide mt-2 inline-block underline">BINANCE</span>
+                        <span class="text-gray-600 dark:text-gray-300 tracking-wide mt-2 archivo-700">BINANCE</span>
                     </a>
                 </div>
                 <div class="">
-                    <a href="https://www.luno.com/" target="_blank"
-                        class="p-4 flex flex-col items-center">
+                    <a href="https://www.luno.com/" target="_blank" class="p-2 flex flex-col items-center hover:animate-pulse focus:animate-pulse">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -90,12 +97,11 @@
                                         style="fill:#fff"></path>
                                 </g>
                             </svg></span>
-                        <span class="text-gray-600 tracking-wide mt-2 inline-block underline">LUNO</span>
+                        <span class="text-gray-600 dark:text-gray-300 tracking-wide mt-2  archivo-700">LUNO</span>
                     </a>
                 </div>
                 <div class="">
-                    <a href="https://www.coinbase.com/" target="_blank"
-                        class="p-4 flex flex-col items-center">
+                    <a href="https://www.coinbase.com/" target="_blank" class="p-2 flex flex-col items-center hover:animate-pulse focus:animate-pulse">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -107,12 +113,11 @@
                                         style="fill:#fff"></path>
                                 </g>
                             </svg></span>
-                        <span class="text-gray-600 tracking-wide mt-2 inline-block underline">COINBASE</span>
+                        <span class="text-gray-600 dark:text-gray-300 tracking-wide mt-2  archivo-700">COINBASE</span>
                     </a>
                 </div>
                 <div class="">
-                    <a href=" https://www.kraken.com/" target="_blank"
-                        class="p-4 flex flex-col items-center">
+                    <a href="https://www.kraken.com/" target="_blank" class="p-2 flex flex-col items-center hover:animate-pulse focus:animate-pulse">
                         <span class="text-gray-400"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
                                 fill="#000000" class="w-14 h-14">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -124,10 +129,9 @@
                                         style="fill:#fff"></path>
                                 </g>
                             </svg></span>
-                        <span class="text-gray-600 tracking-wide mt-2 inline-block underline">KRAKEN</span>
+                        <span class="text-gray-600 dark:text-gray-300 tracking-wide mt-2  archivo-700">KRAKEN</span>
                     </a>
                 </div>
-                <!-- Add more partner divs as needed -->
             </div>
         </div>
     </section>

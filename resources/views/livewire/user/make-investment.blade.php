@@ -1,7 +1,7 @@
 <div class="max-w-6xl mx-auto">
     <div class="mb-10">
-        <h2 class="text-center text-gray-700 text-2xl archivo-800 capitalize mb-4 text-center">Fill out the form.</h2>
-        <p class="text-center mx-auto text-slate-600 md:w-1/2">
+        <h2 class="text-center text-gray-700 dark:text-gray-200 text-2xl font-semibold mb-4 text-center">Fill out the form</h2>
+        <p class="text-center mx-auto text-gray-600 dark:text-gray-400 md:w-1/2">
             {{ config('app.name') }} accepts only cryptocurrency as a source of funding for investment. Investment can
             also be funded using available funds in your portfolio
         </p>
@@ -24,17 +24,17 @@
                     </span>
                 </div>
             </div>
-            <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-t-md">
+            <div class="w-full px-4 py-5 bg-white dark:bg-gray-900 sm:p-6 shadow sm:rounded-t-md">
                 <div class="flex flex-nowrap items-center gap-3 mb-2">
-                    <input type="radio" id="crypto" wire:model="source" value="crypto" />
-                    <label for="crypto">CRYPTOCURRENCY</label>
+                    <input type="radio" id="crypto" wire:model="source" value="crypto" class="bg-white border-gray-300 dark:bg-gray-700 dark:border-gray-600"/>
+                    <label for="crypto" class="text-gray-700 dark:text-gray-300 text-sm">CRYPTOCURRENCY</label>
                 </div>
                 <div class="flex flex-nowrap items-center gap-3">
-                    <input id="funds" type="radio" wire:model="source" value="funds" />
-                    <label for="funds" value="ACCOUNT FUNDS">ACCOUNT FUNDS</label>
+                    <input id="funds" type="radio" wire:model="source" value="funds" class="bg-white border-gray-300 dark:bg-gray-700 dark:border-gray-600"/>
+                    <label for="funds" class="text-gray-700 dark:text-gray-300 text-sm">ACCOUNT FUNDS</label>
                 </div>
                 @if ($source === 'funds')
-                    <p class="text-lg archivo-700 text-slate-600 py-4">Available Funds: ${{ number_format($user->doBal) }}</p>
+                    <p class="text-lg archivo-700 text-gray-600 dark:text-gray-400 py-4 text-sm">Available Funds: ${{ number_format($user->doBal) }}</p>
                 @endif
                 <div class="grid grid-cols-6 gap-6 mt-4">
                     <div class="col-span-6 md:col-span-5">
@@ -49,14 +49,12 @@
                         <div class="col-span-6 sm:col-span-5">
                             <x-jet-label for="wallet_id" value="{{ __('Select Payment') }}" />
                             <select name="wallet_id" id="wallet_id"
-                                class="mt-1 block w-full 
-                        border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 
-                        focus:ring-opacity-50 rounded-md shadow-sm"
+                                class="text-gray-800 dark:text-gray-100 bg-inherit mt-1 block w-full border-gray-300 dark:border-gray-700 focus:border-indigo-300 dark:focus:border-blue-300 rounded-md shadow-sm"
                                 wire:model.defer="wallet_id">
-                                <option value="" @if (old('wallet_id') == '') {{ 'selected' }} @endif>
+                                <option class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300" value="" @if (old('wallet_id') == '') {{ 'selected' }} @endif>
                                     select cryptocurrency</option>
                                 @foreach ($wallets as $wallet)
-                                    <option value="{{ $wallet->id }}"
+                                    <option class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300" value="{{ $wallet->id }}"
                                         @if (old('wallet_id') == $wallet->id) {{ 'selected' }} @endif>
                                         {{ $wallet->name }}</option>
                                 @endforeach
@@ -67,7 +65,7 @@
                 </div>
             </div>
             <div
-                class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
+                class="flex items-center justify-end px-4 py-3 bg-gray-50 dark:bg-gray-700 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
                 <x-jet-confirms-password wire:then="save">
                     <x-jet-button wire:loading.attr="disabled">
                         {{ __('Complete Investment') }}
@@ -76,10 +74,10 @@
             </div>
         </div>
         <div class="mt-14 md:mt-24">
-            <span
-                class="flex flex-nowrap justify-center item-center text-dark text-2xl capitalize mx-auto mt-20 mb-4 md:mt-[-14px] md:w-1/2 ">Use
-                Real-Time Converter</span>
-            <div class="flex flex-nowrap justify-center item-center">
+            <h2
+                class="text-center text-gray-700 dark:text-gray-200 text-3xl capitalize mx-auto mt-20 mb-4 font-semibold">Use
+                Real-Time Converter</h2>
+            <div class="flex justify-center">
                 <!-- Crypto Converter ⚡ Widget -->
                 <crypto-converter-widget shadow symbol live background-color="#383a59" border-radius="0.60rem"
                     fiat="united-states-dollar" crypto="bitcoin" amount="1"

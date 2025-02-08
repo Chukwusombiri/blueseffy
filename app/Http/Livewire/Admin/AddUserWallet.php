@@ -23,7 +23,7 @@ class AddUserWallet extends ModalComponent
         $wallet->address = $this->address;
         $wallet->user_id = $this->user->id;
         $wallet->save();
-
+        
         $this->closeModalWithEvents(['addedUserWallet']);
     }
 

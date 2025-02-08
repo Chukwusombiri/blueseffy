@@ -18,12 +18,10 @@
         <!-- marital status -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="marital_status" value="{{ __('Marital Status') }}" />
-            <select name="marital_status" id="marital_status" class="mt-1 block w-full 
-            border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 
-            focus:ring-opacity-50 rounded-md shadow-sm" wire:model.defer="marital_status">
-                <option value="single">Single</option>
-                <option value="married">Married</option>
-                <option value="divorced">Divorced</option>
+            <select name="marital_status" id="marital_status" class="text-gray-800 dark:text-gray-100 bg-inherit mt-1 block w-full border-gray-300 dark:border-gray-700 focus:border-indigo-300 dark:focus:border-blue-300 rounded-md shadow-sm" wire:model.defer="marital_status">
+                <option class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300" value="single">Single</option>
+                <option class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300" value="married">Married</option>
+                <option class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300" value="divorced">Divorced</option>
             </select>            
             <x-jet-input-error for="marital_status" class="mt-2" />           
         </div>
