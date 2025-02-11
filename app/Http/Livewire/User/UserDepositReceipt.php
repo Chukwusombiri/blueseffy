@@ -10,11 +10,11 @@ use Livewire\WithFileUploads;
 class UserDepositReceipt extends ModalComponent
 {
     use WithFileUploads;
-    public FundingDeposit $deposit;
+    public $deposit;
     public $receipt;
     
-    public function mount(FundingDeposit $deposit){
-        $this->deposit = $deposit;
+    public function mount($id){
+        $this->deposit = FundingDeposit::findOrFail($id);
     } 
 
     protected function rules(){

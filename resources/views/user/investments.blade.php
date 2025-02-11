@@ -1,43 +1,5 @@
 <x-app-layout>
-    <section class="bg-cover bg-center" style="background-image: url('/images/page-header.jpg')">
-        <div class="bg-gray-900 bg-opacity-50 backdrop-blur-sm py-12">
-            <div class="max-w-6xl mx-auto px-6 md:px-10 border-b flex flex-col gap-4">
-                <h2 class="text-2xl font-semibold text-white capitalize">
-                    investment
-                </h2>
-                <div class="text-white text-sm font-medium">
-                    <p class="mb-1">Investments records. Start a new investment.</p>
-                    <p class="mb-1">Last Login: {{ date('M d, y', strtotime($user->last_sign_in_at)) }}</p>
-                    <p class="uppercase font-semibold mb-4 flex items-center text-sm">
-                        <span>Status:</span>
-                        <span class="ml-3 py-1 px-4 md:px-6 md:py-2 rounded-full bg-indigo-600 dark:bg-blue-500 text-xs">
-                            @if ($user->is_paused)
-                                {{ 'ACCOUNT SUSPENDED' }}
-                            @else
-                                @switch($user->status)
-                                    @case('earning')
-                                        {{ 'ACTIVE TRADING' }}
-                                    @break
-
-                                    @case('not_earning')
-                                        {{ 'TRADING SESSION COMPLETED' }}
-                                    @break
-
-                                    @case('dormant')
-                                        {{ 'DORMANT' }}
-                                    @break
-
-                                    @case('active')
-                                        {{ 'YET TO TRADE' }}
-                                    @break
-                                @endswitch
-                            @endif
-                        </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-user-header title="investments" titleDesc="Investment records. Start a new investment."/>
     <section class="py-20">
         <div class="max-w-6xl mx-auto px-6 md:px-8">
             <div class="mb-10 flex flex-wrap justify-between items-center">
@@ -60,7 +22,7 @@
     </section>
     <section id="invest-how-to" class="bg-white dark:bg-gray-900 pt-16 pb-20 lg:pb-28">
         <div class="max-w-xl mx-auto px-6 md:px-8">
-            <p class="text-gray-800 dark:text-gray-200 text-xl font-semibold mb-6 capitalize">Follow these steps to
+            <p class="text-gray-800 dark:text-gray-200 text-2xl font-semibold mb-6 capitalize">Follow these steps to
                 invest</p>
             <ul role="list" class="space-y-3 text-gray-600 dark:text-gray-400 mb-4 text-md">
                 <li class="flex items-center gap-2"><svg class="text-indigo-600 dark:text-blue-500"
