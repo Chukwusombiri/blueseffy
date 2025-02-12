@@ -7,60 +7,62 @@ use App\Models\Otp;
 use App\Models\User;
 use App\Notifications\SendOtpNotification;
 use Carbon\Carbon;
-use Illuminate\Validation\Rule;
 use LivewireUI\Modal\ModalComponent;
 
 class ValidateOtp extends ModalComponent
 {
-    public string|FiatWithdrawal $withdrawal;
-    public $sent='';
-    public $otp;    
+    public $withdrawal;
+    public $isSent = false;
+    public $otp;
 
-    protected function rules(){ return [
-        'otp'=>[Rule::excludeIf(!$this->otp),'exists:otps,otp_code']
-    ];}
+    protected function rules()
+    {
+        return [
+            'otp' => ['string', 'exists:otps,otp_code']
+        ];
+    }
 
-    protected $validationAttributes=[
-        'otp'=>'One Time Password'
+    protected $validationAttributes = [
+        'otp' => 'One Time Password'
     ];
 
-    public function mount(string|FiatWithdrawal $withdrawal){
-        $this->withdrawal =$withdrawal;       
+    public function mount($id)
+    {
+        $this->withdrawal = FiatWithdrawal::findOrFail($id);
     }
 
     protected $listeners = [
-        'open_Modal'=>'openMyModal'
+        'open_Modal' => 'openMyModal'
     ];
 
-    public function send(){
-        $this->sent = '';
-        $generated_otp = rand(100000,999999);   
-        $n_withdrawal = FiatWithdrawal::find($this->withdrawal);
-        $user = User::find($n_withdrawal->user_id);             
-        Otp::where('user_id',$user->id)->delete();
+    public function send()
+    {
+        $this->isSent = false;
+        $generated_otp = rand(100000, 999999);
+        $user = User::find($this->withdrawal->user_id);
+        Otp::where('user_id', $user->id)->delete();
         $otp = new Otp();
-        $otp->fiat_withdrawal_id = $n_withdrawal->id;   
+        $otp->fiat_withdrawal_id = $this->withdrawal->id;
         $otp->expires = Carbon::now()->addMinutes(5);
         $otp->otp_code = $generated_otp;
         $otp->user_id = auth()->user()->id;
-        if($otp->save()){
+        if ($otp->save()) {
             $user->notify(new SendOtpNotification($generated_otp));
-        }        
-        $this->sent = 'sent';
+        }
+        $this->isSent = true;
     }
 
-    public function save(){
+    public function save()
+    {
+        $this->isSent = false;
         $this->validate();
-        $n_withdrawal = FiatWithdrawal::find($this->withdrawal);
+        $sent_otp = Otp::where('user_id', auth()->user()->id)->first();
 
-        $sent_otp = Otp::where('otp_code',$this->otp)
-        ->where('user_id',auth()->user()->id)->first();
-
-        if($sent_otp->expires<Carbon::now()){
-            session()->flash('result','One time password has expired. Request new OTP.');            
-            $this->reset(['otp','sent']);
-        }else{
-            FiatWithdrawal::find($sent_otp->fiat_withdrawal_id)->update(['is_verified'=>true]);                       
+        if ($sent_otp->expires < Carbon::now()) {
+            session()->flash('result', 'One time password has expired. Request new OTP.');
+            $this->reset(['otp']);
+        } else {
+            FiatWithdrawal::find($sent_otp->fiat_withdrawal_id)->update(['is_verified' => true]);
             $this->closeModalWithEvents(['swalwit']);
         }
     }
@@ -70,7 +72,7 @@ class ValidateOtp extends ModalComponent
     }
 
     public static function closeModalOnClickAway(): bool
-{
-    return false;
-}
+    {
+        return false;
+    }
 }

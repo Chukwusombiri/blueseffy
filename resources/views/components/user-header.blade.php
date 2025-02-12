@@ -1,7 +1,7 @@
 @props(['title','titleDesc'=>'','bgImage' => '/images/page-header.jpg'])
 
 <section class="bg-cover bg-center" style="background-image: url({{$bgImage}})">
-    <div class="bg-gray-900 bg-opacity-50 backdrop-blur-sm py-12">
+    <div class="bg-gray-900 bg-opacity-50 backdrop-blur-[2px] py-12">
         <div class="max-w-6xl mx-auto px-6 md:px-10 border-b flex flex-col gap-4">
             <h2 class="text-2xl font-semibold text-white capitalize">
                 {{$title}}

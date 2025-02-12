@@ -1,34 +1,32 @@
-<div>
-    <div class="container py-4">
-        <div>
-            <h2 class="md:text-lg ml-4 text-dark-700 text-center">Validate Withdrawal</h2>
+<div class="bg-white dark:bg-gray-900 p-4">
+    <h2 class="text-lg text-gray-800 dark:text-gray-200 font-semibold text-center">Validate Withdrawal</h2>
+    @if (session()->has('result'))
+        <div class="my-1.5 text-rose-600 text-sm tracking-wide">
+            {{ session('result') }}
         </div>
-        <div class="w-3/4 mx-auto mb-2">
-            @if (session()->has('result'))
-                <div class="bg-red-100 mt-2 p-2">
-                    {{ session('result') }}
-                </div>
-            @endif
-        </div>        
-        <div class="w-10/12 mx-auto mb-2 grid grid-cols-6 gap-2">
-            <label for="otp" class="col-span-6">Enter OTP</label>
-            <input type="number" wire:model="otp" class="col-span-6 rounded-md">
-            <button class="col-span-6 px-2 py-1 bg-gray-800 text-white rounded-md hover:bg-gray-500" wire:click="send">
-                {{$sent!=='sent'? 'REQUEST OTP':'REQUEST NEW OTP'}}
-            </button>
-            @if ($sent=='sent')
-                <p class="col-span-6 bg-green-100 px-4 py-2 rouunded-md">One Time password was sent to your email address</p>                
-            @endif
-            @error('otp')
-               <span class="col-span-6 bg-red-100 mt-2 p-2">{{$message}}</span> 
-            @enderror
-        </div> 
-              
-                     
-        <div class="flex justify-end items-center p-7">
-            <button onclick="Livewire.emit('closeModal')"
-             class="bg-gray-500 text-white rounded-full px-4 py-2 mr-2">close</button>
-            <button wire:click="save" class="bg-indigo-400 rounded-full bg-info px-4 py-2 text-white">submit</button>
-        </div>
+    @endif
+    @if ($isSent)
+        <p class="text-green-500 my-1.5 text-sm tracking-wide">One Time password was sent to your email address</p>
+    @endif
+    <div class="flex flex-col gap-2 mb-3">
+        <x-jet-label for="otp" value="Enter your OTP" />
+        <x-jet-input type="number" wire:model="otp" class="w-full" />           
+        @error('otp')
+            <span class="text-rose-600 text-sm tracking-wide">{{ $message }}</span>
+        @enderror
+    </div>
+    <div class="flex justify-center">
+        <button wire:click="send" wire:loading.attr="disabled"
+        class="mr-2 inline-flex items-center px-6 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition">
+        {{ $isSent ? 'REQUEST OTP' : 'REQUEST NEW OTP' }}
+    </button>
+    </div>
+
+
+    <div class="flex justify-end items-center pb-2 mt-4">
+        <button wire:click="$emit('closeModal')"
+            class="bg-gray-500 text-white font-semibold rounded-xl px-6 py-2 mr-2 text-xs uppercase hover:bg-gray-600">close</button>
+        <button wire:click="save"
+            class="bg-indigo-600 font-semibold text-white dark:bg-blue-500 rounded-xl px-6 py-2 mr-2 text-xs uppercase hover:bg-indigo-700 dark:hover:bg-blue-700">submit</button>
     </div>
 </div>

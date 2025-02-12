@@ -18,7 +18,7 @@ class MakeFiatWithdrawal extends Component
     public $description;
 
     protected function rules(){ return [       
-        'amount'=>['required','numeric','integer'],
+        'amount'=>['required','numeric','integer','min:1'],
         'account_no'=>['required','numeric','integer','min_digits:8'],
         'account_name'=>['required','string'],
         'bank_name'=>['required','string'],
@@ -49,7 +49,7 @@ class MakeFiatWithdrawal extends Component
             }
             $withdrawal->user_id =$user->id;
             if($withdrawal->save()){                                                                                              
-                $this->emit("openModal","user.validate-otp",["withdrawal"=>$withdrawal->id]);
+                $this->emit('openModal','user.validate-otp',['id' => $withdrawal->id]);
                 $this->reset();
             }           
         }                                

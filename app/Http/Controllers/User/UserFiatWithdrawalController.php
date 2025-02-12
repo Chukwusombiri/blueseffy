@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserFiatWithdrawalController extends Controller
 {
@@ -33,5 +34,10 @@ class UserFiatWithdrawalController extends Controller
                 'acROI'=>$acROI,
                 'acBal'=>$acBal
             ]);
+    }
+
+    public function validateWithdrawal()
+    {
+        return view('user.validateFiatWithdrawal');
     }
 }

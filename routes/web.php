@@ -97,7 +97,8 @@ Route::middleware([
             Route::get('/withdrawal/create',[UserWithdrawalController::class,'create'])->name('withdrawal.create'); 
 
             Route::get( '/fiat_withdrawal', [UserFiatWithdrawalController::class,'index'])->name('fiat_withdrawals'); 
-            Route::get('/fiat_withdrawal/create',[UserFiatWithdrawalController::class,'create'])->name('fiat_withdrawal.create');                                 
+            Route::get('/fiat_withdrawal/create',[UserFiatWithdrawalController::class,'create'])->name('fiat_withdrawal.create');   
+            Route::get('validate-fiat-withdrawal',[UserFiatWithdrawalController::class,'validateWithdrawal'])->name('fiat_withdrawal.create');                                 
         }
     ); 
    

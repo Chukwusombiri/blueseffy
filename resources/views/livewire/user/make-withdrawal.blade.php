@@ -1,6 +1,6 @@
 <div class="max-w-6xl mx-auto px-6 bg-white dark:bg-gray-800">        
     <div class="mb-10 lg:mb-16 bg-indigo-100 dark:bg-blue-100 rounded-xl p-6 lg:p-10">
-        <h3 class="text-gray-800 text-xl font-bold mb-2 sora">Portfolio summary</h3>
+        <h3 class="text-gray-800 text-xl font-bold mb-2 sora">Portfolio summary</h3>        
         <p class="text-gray-600 text-sm mb-6">Asset withdrawals are not permitted during an active trading session.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="flex flex-col items-center border-0 border-b border-gray-400 md:border-b-0 md:border-r pb-3 lg:pb-0">
