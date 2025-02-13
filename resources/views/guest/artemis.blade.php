@@ -540,10 +540,10 @@
                                 {{ $bot->name }}
                             </p>
                             <div class="flex items-center justify-center">
-                                <p class="mr-2 text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-200">
+                                <p class="mr-2 text-3xl md:text-4xl font-semibold text-gray-200">
                                     ${{ $bot->price }}
                                 </p>
-                                <p class="text-lg text-gray-600 dark:text-gray-400">/ {{ $bot->duration }} days</p>
+                                <p class="text-lg text-gray-400">/ {{ $bot->duration }} days</p>
                             </div>
                         </div>
                         <ul class="mb-8 space-y-2">
