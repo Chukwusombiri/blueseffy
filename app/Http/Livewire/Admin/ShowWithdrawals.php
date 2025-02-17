@@ -10,53 +10,60 @@ use Livewire\WithPagination;
 
 class ShowWithdrawals extends Component
 {
-    use WithPagination;    
-    public $search ='';
-       
+    use WithPagination;
+    public $search = '';
+
     protected $listeners = [
-        'editedWithdrawal'=>'$refresh',
+        'editedWithdrawal' => '$refresh',
     ];
     public function updatingSearch()
     {
-        $this->resetPage();        
+        $this->resetPage();
     }
 
-    public function clear(){
+    public function clear()
+    {
         $this->search = '';
     }
 
-    public function approve($id){
-        $withdrawal=Withdrawal::find($id);
-        if($withdrawal->is_approved = true){
+    public function approve($id)
+    {
+        $withdrawal = Withdrawal::find($id);
+        if ($withdrawal->is_approved = true) {
             $withdrawal->update();
             $user = User::find($withdrawal->user_id);
             $user->acROI =  $user->acROI - $withdrawal->amount;
-            $user->update();                
-            $user->notify(new WithdrawalApprovalNotification($withdrawal));                      
+            $user->update();
+            $user->notify(new WithdrawalApprovalNotification($withdrawal));
             $this->emit('approvedWithdrawal');
-        }else{
+        } else {
             session()->flash('error', 'withdrawal approval failed.');
         }
     }
 
-    public function delete($id){
-        if(!auth()->user()->is_admin) {
+    public function delete($id)
+    {
+        if (!auth()->user()->is_admin) {
             return redirect()->route('guestHome');
         }
 
-       $withdrawal = Withdrawal::find($id);      
-       $withdrawal->delete();
-       $this->emit('deletedWithdrawal');
+        $withdrawal = Withdrawal::find($id);
+        $withdrawal->delete();
+        $this->emit('deletedWithdrawal');
     }
 
     public function render()
     {
-        return view('livewire.admin.show-withdrawals',[
-           'withdrawals' =>  Withdrawal::whereHas('user')->where('user_id','!=',auth()->user()->id)
-            ->where('amount', 'like', '%'.$this->search.'%')           
-            ->orWhereRelation('userWallet', 'name', 'like', '%'.$this->search.'%')
-            ->orderByDesc('created_at')
-            ->paginate(5),
+        return view('livewire.admin.show-withdrawals', [
+            'withdrawals' =>  Withdrawal::whereHas('user', function ($query) {
+                $query->where('name', 'like', '%' . $this->search . '%');
+            })
+                ->where(function ($query) {
+                    $query->where('amount', 'like', '%' . $this->search . '%')
+                        ->orWhereRelation('userWallet', 'name', 'like', '%' . $this->search . '%');
+                })
+                ->orderByDesc('created_at')
+                ->paginate(5),
         ]);
     }
 }
