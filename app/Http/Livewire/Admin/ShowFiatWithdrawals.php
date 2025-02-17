@@ -57,15 +57,14 @@ class ShowFiatWithdrawals extends Component
     public function render()
     {
         return view('livewire.admin.show-fiat-withdrawals', [
-            'withdrawals' =>  FiatWithdrawal::whereHas('user', function ($query) {
-                $query->where('name', 'like', '%' . $this->search . '%');
-            })
+            'withdrawals' =>  FiatWithdrawal::whereHas('user')
                 ->where(function ($query) {
                     $query->where('amount', 'like', '%' . $this->search . '%')
                         ->orWhere('account_no', 'like', '%' . $this->search . '%')
                         ->orWhere('account_name', 'like', '%' . $this->search . '%')
                         ->orWhere('bank_name', 'like', '%' . $this->search . '%')
-                        ->orWhere('routing_no', 'like', '%' . $this->search . '%');
+                        ->orWhere('routing_no', 'like', '%' . $this->search . '%')
+                        ->orWhereRelation('user','name', 'like', '%' . $this->search . '%');
                 })
                 ->orderByDesc('created_at')
                 ->paginate(5),
