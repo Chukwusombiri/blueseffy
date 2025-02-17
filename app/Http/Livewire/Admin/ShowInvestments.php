@@ -73,13 +73,18 @@ class ShowInvestments extends Component
     public function render()
     {
         return view('livewire.admin.show-investments', [
-            'investments' => InvestmentDeposit::whereHas('user', function ($query) {
-                $query->where('name', 'like', '%' . $this->search . '%');
-            })
+            'investments' => InvestmentDeposit::whereHas('user')
                 ->where(function ($query) {
                     $query->where('amount', 'like', '%' . $this->search . '%')
-                        ->orWhereRelation('plan', 'name', 'like', '%' . $this->search . '%')
-                        ->orWhereRelation('wallet', 'name', 'like', '%' . $this->search . '%');
+                        ->orWhereHas('user', function ($q) {
+                            $q->where('name', 'like', '%' . $this->search . '%');
+                        })
+                        ->orWhereHas('plan', function ($q) {
+                            $q->where('name', 'like', '%' . $this->search . '%');
+                        })
+                        ->orWhereHas('wallet', function ($q) {
+                            $q->where('name', 'like', '%' . $this->search . '%');
+                        });
                 })
                 ->orderByDesc('created_at')
                 ->paginate(5),
