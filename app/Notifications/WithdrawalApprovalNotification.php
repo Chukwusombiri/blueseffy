@@ -44,7 +44,7 @@ class WithdrawalApprovalNotification extends Notification
         return (new MailMessage)
                     ->subject('Withdrawal Sent')
                     ->greeting('Hello '.$this->withdrawal->user->name.',')
-                    ->line('Congratulations, You\'ve successfully withdrawn $'.$this->withdrawal->amount.' worth of '.$this->withdrawal->userWallet->name.'.')
+                    ->line('Congratulations, You\'ve successfully withdrawn $'.$this->withdrawal->amount.' worth of '.($this->withdrawal->userWallet->name ?? 'crypto').'.')
                     ->line('The funds has been sent to your designated wallet address. Feel free to contact us for further Enquiries.')
                     ->line('Deposit more today and earn more.')
                     ->line('Thank you for chosing us!');

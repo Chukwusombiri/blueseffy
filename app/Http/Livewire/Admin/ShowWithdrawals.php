@@ -52,7 +52,7 @@ class ShowWithdrawals extends Component
     public function render()
     {
         return view('livewire.admin.show-withdrawals',[
-           'withdrawals' =>  Withdrawal::where('user_id','!=',auth()->user()->id)
+           'withdrawals' =>  Withdrawal::whereHas('user')->where('user_id','!=',auth()->user()->id)
             ->where('amount', 'like', '%'.$this->search.'%')           
             ->orWhereRelation('userWallet', 'name', 'like', '%'.$this->search.'%')
             ->orderByDesc('created_at')

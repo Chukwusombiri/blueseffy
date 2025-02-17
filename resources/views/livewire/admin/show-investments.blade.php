@@ -43,7 +43,7 @@
                 @endif
                 <td>{{$investment->wallet->name ?? 'Funding Wallet'}} <br></td>
   
-                <td>{{$investment->plan->name}}<br></td>                            
+                <td>{{$investment->plan->name ?? 'Deleted plan'}}<br></td>                            
                 <td>{{$investment->created_at->diffForHumans()}}</td>
                 <td>
                   @if ($investment->is_approved)

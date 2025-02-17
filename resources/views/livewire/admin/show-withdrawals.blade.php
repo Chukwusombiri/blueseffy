@@ -39,7 +39,7 @@
                    @else 
                      <td>${{$withdrawal->amount}}</td>
                    @endif                      
-                   <td>{{$withdrawal->userWallet->name}}</td>
+                   <td>{{$withdrawal->userWallet->name ?? '---'}}</td>
                    <td>{{$withdrawal->created_at->diffForHumans()}}</td>
                    <td>
                      @if ($withdrawal->is_approved)

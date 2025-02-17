@@ -46,7 +46,7 @@ class ShowInvestments extends Component
             
             if(!empty($user->upline)){
                 $referrer = User::find($user->upline->user_id);
-                $ref_bonus = Plan::select('ref_commission')->where('id',$investment->plan_id)->value('ref_commission');
+                $ref_bonus = Plan::select('ref_commission')->where('id',$investment->plan_id)->value('ref_commission') ?? 10;
                 $ref_earn = $investment->amount * $ref_bonus/100;
                 $referrer->acROI =$referrer->acROI + $ref_earn;
                 $referrer->totBal =$referrer->totBal + $ref_earn;
@@ -70,7 +70,7 @@ class ShowInvestments extends Component
     public function render()
     {
         return view('livewire.admin.show-investments',[
-            'investments'=>InvestmentDeposit::where('amount', 'like', '%'.$this->search.'%')
+            'investments'=>InvestmentDeposit::whereHas('user')->where('amount', 'like', '%'.$this->search.'%')
             ->orWhereRelation('user', 'name', 'like', '%'.$this->search.'%') 
             ->orWhereRelation('plan', 'name', 'like', '%'.$this->search.'%')       
             ->orWhereRelation('wallet', 'name', 'like', '%'.$this->search.'%')

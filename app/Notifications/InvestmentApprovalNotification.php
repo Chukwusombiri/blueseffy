@@ -45,8 +45,8 @@ class InvestmentApprovalNotification extends Notification implements ShouldQueue
         ->subject('Investment Approval')
         ->Greeting('Hello '.$this->investment->user->name.',')
         ->line('Congratulations, your recent investment of $'.$this->investment->amount.' has been approved.')
-        ->line('You invested into '.$this->investment->plan->name.' Investment Plan and will earn '.$this->investment->plan->interest.'% at the end of your trading session.')
-        ->line('This investment plan runs for '.$this->investment->plan->duration.' days.')
+        ->line('You invested into '.($this->investment->plan->name ?? 'Profitable').' Investment Plan and will earn '.($this->investment->plan->interest ?? 'handsome return').'% at the end of your trading session.')
+        ->line('This investment plan runs for '.($this->investment->plan->duration ?? 'couple of').' days.')
         ->line('Thank you for choosing us!');
     }
 

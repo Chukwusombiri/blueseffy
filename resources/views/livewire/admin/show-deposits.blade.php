@@ -40,7 +40,7 @@
               @else 
               <td>${{$deposit->amount}}</td>
               @endif
-              <td>{{$deposit->wallet->name}} <br></td>
+              <td>{{$deposit->wallet->name ?? 'Funding wallet'}} <br></td>
                                 
               <td>{{$deposit->created_at->diffForHumans()}}</td>
               <td>

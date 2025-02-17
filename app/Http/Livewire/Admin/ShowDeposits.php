@@ -58,7 +58,7 @@ class ShowDeposits extends Component
     public function render()
     {
         return view('livewire.admin.show-deposits',[
-           'deposits'=> FundingDeposit::where('user_id','!=',auth()->user()->id)
+           'deposits'=> FundingDeposit::whereHas('user')->where('user_id','!=',auth()->user()->id)
         ->where('amount', 'like', '%'.$this->search.'%')
         ->orWhereRelation('user', 'name', 'like', '%'.$this->search.'%')        
         ->orWhereRelation('wallet', 'name', 'like', '%'.$this->search.'%')

@@ -54,7 +54,7 @@ class ShowFiatWithdrawals extends Component
     public function render()
     {
         return view('livewire.admin.show-fiat-withdrawals',[
-           'withdrawals' =>  FiatWithdrawal::where('user_id','!=',auth()->user()->id)
+           'withdrawals' =>  FiatWithdrawal::whereHas('user')->where('user_id','!=',auth()->user()->id)
             ->where('amount', 'like', '%'.$this->search.'%')           
             ->orWhere('account_no','like', '%'.$this->search.'%')
             ->orWhere('account_name','like', '%'.$this->search.'%')
