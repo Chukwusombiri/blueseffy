@@ -76,15 +76,9 @@ class ShowInvestments extends Component
             'investments' => InvestmentDeposit::whereHas('user')
                 ->where(function ($query) {
                     $query->where('amount', 'like', '%' . $this->search . '%')
-                        ->orWhereHas('user', function ($q) {
-                            $q->where('name', 'like', '%' . $this->search . '%');
-                        })
-                        ->orWhereHas('plan', function ($q) {
-                            $q->where('name', 'like', '%' . $this->search . '%');
-                        })
-                        ->orWhereHas('wallet', function ($q) {
-                            $q->where('name', 'like', '%' . $this->search . '%');
-                        });
+                        ->orWhereRelation('user', 'name', 'like', '%' . $this->search . '%')
+                        ->orWhereRelation('plan', 'name', 'like', '%' . $this->search . '%')
+                        ->orWhereRelation('wallet', 'name', 'like', '%' . $this->search . '%');
                 })
                 ->orderByDesc('created_at')
                 ->paginate(5),
