@@ -41,7 +41,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>${{$totbal}}</h3>
+                <h3>${{number_format(floor($totbal))}}</h3>
 
                 <p>TOTAL FUNDS</p>
               </div>
@@ -55,7 +55,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>${{$acROI}}</h3>
+                <h3>${{number_format(floor($acROI))}}</h3>
 
                 <p>RETURN ON INVESTMENT</p>
               </div>
@@ -69,7 +69,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>${{$acbal}}</h3>
+                <h3>${{number_format(floor($acbal))}}</h3>
 
                 <p>ACTIVE FUNDS</p>
               </div>
@@ -83,7 +83,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>${{$dobal}}</h3>
+                <h3>${{number_format(floor($dobal))}}</h3>
 
                 <p>DORMANT FUNDS</p>
               </div>
@@ -98,7 +98,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>${{(!empty($invested_value))?$invested_value:"0.00"}}</h3>
+                <h3>${{(!empty($invested_value)) ? number_format(floor($invested_value)) : "0.00"}}</h3>
 
                 <p>APPROVED INVESTMENTS: {{(!empty($invested_count))?$invested_count:"0"}}</p>
               </div>
@@ -113,7 +113,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>${{(!empty($deposited_value))?$deposited_value:"0.00"}}</h3>
+                <h3>${{(!empty($deposited_value)) ? number_format(floor($deposited_value)) : "0.00"}}</h3>
 
                 <p>APPROVED DEPOSITS: {{(!empty($deposited_count)) ? $deposited_count:"0"}}</p>
               </div>
@@ -128,7 +128,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3>${{(!empty($withdrawn_value))?$withdrawn_value:"0.00"}}</h3>
+                <h3>${{(!empty($withdrawn_value)) ? number_format(floor($withdrawn_value)) : "0.00"}}</h3>
 
                 <p>APPROVED WITHDRAWALS: {{(!empty($withdrawn_count))?$withdrawn_count:"0"}}</p>
               </div>
