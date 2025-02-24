@@ -10,8 +10,8 @@
                     font-family: 'Sora', sans-serif;
                     font-size: 1.25rem;
                     text-transform: capitalize;
-                    color: #4f46e5; /* text-indigo-600 */
-                    letter-spacing: 0.025em; /* tracking-wide */
+                    color: #2563eb;
+                    letter-spacing: 0.025em;
                 ">
                 <img src="{{ asset('images/blues_dark.png') }}"
                     alt="App logo" style="width: 2.5rem; height: 2.5rem; margin-right: 0.25rem;"

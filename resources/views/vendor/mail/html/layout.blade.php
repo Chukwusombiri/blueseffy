@@ -6,6 +6,16 @@
 <meta name="color-scheme" content="light">
 <meta name="supported-color-schemes" content="light">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
+
+.sora{
+  font-family: "Sora", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
 @media only screen and (max-width: 600px) {
 .inner-body {
 width: 100% !important;

@@ -14,7 +14,7 @@
   }">
     <div class="flex flex-col">
         <h2 class="flex items-center flex-wrap sora text-xl capitalize text-indigo-600 dark:text-blue-500 tracking-wide">    
-            <img x-bind:src="isDark ? '{{ asset('images/blues_dark.png') }}' : '{{ asset('images/blues.png') }}'" alt="App logo" class="w-10 h-10 mr-1">    
+            <img x-bind:src="isDark ? '{{ asset('images/blues_dark.png') }}' : '{{ asset('images/blues.png') }}'" src="{{ asset('images/blues.png') }}" alt="App logo" class="w-10 h-10 mr-1">    
             <span>Blues</span>
             <span>efficiency</span>   
         </h2>

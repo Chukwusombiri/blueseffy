@@ -36,8 +36,4 @@ class UserFiatWithdrawalController extends Controller
             ]);
     }
 
-    public function validateWithdrawal()
-    {
-        return view('user.validateFiatWithdrawal');
-    }
 }
