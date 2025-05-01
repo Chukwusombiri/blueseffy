@@ -45,6 +45,7 @@ class CreateNewUser implements CreatesNewUsers
             ]),],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+            'g-recaptcha-response' => ['required', 'captcha'],
         ])->validate();
 
         $user = User::create([

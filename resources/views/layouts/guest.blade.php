@@ -26,5 +26,5 @@
         {{ $slot }}
     </div>
 </body>
-
+{!! NoCaptcha::renderJs() !!}
 </html>
