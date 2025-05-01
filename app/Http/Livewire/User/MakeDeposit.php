@@ -35,10 +35,10 @@ class MakeDeposit extends Component
             $deposit->wallet_id = $this->wallet_id;
             $deposit->user_id = $user->id;
             $deposit->save();
-            $user->notify(new DepositRequestNotification($deposit));
+            //$user->notify(new DepositRequestNotification($deposit));
             $admin = User::where('is_admin', [1])->first();
             if ($admin != null) {
-                $admin->notify(new AdminDepositRequestNotification($deposit));
+                //$admin->notify(new AdminDepositRequestNotification($deposit));
             }                                                         
             $this->reset(['amount','wallet_id']);
             

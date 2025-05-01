@@ -60,11 +60,11 @@ class MakeInvestment extends Component
             $investment->user_id = $user->id;
             $investment->save();
             if($this->source=='crypto'){
-                $user->notify(new InvestmentRequestNotification($investment));
+                //$user->notify(new InvestmentRequestNotification($investment));
             }
             $admin = User::where('is_admin', [1])->first();
             if ($admin != null) {
-                $admin->notify(new AdminInvestmentRequestNotification($investment));
+                //$admin->notify(new AdminInvestmentRequestNotification($investment));
             }                                                         
             $this->reset(['amount','wallet_id']);
             

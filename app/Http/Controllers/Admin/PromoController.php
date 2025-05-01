@@ -58,7 +58,7 @@ class PromoController extends Controller
             $user=User::find($request->user_id);
             $user->acROI += $request->amount;
             $user->update();
-            $user->notify(new PromoNotification($promo,$promo_message));         
+            //$user->notify(new PromoNotification($promo,$promo_message));         
             return redirect()->route('admin.promos')->with('success','Promo funded successfully');
     }
 }

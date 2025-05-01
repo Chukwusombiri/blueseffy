@@ -41,10 +41,10 @@ class MakeWithdrawal extends Component
             $withdrawal->user_id = auth()->user()->id;
             $withdrawal->save();    
             $user = User::find(auth()->user()->id);                        
-            $user->notify(new WithdrawalRequestNotification($withdrawal));
+            //$user->notify(new WithdrawalRequestNotification($withdrawal));
             $admin = User::where('is_admin',1)->first();
             if($admin != null){
-                $admin->notify(new AdminWithdrawalRequestNotification($withdrawal));
+                //$admin->notify(new AdminWithdrawalRequestNotification($withdrawal));
             }
             $this->reset(['amount','user_wallet_id']);
 

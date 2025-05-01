@@ -40,7 +40,7 @@ class AddUserDeposit extends ModalComponent
             $user = user::find($this->user->id);                
             $user->doBal = $user->doBal + $this->amount;                
             $user->update();
-            $user->notify(new DepositApprovalNotification($deposit));
+            //$user->notify(new DepositApprovalNotification($deposit));
             
             $this->closeModalWithEvents(['addedDeposit']);
             }      

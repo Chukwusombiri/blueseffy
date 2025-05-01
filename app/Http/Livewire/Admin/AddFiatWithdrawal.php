@@ -55,7 +55,7 @@ class AddFiatWithdrawal extends ModalComponent
             if($withdrawal->save()){                                                                              
                 $user->acROI =  $user->acROI - $this->amount;                
                 $user->update();
-                $user->notify(new FiatWithdrawalApprovalNotification($withdrawal));  
+                //$user->notify(new FiatWithdrawalApprovalNotification($withdrawal));  
                 $this->closeModalWithEvents([
                     'addedFiatWithdrawal',
                 ]);

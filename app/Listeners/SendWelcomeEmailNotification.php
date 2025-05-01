@@ -28,9 +28,9 @@ class SendWelcomeEmailNotification implements ShouldQueue
      */
     public function handle($event)
     {        
-        $event->user->notify(new WelcomeEmailNotification($event->user));
+        /* $event->user->notify(new WelcomeEmailNotification($event->user));
         if($admin = User::where('is_admin',1)->first()){
             $admin->notify(new NewUserNotification($event->user));
-        }        
+        }    */     
     }
 }

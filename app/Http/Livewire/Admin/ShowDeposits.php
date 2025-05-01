@@ -38,7 +38,7 @@ class ShowDeposits extends Component
             $user->doBal = $user->doBal + $deposit->amount;
             $user->totBal = $user->acROI + $deposit->amount;
             $user->update();
-            $user->notify(new DepositApprovalNotification($deposit));
+            //$user->notify(new DepositApprovalNotification($deposit));
 
             $this->emit('approvedDeposit');
         }

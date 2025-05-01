@@ -36,7 +36,7 @@ class CompanyWalletController extends Controller
         $wallet->icon_path = $request->icon->storePublicly('wallets','public');      
         $wallet->save();
         $user = User::find(auth()->user()->id);
-        $user->notify(new NewWalletNotification($wallet));
+        //$user->notify(new NewWalletNotification($wallet));
 
         return redirect()->back()->with('success', 'Company wallet successfully added');
     }
@@ -64,7 +64,7 @@ class CompanyWalletController extends Controller
         }     
         $wallet->update();
         $user = User::find(auth()->user()->id);
-        $user->notify(new WalletUpdateNotification($wallet));
+        //$user->notify(new WalletUpdateNotification($wallet));
         return redirect()->back()->with('success', $wallet->name.' wallet successfully updated');
     }
 

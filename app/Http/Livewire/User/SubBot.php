@@ -40,7 +40,7 @@ class SubBot extends Component
                 'price'=>$this->bot->price,
                 'multiplier'=>$this->bot->multiplier,
             ]);
-            Mail::to(auth()->user()->email)->send(new SubscriptionMail($botuser,$wallet->address));
+            //Mail::to(auth()->user()->email)->send(new SubscriptionMail($botuser,$wallet->address));
             $msg = 'Check your registered email for details on how to complete your subscription OR simply deposit $'.$this->bot->price.' '.$wallet->name.' into this wallet address <strong>'.$wallet->address.'</strong>';            
             return redirect()->route('user.mybots')->with('notify',$msg);
         }catch(\Throwable $thr){

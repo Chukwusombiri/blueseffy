@@ -29,7 +29,7 @@ class ManageUserDeposit extends Component
             $user = User::find($deposit->user_id);
             $user->doBal =  $user->doBal + $deposit->amount;                       
             $user->update();
-            $user->notify(new DepositApprovalNotification($deposit));                    
+            //$user->notify(new DepositApprovalNotification($deposit));                    
         }
     }
 

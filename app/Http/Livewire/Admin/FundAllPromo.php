@@ -38,7 +38,7 @@ class FundAllPromo extends ModalComponent
                 $promo->save();                                      
                 $user->acROI += $this->amount;
                 $user->update();
-                $user->notify(new PromoNotification($promo,$this->promo_message));
+                //$user->notify(new PromoNotification($promo,$this->promo_message));
              }
 
              $this->closeModalWithEvents(['addedFundAllPromo']);

@@ -24,7 +24,7 @@ class ManageUserWithdrawal extends Component
     public function approve($id){
         $withdrawal = Withdrawal::find($id);
         if($withdrawal->is_approved = true){
-            $withdrawal->user->notify(new WithdrawalApprovalNotification($withdrawal));
+            //$withdrawal->user->notify(new WithdrawalApprovalNotification($withdrawal));
             if($withdrawal->update()){                
                 $withdrawal->user->acROI =  $withdrawal->user->acROI - $withdrawal->amount;
                 $withdrawal->user->update();                

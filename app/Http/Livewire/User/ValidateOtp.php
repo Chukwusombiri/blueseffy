@@ -46,9 +46,8 @@ class ValidateOtp extends ModalComponent
         $otp->expires = Carbon::now()->addMinutes(5);
         $otp->otp_code = $generated_otp;
         $otp->user_id = auth()->user()->id;
-        if ($otp->save()) {
-            $user->notify(new SendOtpNotification($generated_otp));
-        }
+        $otp->save();    
+        //$user->notify(new SendOtpNotification($generated_otp));        
         $this->isSent = true;
     }
 

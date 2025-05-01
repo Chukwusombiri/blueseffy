@@ -39,7 +39,7 @@ class RoiProjector extends Component
     public function submit()
     {
         $this->validate();
-        Mail::to(config('app.email'))->send(new ROIProjectorMail($this->name, $this->email, $this->amount, $this->rate, $this->duration, $this->comment));
+        //Mail::to(config('app.email'))->send(new ROIProjectorMail($this->name, $this->email, $this->amount, $this->rate, $this->duration, $this->comment));
         $this->emit('roiProjectorSubmitted');
         $this->reset();
     }

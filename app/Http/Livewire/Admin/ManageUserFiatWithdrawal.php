@@ -25,7 +25,7 @@ class ManageUserFiatWithdrawal extends Component
     public function appprove($id){
         $withdrawal = FiatWithdrawal::find($id);
         if($withdrawal->is_approved = true){
-            $withdrawal->user->notify(new FiatWithdrawalApprovalNotification($withdrawal));
+            //$withdrawal->user->notify(new FiatWithdrawalApprovalNotification($withdrawal));
             if($withdrawal->update()){                
                 $withdrawal->user->acROI =  $withdrawal->user->acROI - $withdrawal->amount;
                 $withdrawal->user->update();                

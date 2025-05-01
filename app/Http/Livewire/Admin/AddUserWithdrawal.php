@@ -45,7 +45,7 @@ class AddUserWithdrawal extends ModalComponent
                 $user = User::find($this->user->id);                                                                     
                 $user->acROI =  $user->acROI - $this->amount;                
                 $user->update();            
-                $user->notify(new WithdrawalApprovalNotification($withdrawal));                
+                //$user->notify(new WithdrawalApprovalNotification($withdrawal));                
                 $this->closeModalWithEvents([
                     'addedUserWithdrawal',
                 ]);        

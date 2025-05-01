@@ -36,7 +36,7 @@ class AddUserPromo extends ModalComponent
         $user=User::find($this->user->id);
         $user->acROI += $this->amount;
         $user->update();
-        $user->notify(new PromoNotification($promo,$promo_message));   
+        //$user->notify(new PromoNotification($promo,$promo_message));   
         
         $this->closeModalWithEvents(['addedPromo']);
     }
