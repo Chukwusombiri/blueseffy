@@ -30,6 +30,12 @@
                     <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                 </label>
             </div>
+            <div class="mt-4">
+                {!! NoCaptcha::display() !!}
+                @error('g-recaptcha-response')
+                    <span class="text-red-600">{{ $message }}</span>
+                @enderror
+            </div>
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
