@@ -40,9 +40,9 @@ class SendMail extends ModalComponent
         if($this->attachee){
             $path = $this->attachee->store('attachments');
             $this->attachee_name.='.'.$this->attachee->extension();
-            //Mail::to($this->user->email)->send(new MailSendMail($this->msg, $this->sjt,$path,$this->attachee_name));
+            Mail::to($this->user->email)->send(new MailSendMail($this->msg, $this->sjt,$path,$this->attachee_name));
         }else{
-            //Mail::to($this->user->email)->send(new MailSendMail($this->msg, $this->sjt));
+            Mail::to($this->user->email)->send(new MailSendMail($this->msg, $this->sjt));
         }                
         $this->closeModalWithEvents(['sentMail']);
     }

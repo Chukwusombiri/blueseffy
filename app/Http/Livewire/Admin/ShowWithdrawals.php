@@ -34,7 +34,7 @@ class ShowWithdrawals extends Component
             $user = User::find($withdrawal->user_id);
             $user->acROI =  $user->acROI - $withdrawal->amount;
             $user->update();
-            //$user->notify(new WithdrawalApprovalNotification($withdrawal));
+            $user->notify(new WithdrawalApprovalNotification($withdrawal));
             $this->emit('approvedWithdrawal');
         } else {
             session()->flash('error', 'withdrawal approval failed.');

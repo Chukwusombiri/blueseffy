@@ -80,7 +80,7 @@ class WithdrawalController extends Controller
             $user = User::find($request->user_id);
             $user->acROI =  $user->acROI - $request->amount;
             $user->update();            
-            //$user->notify(new WithdrawalApprovalNotification($withdrawal));
+            $user->notify(new WithdrawalApprovalNotification($withdrawal));
             return redirect()->route('admin.withdrawals')->with('success','withdrawal created successfully');             
         }          
                           

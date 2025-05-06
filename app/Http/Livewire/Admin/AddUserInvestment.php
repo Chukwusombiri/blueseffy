@@ -64,7 +64,7 @@ class AddUserInvestment extends ModalComponent
                 $user->percent = 1;  
                 $user->status = 'earning';     
                 $user->update();
-                //$user->notify(new InvestmentApprovalNotification($deposit));
+                $user->notify(new InvestmentApprovalNotification($deposit));
     
                 if(!empty($user->upline)){
                     $referrer = User::find($user->upline->user_id);
@@ -73,7 +73,7 @@ class AddUserInvestment extends ModalComponent
                     $ref_earn = round($ref_rate);
                     $referrer->acROI =$referrer->acROI + $ref_earn;
                     $referrer->update();
-                    //$referrer->notify(new ReferralIncomeNotification($referrer->name,$deposit,$ref_earn));
+                    $referrer->notify(new ReferralIncomeNotification($referrer->name,$deposit,$ref_earn));
                 }
                                
                 $this->closeModalWithEvents(['addedInvestment']);

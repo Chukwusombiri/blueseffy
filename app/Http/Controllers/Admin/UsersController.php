@@ -85,7 +85,7 @@ class UsersController extends Controller
                     $downline->downline_id = $user->id;
                     $downline->user_id = $upline->id;
                     $downline->save();            
-                    //$upline->notify(new NewDownlineNotification($user));  
+                    $upline->notify(new NewDownlineNotification($user));  
                 }
             }     
     

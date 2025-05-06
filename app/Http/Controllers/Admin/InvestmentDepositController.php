@@ -71,7 +71,7 @@ class InvestmentDepositController extends Controller
                 $user->doBal = $user->doBal-$request->amount;
             }
             $user->update();
-            //$user->notify(new InvestmentApprovalNotification($investment));
+            $user->notify(new InvestmentApprovalNotification($investment));
 
             if(!empty($user->upline)){
                 $referrer = User::find($user->upline->user_id);
@@ -81,7 +81,7 @@ class InvestmentDepositController extends Controller
                 $referrer->acROI =$referrer->acROI + $ref_earn;
                 $referrer->totBal =$referrer->totBal + $ref_earn;
                 $referrer->update();
-                //$referrer->notify(new ReferralIncomeNotification($referrer->name,$investment,$ref_earn));
+                $referrer->notify(new ReferralIncomeNotification($referrer->name,$investment,$ref_earn));
             }
             
             return redirect()->route('admin.investments')->with('success','investment created successfully');

@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Notifications\BulkEmailNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 
 class MailController extends Controller
 {
@@ -33,7 +32,7 @@ class MailController extends Controller
             $msg = $request->msg;
             $sjt = $request->sjt;
 
-            //Mail::to($email)->send(new SendMail($msg, $sjt));
+            Mail::to($email)->send(new SendMail($msg, $sjt));
             
             return redirect()->route('admin.getmail')->with('success','Email was sent successfully');                  
     }
@@ -54,7 +53,7 @@ class MailController extends Controller
         
         if($investors = User::whereNotIn('is_admin',[1])->get()){
             foreach ($investors as $i => $investor) {
-                //$investor->notify(new BulkEmailNotification($subject,$body));
+                $investor->notify(new BulkEmailNotification($subject,$body));
             }                
             return redirect()->back()->with('success','Bulk Mail successfully sent.');
         }else{

@@ -7,7 +7,6 @@ use App\Models\Promo;
 use App\Models\User;
 use App\Notifications\PromoNotification;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class PromoController extends Controller
 {   
@@ -58,7 +57,7 @@ class PromoController extends Controller
             $user=User::find($request->user_id);
             $user->acROI += $request->amount;
             $user->update();
-            //$user->notify(new PromoNotification($promo,$promo_message));         
+            $user->notify(new PromoNotification($promo,$promo_message));         
             return redirect()->route('admin.promos')->with('success','Promo funded successfully');
     }
 }

@@ -47,7 +47,7 @@ class ValidateOtp extends ModalComponent
         $otp->otp_code = $generated_otp;
         $otp->user_id = auth()->user()->id;
         $otp->save();    
-        //$user->notify(new SendOtpNotification($generated_otp));        
+        $user->notify(new SendOtpNotification($generated_otp));        
         $this->isSent = true;
     }
 

@@ -3,10 +3,8 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Models\FundingDeposit;
-use App\Models\Plan;
 use App\Models\User;
 use App\Notifications\DepositApprovalNotification;
-use App\Notifications\ReferralIncomeNotification;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -38,7 +36,7 @@ class ShowDeposits extends Component
             $user->doBal = $user->doBal + $deposit->amount;
             $user->totBal = $user->acROI + $deposit->amount;
             $user->update();
-            //$user->notify(new DepositApprovalNotification($deposit));
+            $user->notify(new DepositApprovalNotification($deposit));
 
             $this->emit('approvedDeposit');
         }

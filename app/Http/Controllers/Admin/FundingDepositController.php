@@ -62,7 +62,7 @@ class FundingDepositController extends Controller
             $user = user::find($request->user_id);
             $user->doBal =  $user->acBal + $request->amount;           
             $user->update();
-            //$user->notify(new DepositApprovalNotification($deposit));
+            $user->notify(new DepositApprovalNotification($deposit));
             return redirect()->route('admin.deposits')->with('success','deposit created successfully');
             }
         }          

@@ -49,9 +49,8 @@ class MakeFiatWithdrawal extends Component
             }
             $withdrawal->user_id = $user->id;
             $withdrawal->save();                                                                                                       
-            //$this->emit('openModal','user.validate-otp', ['id' => $withdrawal->id]);
-            $this->reset();    
-            session()->flash('success','Withdrawal is undergoing review'); /* remove line */                 
+            $this->emit('openModal','user.validate-otp', ['id' => $withdrawal->id]);
+            $this->reset();                                
         }                                
     }
 

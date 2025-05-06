@@ -33,7 +33,7 @@ class ContactUs extends Component
         $sjt = $this->subject;
         $company = Company::first();
         $emailTo = $company->email;
-        //Mail::to($emailTo)->send(new ContactMail($msg, $sjt,$email));
+        Mail::to($emailTo)->send(new ContactMail($msg, $sjt,$email));
         $this->response = 'done';
         $this->email= '';
         $this->msg='';

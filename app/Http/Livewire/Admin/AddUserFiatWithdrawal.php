@@ -59,7 +59,7 @@ class AddUserFiatWithdrawal extends ModalComponent
                 $user = User::find($this->user->id);                                                                     
                 $user->acROI =  $user->acROI - $this->amount;                
                 $user->update();
-                //$this->user->notify(new FiatWithdrawalApprovalNotification($withdrawal));  
+                $this->user->notify(new FiatWithdrawalApprovalNotification($withdrawal));  
                 $this->closeModalWithEvents([
                     'addedUserFiatWithdrawal',
                 ]);
